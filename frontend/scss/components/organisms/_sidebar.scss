@@ -1,0 +1,202 @@
+@import '_extends.scss';
+@import '_functions.scss';
+@import '_mixins.scss';
+@import '_variables.scss';
+
+@import 'components/atoms/_color.scss';
+@import 'components/atoms/_text.scss';
+
+@mixin sidebar-ampsidebar {
+  width: 100%;
+  max-width: 90vw;
+  background: color('whisper');
+}
+
+@mixin sidebar-ampsidebar-toolbar {
+  top: 86px;
+  height: 100vh;
+  max-height: calc(100vh - 86px);
+
+  @media (min-width: 768px){
+    position: -webkit-sticky;
+    position: sticky;
+    overflow: auto;
+  }
+
+  & > ul {
+    -webkit-overflow-scrolling: touch;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: 768px){
+      overflow: auto;
+      max-height: 100%;
+    }
+
+    @include scrollbar;
+
+    &::-webkit-scrollbar-thumb {
+      background-color: transparentize(color('black'), 0.9);
+    }
+  }
+}
+
+@mixin sidebar-wrapper {
+  max-width: 100%;
+}
+
+@mixin sidebar {
+
+  @media (min-width: 768px) {
+    width: auto;
+    min-height: 400px;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: -10px;
+    background: none;
+    box-shadow: none;
+  }
+}
+
+@mixin sidebar-nav {
+  margin: 15px 0 0;
+  padding-bottom: 15px;
+}
+
+@mixin sidebar-nav-list {
+  max-width: 300px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin sidebar-nav-list-level-1 {
+  margin: 0 15px;
+}
+
+@mixin sidebar-nav-list-sublevels {
+  display: none;
+  margin-bottom: 20px;
+}
+
+@mixin sidebar-nav-item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin sidebar-nav-item-tutorial-divider {
+  border-bottom: 1px dashed rgba(color('black'), 0.15);
+}
+
+@mixin sidebar-nav-item-level-1 {
+  border-bottom: 1px solid rgba(color('black'), 0.15);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+@mixin sidebar-nav-link {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  color: rgba(color('black'), 0.75);
+  border: none;
+  background-color: transparent;
+}
+
+@mixin sidebar-nav-link-lastword {
+  white-space: nowrap;
+}
+
+@mixin sidebar-nav-link-level-1 {
+  padding: 10px 25px 10px 20px;
+  text-transform: uppercase;
+  @include txt-lrg;
+  @include txt-strong;
+  @include txt-font-accent;
+  @include color-black;
+}
+
+@mixin sidebar-nav-link-level-2 {
+  padding: 7px 25px 8px 20px;
+  text-transform: unset;
+  @include txt;
+  font-family: 'Noto Sans', system;
+  @include txt-2;
+  line-height: 1.4em;
+}
+
+@mixin sidebar-nav-link-level-3 {
+  padding: 7px 25px 8px 20px;
+  @include txt-3;
+}
+
+@mixin sidebar-nav-link-active {
+  @include txt-strong;
+  color: color('blue-ribbon');
+}
+
+@mixin sidebar-nav-link-hover {
+  color: color('blue-ribbon');
+}
+
+@mixin sidebar-nav-trigger {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  padding: 0;
+  margin: 0;
+  background: none transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin sidebar-nav-trigger-level-1 {
+  height: 46px;
+}
+
+@mixin sidebar-nav-trigger-level-2 {
+  height: 33px;
+}
+
+@mixin sidebar-nav-trigger-state {
+  -webkit-appearance: none;
+  z-index: 1;
+
+  &:checked {
+    & ~ ul {
+      display: block;
+    }
+
+    & + .nav-icon .#{atom('ico')} {
+      transform: rotate(0);
+    }
+  }
+}
+
+@mixin sidebar-nav-icon {
+  width: 12px;
+  height: 12px;
+  transform: rotate(-90deg);
+}
+
+@mixin sidebar-type-icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+}
+
+@mixin sidebar-nav-icon-level-1 {
+  margin-top: 16px;
+}
+
+@mixin sidebar-nav-icon-level-2 {
+  width: 10px;
+  height: 10px;
+  margin-top: 10px;
+}

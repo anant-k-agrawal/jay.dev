@@ -1,0 +1,10 @@
+number: null
+at: 2021-03-19T11:33:43.785Z
+by: Patrick Kettner
+environment: production
+commit:
+  sha: a1bb32aad3
+  message: |-
+    Revert "functional survey (#5533)" (#5545)
+
+    This reverts commit 656d8c2f528a369f93facaa4b6b28c7164bdbb47.

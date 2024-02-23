@@ -1,0 +1,28 @@
+$title: Single Image
+$view: /views/detail/template-detail.j2
+$category: Story Ads
+$order: 5
+formats:
+  - ads
+
+teaser:
+  image:
+    src: '/static/img/templates/single-image-template.jpg'
+    width: 9
+    height: 16
+    alt: Single Image
+  video:
+    src: '/static/img/templates/single-image-template.mp4'
+    width: 9
+    height: 16
+
+  download_url: '/static/files/templates/single-image-ads.zip'
+  template_demo_home: 'ads/single-image-ads/single-image.html'
+  template_github_home: 'ads/single-image-ads'
+ 
+document:
+  pages: /content/amp-dev/documentation/templates/single-image-ads/pages
+  description: Template for your own single image story ad.
+
+url:
+  path: '/documentation/templates/single-image-ads'

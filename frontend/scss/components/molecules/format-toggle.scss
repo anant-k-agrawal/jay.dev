@@ -1,0 +1,131 @@
+@import '_extends.scss';
+@import '_functions.scss';
+@import '_mixins.scss';
+@import '_variables.scss';
+
+@import 'components/atoms/_color.scss';
+@import 'components/atoms/_text';
+
+.#{molecule('format-toggle')} {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin: 0 10px;
+  padding: 10px 0 0 0;
+  width: 100%;
+  max-width: 85%;
+  z-index: 12;
+
+  @media (min-width: 768px) {
+    padding: 0;
+    margin: 0 15px 0 0;
+    max-width: 100%;
+  }
+
+  &-selected {
+    .amp-mode-touch & {
+      position: relative;
+    }
+    border: 0;
+
+    &:focus, &:hover {
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        height: 300%;
+        width: 100%;
+      }
+    }
+  }
+
+  &-link, &-selected {
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 2px;
+    padding: 5px 8px;
+    overflow: hidden;
+    @include txt;
+    @include txt-font-accent;
+    font-size: 12px;
+    text-align: left;
+    border-radius: 4px;
+    color: color('black');
+    background: color('athens-gray');
+    transition: opacity 0.2s ease;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.25);
+
+    .#{atom('ico')} {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+      fill: color('black');
+    }
+  }
+
+  &-link {
+    color: color('black');
+    background: color('athens-gray');
+
+    .#{atom('ico')} {
+      fill: color('black');
+    }
+  }
+
+  &-link-websites {
+    &:hover, &.#{molecule('format-toggle')}-selected  {
+      @include gradient-websites; color: color('white');
+      .#{atom('ico')} { fill: color('white'); }
+    }
+  }
+
+  &-link-stories {
+    &:hover, &.#{molecule('format-toggle')}-selected {
+      @include gradient-stories; color: color('charade');
+      .#{atom('ico')} { fill: color('charade'); }
+    }
+  }
+
+  &-link-ads {
+    &:hover, &.#{molecule('format-toggle')}-selected {
+      @include gradient-ads; color: color('white');
+      .#{atom('ico')} { fill: color('white'); }
+    }
+  }
+
+  &-link-email {
+    &:hover, &.#{molecule('format-toggle')}-selected {
+      @include gradient-e-mails; color: color('charade');
+      .#{atom('ico')} { fill: color('charade'); }
+    }
+  }
+
+  &-angle {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  &-formats {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.2s ease;
+    transition-delay: 0.05s;
+
+    .#{molecule('format-toggle')}-selected:focus + &,
+    .#{molecule('format-toggle')}-selected:hover + &,
+    &:focus-within,
+    &:hover {
+      pointer-events: auto;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
