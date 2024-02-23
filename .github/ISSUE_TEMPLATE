@@ -1,0 +1,33 @@
+<!--
+
+Use the template below to report **documentation issues for the amp.dev site**.  
+
+Have questions about using AMP ?
+=================================
+- Ask general questions about AMP over on Stack Overflow under the AMP HTML tag: https://stackoverflow.com/questions/tagged/amp-html
+- Ask and post questions or problems related to Google Search in Google's AMP forum: https://goo.gl/utQ1KZ
+
+Think you found a bug in using AMP HTML?
+========================================
+Please use the bug report template at https://github.com/ampproject/amphtml/issues/new
+
+-->
+
+
+## Description of the issue found on amp.dev
+
+Please provide:
+
+- Page link: <insert the URL link to the amp.dev page(s) that you found the issue on>
+- Description of the documentation issue:
+
+## How do we reproduce the issue?
+
+Please provide the steps to reproduce the issue:
+
+1. Step 1 to reproduce
+2. Step 2 to reproduce
+3. …
+
+What browser are you using?
+What O/S are you using?
