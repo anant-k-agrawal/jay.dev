@@ -1,0 +1,80 @@
+/* A project prefix that is added by using the prefix() function. Abbreviation
+of the project name amp.dev */
+$projectPrefix: 'ap';
+
+/* All category codes which are prepended to selector by using either atom(selector),
+molecule(selector) or organism(selector) */
+$categoryPrefixes: (
+  utility: '',
+  atom: 'a',
+  molecule: 'm',
+  organism: 'o',
+  template: 't',
+);
+
+$sizes: (
+  xs: '1',
+  sm: '2',
+  md: '3',
+  lg: '4',
+  xl: '5',
+);
+
+/* The smallest supported device width.
+It's used as `min-width` value for html and body
+and as @media query in burger-menu, language-selector and footer. */
+$minDeviceWidth: 240px;
+
+/* This variables are used in the following files:
+- frontend/scss/components/molecules/banner.scss
+- frontend/scss/components/organisms/header.scss
+- frontend/scss/components/organisms/burger-menu.scss
+
+The calculations of the height and top values of banner, header and burger-menu
+are based on this variables. If you change them, they automatically adjust. */
+$mobileHeaderHeight: 55px;
+$bannerHeight: 31px;
+
+/* The following map contains every color that is used inside the project. The
+names are identified by using the http://chir.ag/projects/name-that-color to
+prevent double colors and/or hirarchy dicussions */
+$colors: (
+  'black': #000000,
+  'charade': #20202a,
+  'river-bed': #48525c,
+  'oslo-gray': #91979d,
+  'iron': #e2e5e6,
+  'athens-gray': #ebebf0,
+  'whisper': #fafafc,
+  'white': #ffffff,
+  'blue-ribbon': #005af0,
+  'robins-egg': #00dcc0,
+  'japan-laurel': #09a600,
+  'pear': #a6e22e,
+  'confetti': #e1eb64,
+  'school-bus': #ffdc00,
+  'clementine': #ec6600,
+  'bittersweet': #f56c64,
+  'guardsman-red': #c80000,
+  'slack': #45184b,
+  'lav-magenta': #eb49e1,
+  'electric-violet': #5500d7,
+  'chestnut-rose': #d45a5a,
+);
+
+$safeColors: (
+  'white': #fff,
+  'black': #000,
+  'dark-gray': #20202a,
+  'light-gray': #8c8f94,
+  'blue': #005af0,
+  'green': #09a600,
+  'orange': #ec6600,
+  'dark-red': #c80000,
+);
+
+$shadows: (
+  'regular': 0 30px 30px -15px rgba(0, 0, 0, 0.25),
+  'drop': 0 30px 30px -15px rgba(0, 0, 0, 0.25),
+  'center': 0 5px 15px 10px rgba(0, 0, 0, 0.2),
+);

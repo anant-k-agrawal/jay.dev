@@ -1,0 +1,104 @@
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+/*
+
+##################
+### ATOM: text ###
+##################
+
+### INFO:
+
+Text atom could be used almost everywhere.
+It has multiple size modifiers (more could be added below).
+
+### MODIFIERS:
+
+sizes
+  Selector names of the sizes could be changed globally in variables.
+
+p
+  Paragraph style text.
+
+TODO: mono (inline, block)
+  Changes the font-family to a monospaced font as inline or block text.
+
+*/
+
+@mixin txt {
+	line-height: 1.6rem;
+	font-weight: normal;
+	color: color('river-bed');
+}
+
+@mixin txt-lrg {
+  font-size: 1.125rem; //18px
+}
+
+@mixin txt-1 {
+	font-size: 1rem; //16px
+}
+
+@mixin txt-2 {
+	font-size: 0.875rem; //14px
+}
+
+@mixin txt-3 {
+	font-size: 0.8125rem; //13px
+}
+
+@mixin txt-4 {
+	font-size: 0.625rem; //10px
+}
+
+@mixin txt-font-accent {
+	font-family: 'Poppins',  system;
+  font-weight: 700;
+}
+
+@mixin txt-hl {
+	display: block;
+	margin-top: 1em;
+	line-height: 1.25em;
+}
+
+@mixin txt-p {
+	display: block;
+	margin-top: 1.1em;
+	margin-bottom: 0;
+}
+
+@mixin txt-mono {
+	font-family: 'Fira Mono', monospace;
+  font-weight: 500;
+}
+
+@mixin txt-mono-inline {
+	display: inline;
+	padding: 2px 4px;
+  @include txt-mono;
+	word-break: normal;
+	color: color('black');
+	background-color: color('iron');
+	font-size: 0.9em;
+}
+
+@mixin txt-mono-block {
+	display: block;
+  @include txt-mono;
+	background-color: color('whisper');
+}
+
+@mixin txt-strong {
+	font-weight: bold;
+}
+
+@mixin txt-center {
+	text-align: center;
+}
+
+@mixin txt-uppercase {
+	text-transform: uppercase;
+}

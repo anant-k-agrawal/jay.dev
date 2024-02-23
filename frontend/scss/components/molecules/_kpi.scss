@@ -1,0 +1,64 @@
+/*
+
+######################
+### MOLECULE: KPI ###
+######################
+
+### INFO:
+
+The KPI molecule is a combination of icon, headline and text atoms.
+The size of the icon should be 2 (small), the headline should be h1 (xxlarge) and text should be 4 (large).
+
+*/
+
+@import '../atoms/_text.scss';
+@import '../atoms/_icon.scss';
+@import '../atoms/_color.scss';
+
+@mixin kpi {
+  position: relative;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+}
+
+@mixin kpi-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 1.5em 1em;
+}
+
+@mixin kpi-fluid {
+  padding-bottom: 0;
+}
+
+@mixin kpi-fluid-content {
+  position: static;
+}
+
+@mixin kpi-icon {
+  @include ico-2;
+  @include ico-white;
+}
+
+@mixin kpi-number {
+  @include txt;
+  @include txt-strong;
+  @include txt-font-accent;
+  @include color-white;
+  display: block;
+  font-size: 3em;
+  line-height: 1em;
+}
+
+@mixin kpi-text {
+  @include txt;
+  @include txt-p;
+  @include txt-strong;
+  line-height: 1em;
+}
