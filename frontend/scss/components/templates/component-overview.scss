@@ -1,0 +1,163 @@
+/*
+
+####################################
+### TEMPLATE: component overview ###
+####################################
+
+### INFO:
+
+*/
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+@import '../atoms/_text.scss';
+@import '../atoms/_color.scss';
+@import '../atoms/_headline.scss';
+
+@import '../templates/_default.scss';
+
+body {
+  background-color: color('whisper');
+}
+
+.#{template('component-overview')} {
+  .#{utility('container')} {
+    @include container;
+    @include container-nogap;
+  }
+
+  .#{utility('content')},
+  .#{utility('help')} {
+    grid-column: 1;
+    position: relative;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    background: color('white');
+    @include content-shadow;
+
+    @media (min-width: 768px) {
+      grid-column: 9 / 25;
+    }
+
+    @media (min-width: 1024px) {
+      grid-column: 6 / 25;
+    }
+
+    .#{atom('sidebar-toggle-label')}{
+      margin-left: -25px;
+
+      @media (min-width: 768px) {
+        margin-left: -30px;
+      }
+    }
+
+  }
+
+  .#{utility('sidebar')} {
+    @include sidebar;
+  }
+
+  .#{utility('toc')} {
+    @include toc;
+  }
+
+  .#{utility('sidebar')} + .#{utility('content')},
+  .#{utility('toc')} + .#{utility('content')} {
+    @include content-with-sidebar;
+  }
+
+  .#{utility('benefits--list')} {
+    @media (min-width: 1024px){
+      display: flex;
+    }
+
+    .#{molecule('benefit')} {
+      margin: 20px 0;
+
+      @media (min-width: 768px){
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &-anchor-list {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 2;
+    top: 90px;
+    padding: 20px 30px 20px 30px;
+    margin: 2em -30px;
+    text-align: center;
+    background: linear-gradient(to bottom, color('whisper') 0%, color('whisper') 80%, rgba(250, 250, 252, 0) 100%);
+
+    &-item {
+      @include txt;
+
+      &:not(:last-child):after {
+        color: color('iron');
+        content: " |";
+      }
+    }
+  }
+
+  .#{organism('teaser')} {
+    &-grid-list {
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      .#{molecule('teaser-component')} {
+        @media (max-width: 559px){
+          margin: 0 0 2em 0;
+        }
+        .#{molecule('teaser')} {
+          &-header {
+            align-items: flex-end;
+            padding-bottom: 10px;
+            padding-top: 30px;
+            height: auto;
+            &-title {
+              font-size: 1.125em;
+            }
+          }
+          &-content {
+            padding: 1.25em;
+          }
+        }
+      }
+      &-anchor {
+        position: relative;
+        top: -180px;
+        &:target::before {
+          height: 0;
+          margin: 0;
+        }
+      }
+    }
+    &-grid {
+      margin-bottom: 10px;
+    }
+  }
+
+  .#{utility('card-grid')} {
+    padding: 0;
+    margin: 0;
+
+    h2 {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  .#{organism('card-grid')} {
+    &-card {
+      .#{molecule('lnk')} {
+        padding: 0;
+      }
+      .#{molecule('lnk')}:last-of-type {
+        padding: 0 0 10px 0;
+      }
+    }
+  }
+}

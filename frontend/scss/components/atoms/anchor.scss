@@ -1,0 +1,18 @@
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+@import './_text';
+@import './_color';
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: color('blue-ribbon');
+
+	code {
+		@include txt-mono-inline;
+		@include color-blue-ribbon;
+	}
+}

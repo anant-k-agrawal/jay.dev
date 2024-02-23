@@ -1,0 +1,76 @@
+{# Always assume doc.author and doc.translator are GitHub handles #}
+{% if doc.author %}
+<section class="ap--content">
+  <hr>
+  {% do doc.styles.addCssFile('/css/components/molecules/mini-card.css') %}
+  {% do doc.styles.addCssFile('/css/components/organisms/mini-card-list.css') %}
+  <ul class="ap-o-mini-card-list">
+    <li class="ap-o-mini-card-list-item">
+      <div class="ap-m-mini-card">
+        {% set authors = doc.author if doc.author is iterable and doc.author is not string else [doc.author] %}
+        {% for author in authors %}
+          <amp-img
+            alt="Author avatar"
+            src="https://github.com/{{ author }}.png?size=38"
+            width="38"
+            height="38"
+            class="large"
+            style="max-width: 38px"
+            layout="responsive">
+          </amp-img>
+        {% endfor %}
+
+        <span>
+          <strong>Written by 
+          {% for author in authors %}
+            <a href="https://github.com/{{ author }}" rel="nofollow" target="_blank">
+              @{{ author }}
+            </a>
+          {% if doc.author|length == 2 and loop.first %}
+           and 
+          {% elif doc.author|length != 2 and not loop.last %}
+          , 
+          {% endif %}
+          {% endfor %}
+          </strong>
+
+          {% if doc.contributors %}
+          <br>
+          <small>
+            with contributions from 
+            {% for contributor in doc.contributors %}
+            <strong>
+              <a href="https://github.com/{{ contributor }}" rel="nofollow" target="_blank">
+                @{{ contributor }}
+              </a>
+            </strong>
+            {% if doc.contributors|length == 2 and loop.first%}
+             and 
+            {% elif doc.contributors|length != 2 and not loop.last %}
+            , 
+            {% endif %}
+            {% endfor %}
+          </small>
+        {% endif %}
+        </span>
+
+      </a>
+    </li>
+    {% if doc.translator %}
+    <li class="ap-o-mini-card-list-item">
+      <a href="https://github.com/{{ doc.translator }}" rel="nofollow" class="ap-m-mini-card" target="_blank">
+        <amp-img
+          alt="Author avatar"
+          src="https://github.com/{{ doc.translator }}.png?size=38"
+          width="38"
+          height="38"
+          style="max-width: 38px"
+          layout="intrinsic">
+        </amp-img>
+        <span>Translated by <strong>@{{ doc.translator }}</strong></span>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</section>
+{% endif %}
