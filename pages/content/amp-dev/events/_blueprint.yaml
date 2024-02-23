@@ -1,0 +1,11 @@
+$view: /views/default.j2
+$title@: Events
+$path: /events/{base}.html
+$localization:
+  path: /{locale}/events/{base}.html
+$order: 4
+
+index: /content/amp-dev/events/amp-fest-2020.html
+flyout:
+    - /content/amp-dev/events/amp-fest-2020.html
+    - /content/amp-dev/events/amp-roadshow.html

@@ -1,0 +1,837 @@
+overview:
+  - title: What is the Accelerated Mobile Pages project?
+    answer: |
+      The Accelerated Mobile Pages (AMP) Project is an open source initiative that came out of discussions between publishers and technology companies about the need to improve the entire mobile content ecosystem for everyone -- publishers, consumer platforms, advertisers, creators, and users.
+
+      Today, the expectation is that content should load super fast and be easy to explore. The reality is that content can take several seconds to load, or, because the user abandons the slow page, never fully loads at all. Accelerated Mobile Pages are web pages designed to load near instantaneously -- they are a step towards a better mobile web for all.
+  - title: What are the benefits of Accelerated Mobile Pages?
+    answer: |
+      Speed matters and instant is the ideal. Research has shown higher bounce rates associated with slower-loading web pages. Using the AMP format will make it far more compelling for people to consume and engage with more content. But this isn’t just about speed and performance. We also want to promote enhanced distribution so that publishers and advertisers can take advantage of the open web’s potential for their content to appear everywhere quickly -- across platforms and apps -- which can lead to more revenue.
+  - title: How do Accelerated Mobile Pages work?
+    answer: |
+      Accelerated Mobile Pages are just like any other HTML page, but with a limited set of allowed technical functionality that is defined and governed by the open source AMP spec. Just like all web pages, Accelerated Mobile Pages will load in any modern browser or app webview.
+
+      AMP files take advantage of various technical and architectural approaches that prioritize speed to provide a faster experience for users. AMP developers can use a rich and growing library of web components that offer the ability to embed rich media objects like video and social posts, display advertising, or collect analytics. The goal is not to homogenize how content looks and feels, but instead to build a more common technical core between pages that speeds up load times.
+
+      In addition, AMP files can be cached in the cloud in order to reduce the time content takes to get to a user’s mobile device. By using the AMP format, content producers are making the content in AMP files available to be cached by third parties. Under this type of framework, publishers and advertisers continue to control their content, but platforms can easily cache or mirror the content for optimal delivery speed to users. Google has provided the [Google AMP Cache](https://developers.google.com/amp/cache/) that can be used by anyone at no cost, and all AMPs will be cached by the Google AMP Cache. Other companies may build their own AMP cache as well.
+
+      In summary, the goal is that the combination of limited technical functionality with a distribution system built around caching will lead to better performing pages, and increased audience development.
+  - title: Why does the Accelerated Mobile Pages Project take an open source approach?
+    answer: |
+      The companies involved in the project want to make the mobile web work better for all -- not just for one platform, one set of technologies, or one set of publishers, or one set of advertisers. Making the project open source enables people to share and contribute their ideas and code for making the mobile web fast. We are just at the beginning of that journey and we look forward to other publishers, advertisers and technology companies joining along the way.
+  - title: Who can use Accelerated Mobile Pages?
+    answer: |
+      The project is open to all players in the ecosystem - publishers, consumer platforms, advertisers and creators. To get an idea who some of the companies and sites are who use AMP, head to the [Who page](/support/faqs/supported-platforms.html).
+  - title: What are the consequences of using Accelerated Mobile Pages?
+    answer: |
+      By using the AMP format, content producers are making the content in AMP files available to be crawled, indexed & displayed (subject to the robots exclusion protocol) and cached by third parties.
+  - title: What responsibilities do I have when using Accelerated Mobile Pages?
+    answer: |
+      If a publisher or advertiser collects data from users who view its AMP pages, such data collection is governed by their privacy policy.  It is the publisher or advertiser’s responsibility to disclose its privacy policy, ideally by including a link to it within each of their AMP pages.
+
+      Furthermore, the laws in many jurisdictions, such as in the European Union, require a website to give visitors information about cookies and other forms of local storage used on the site (including AMP pages). In many cases, these laws also require that the website obtain consent.  It is the website's responsibility to determine, based on its use of cookies, what type of notice would be appropriate.  Additional information and tools for generating cookie notices can be found at www.cookiechoices.org.  Note that the AMP component [amp-user-notification](/docs/reference/components/amp-user-notification.html) provides a way to display a dismissable notification to the user.
+
+      If an AMP page is shown within a viewer on a third party platform, such as a Google AMP Viewer on Google Search, the viewer may be a hybrid environment in which the AMP page and the third party platform may each collect data about the user.  In such a case, data collection by each party is governed by that party’s privacy policy (i.e., in a hybrid viewer environment, data collected by the AMP page is governed by its privacy policy and data collected by the third party platform is governed by the platform’s privacy policy).  It is each party’s responsibility to disclose its privacy policy and comply with relevant data regulations, including European laws relating to its use of cookies.
+  - title: What type of content works best using Accelerated Mobile Pages?
+    answer: |
+      The goal is for all content, from news stories to videos and from blogs to commerce pages and GIFs, to work using Accelerated Mobile Pages.
+  - title: Does making my content work for Accelerated Mobile Pages entail more work?
+    answer: |
+      In short, not much. Since “AMP HTML” is built entirely out of existing web technologies, the development process mirrors the one publishers  and advertisers are already using today. Publishers  and advertisers can familiarize themselves with the [AMP HTML specification](/docs/fundamentals/spec.html) on GitHub. For those used to the current process, we don’t expect a significant learning curve.
+  - title: How can a publisher or advertiser get content into AMP HTML?
+    answer: |
+      Publishers and Content Management System (CMS) providers can develop an integration with their CMS to generate AMP content. Automattic has already published a [WordPress AMP plugin](https://wordpress.org/plugins/amp/) and we hope that all content management systems will add support for AMP HTML pages.
+  - title: Is AMP only for mobile?
+    answer: |
+      AMP was designed with responsiveness in mind, to work across *all* screen sizes.  However, some features for third-party platforms (e.g., Google's Top Stories carousel) may only be designed for the mobile experience.  Check with the third-party platform for how they use AMP.  For more information about mobile and desktop AMP pages, see Paul Bakaus' blog post on [About that ‘mobile’ in Accelerated Mobile Pages](https://paulbakaus.com/2016/07/01/about-that-mobile-in-accelerated-mobile-pages/).
+platform_involvement:
+  - title: How can a consumer platform get involved in Accelerated Mobile Pages?
+    answer: |
+      The project is open to everyone, and existing members of the project are very enthusiastic to engage with consumer platforms on the initiative. Google has opened its cache for use for free by anyone, including to consumer platforms that would like to display AMP content in their environment. Please get in touch via [GitHub](https://github.com/ampproject/amphtml/issues/new) and we will address your questions as quickly as we can.
+  - title: How can an advertising or technology vendor get involved in Accelerated Mobile Pages?
+    answer: |
+      Please review the [contributing guidelines](https://github.com/ampproject/amphtml/tree/main/3p#ads) and get in touch via [GitHub](https://github.com/ampproject/amphtml/issues/new).
+publisher_monetization:
+  - title: How does advertising work on Accelerated Mobile Pages?
+    answer: |
+      A goal of the Accelerated Mobile Pages Project is to ensure effective ad monetization on the mobile web while embracing a user-centric approach. There is currently support for a comprehensive range of ad formats, ad networks and technologies in Accelerated Mobile Pages. As part of that, those involved with the project are also engaged in crafting Sustainable Ad Practices to ensure that ads in AMP files are fast, safe, compelling and effective for users.
+  - title: Are publishers able to sell their own ad inventory?
+    answer: |
+      Yes, as with their existing websites, publishers control their ad inventory and how they sell it.
+  - title: How do subscriptions and paywalls work with Accelerated Mobile Pages?
+    answer: |
+      It is a core objective of the Accelerated Mobile Pages project to support subscriptions and paywalls. AMP currently supports a flexible access framework where publishers can control the document viewing experience for subscribers, metered users and anonymous users.
+  - title: How are analytics being handled in this AMP format?
+    answer: |
+      Ensuring publishers are able to get robust analytics insight is a core design goal for the project. AMP currently supports the collection of analytics information using features like amp-analytics, which can integrate with 3rd party systems without compromising the AMP file speed or size. Several analytics providers are [participating](/support/faqs/supported-platforms.html#analytics) in the project.
+  - title: Do publishers receive credit for the traffic from a measurement perspective?
+    answer: |
+      Yes, an AMP file is the same as the rest of your site – this space is the publisher’s canvas.
+  - title: How do I become a part of this project?
+    answer: |
+      We welcome interested individuals and companies who want to get involved to get in touch via [GitHub](https://github.com/ampproject/amphtml/issues/new), so that we can add you to a distribution list and keep you posted on any new information.
+platform_and_vendor_partners:
+  - title: Ads
+    id: ads
+    list:
+      - label: 1wo
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/1wo.md
+      - label: 24smi
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/24smi.md
+      - label: A8net
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/a8.md
+      - label: A9
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/a9.md
+      - label: AccessTrade
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/accesstrade.md
+      - label: Ad.Agio - Neodata Group
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adagio.md
+      - label: Adblade
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adblade.md
+      - label: AdButler
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adbutler.md
+      - label: Adform
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adform.md
+      - label: AdFox
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adfox.md
+      - label: Ad Generation
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adgeneration.md
+      - label: AdGlare
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adglare.md
+      - label: Adhese
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adhese.md
+      - label: AdinCube
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adincube.md
+      - label: ADITION technologies AG
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adition.md
+      - label: Adman
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adman.md
+      - label: Admanmedia
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/admanmedia.md
+      - label: Admixer
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/admixer.md
+      - label: Adnuntius
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adnuntius.md
+      - label: AdOcean
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adocean.md
+      - label: Adop
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adop.md
+      - label: AdPicker
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adpicker.md
+      - label: AdPlugg
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adplugg.md
+      - label: Adpon
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adpon.md
+      - label: Adpushup
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adpushup.md
+      - label: AdReactor
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adreactor.md
+      - label: AdSensor
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adsensor.md
+      - label: AdServSolution
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adservsolutions.md
+      - label: AdsLoom
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adsloom.md
+      - label: AdsNative
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adsnative.md
+      - label: AdSpeed
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adspeed.md
+      - label: AdSpirit
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adspirit.md
+      - label: AdStir
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adstir.md
+      - label: AdStyle
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adstyle.md
+      - label: AdTech
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adtech.md
+      - label: Adtelligent
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adtelligent.md
+      - label: AdThrive
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adthrive.md
+      - label: AdUnity
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adunity.md
+      - label: AdUp Technology
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/aduptech.md
+      - label: Adventive
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adventive.md
+      - label: Adverline
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adverline.md
+      - label: Adverticum
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adverticum.md
+      - label: AdvertServe
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/advertserve.md
+      - label: Adyoulike
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/adyoulike.md
+      - label: AffiliateB
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/affiliateb.md
+      - label: AJA
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/aja.md
+      - label: AMoAd
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/amoad.md
+      - label: Aniview
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/aniview.md
+      - label: AnyClip
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/anyclip.md
+      - label: AppNexus
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/appnexus.md
+      - label: AppVador
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/appvador.md
+      - label: Atomx
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/atomx.md
+      - label: Baidu
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/baidu.md
+      - label: BeaverAds
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/beaverads.md
+      - label: Bidtellect
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/bidtellect.md
+      - label: Blade
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/blade.md
+      - label: brainy
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/brainy.md
+      - label: Bringhub
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/bringhub.md
+      - label: Broadstreet Ads
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/broadstreetads.md
+      - label: ByPlay
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/byplay.md
+      - label: CA A.J.A. Infeed
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/caajainfeed.md
+      - label: Rambler&Co
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/capirs.md
+      - label: CA ProFit-X
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/caprofitx.md
+      - label: Cedato
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/cedato.md
+      - label: Colombia
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/colombia.md
+      - label: CONATIVE
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/conative.md
+      - label: Connatix
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/connatix.md
+      - label: Content.ad Inline Ad
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/contentad.md
+      - label: Criteo
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/criteo.md
+      - label: Custom Search Ads
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/csa.md
+      - label: Dable
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/dable.md
+      - label: Digiteka
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/digiteka.md
+      - label: Directadvert
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/directadvert.md
+      - label: DistroScale
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/distroscale.md
+      - label: DotAndAds
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/dotandads.md
+      - label: DynAd
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/dynad.md
+      - label: eADV
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/eadv.md
+      - label: Empower
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/empower.md
+      - label: Engageya
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/engageya.md
+      - label: Basic
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/epeex.md
+      - label: e-planning
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/eplanning.md
+      - label: Ezoic
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/ezoic.md
+      - label: FlexOneELEPHANT
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/f1e.md
+      - label: F1H
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/f1h.md
+      - label: FeedAd
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/feedad.md
+      - label: felmat
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/felmat.md
+      - label: finative
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/finative.md
+      - label: FirstImpression.io
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/firstimpression.md
+      - label: Flite
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/flite.md
+      - label: fluct
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/fluct.md
+      - label: Fork Media
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/forkmedia.md
+      - label: FreeWheel
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/freewheel.md
+      - label: Fusion
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/fusion.md
+      - label: Geniee SSP
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/genieessp.md
+      - label: Giraff
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/giraff.md
+      - label: Glomex
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/glomex.md
+      - label: GMOSSP
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/gmossp.md
+      - label: GumGum
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/gumgum.md
+      - label: Holder
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/holder.md
+      - label: iBILLBOARD AdServer
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/ibillboard.md
+      - label: Idealmedia
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/idealmedia.md
+      - label: Imedia
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/imedia.md
+      - label: IMobile
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/imobile.md
+      - label: Imonomy
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/imonomy.md
+      - label: Improve Digital
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/improvedigital.md
+      - label: Industrybrains
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/industrybrains.md
+      - label: InMobi
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/inmobi.md
+      - label: Innity
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/innity.md
+      - label: Insticator
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/insticator.md
+      - label: Invibes
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/invibes.md
+      - label: Iprom
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/iprom.md
+      - label: Index Exchange AMP RTC
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/ix.md
+      - label: JUBNA
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/jubna.md
+      - label: Kargo
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/kargo.md
+      - label: Ketshwa
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/ketshwa.md
+      - label: Kiosked
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/kiosked.md
+      - label: Kixer
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/kixer.md
+      - label: Kuadio
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/kuadio.md
+      - label: Lentainform
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/lentainform.md
+      - label: Ligatus
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/ligatus.md
+      - label: LockerDome
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/lockerdome.md
+      - label: logly
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/logly.md
+      - label: Example
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/loka.md
+      - label: LuckyAds
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/luckyads.md
+      - label: Macaw
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/macaw.md
+      - label: MADS
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/mads.md
+      - label: MANTIS® Ad Network
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/mantis.md
+      - label: Marfeel
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/marfeel.md
+      - label: Mediaad
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/mediaad.md
+      - label: Media.net
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/medianet.md
+      - label: Mediavine
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/mediavine.md
+      - label: Medyanet
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/medyanet.md
+      - label: Meg
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/meg.md
+      - label: MGID
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/mgid.md
+      - label: MicroAd
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/microad.md
+      - label: Mixi.Media
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/miximedia.md
+      - label: Mixpo
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/mixpo.md
+      - label: Monetizer101
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/monetizer101.md
+      - label: mox.tv
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/mox.md
+      - label: My6sense
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/my6sense.md
+      - label: MyFinance
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/myfinance.md
+      - label: myoffrz
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/myoffrz.md
+      - label: myTarget
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/mytarget.md
+      - label: myWidget
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/mywidget.md
+      - label: nativeroll
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/nativeroll.md
+      - label: Nativery
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/nativery.md
+      - label: Nativo
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/nativo.md
+      - label: Navegg
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/navegg.md
+      - label: Nend
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/nend.md
+      - label: netletix
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/netletix.md
+      - label: Noddus
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/noddus.md
+      - label: Nokta
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/nokta.md
+      - label: Newsroom AI
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/nws.md
+      - label: Oblivki
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/oblivki.md
+      - label: OneAD
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/onead.md
+      - label: OnNetwork
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/onnetwork.md
+      - label: Open AdStream (OAS)
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/openadstream.md
+      - label: OpenX
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/openx.md
+      - label: Opinary
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/opinary.md
+      - label: Outbrain
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/outbrain.md
+      - label: Pixels
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/pixels.md
+      - label: PlayStream
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/playstream.md
+      - label: plista
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/plista.md
+      - label: PolymorphicAds
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/polymorphicads.md
+      - label: popIn
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/popin.md
+      - label: Postquare
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/postquare.md
+      - label: PPStudio
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/ppstudio.md
+      - label: Pressboard
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/pressboard.md
+      - label: PromoteIQ
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/promoteiq.md
+      - label: PubExchange
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/pubexchange.md
+      - label: PubGuru
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/pubguru.md
+      - label: pubmatic
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/pubmatic.md
+      - label: Pubmine
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/pubmine.md
+      - label: puffnetwork
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/puffnetwork.md
+      - label: Pulse
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/pulse.md
+      - label: PulsePoint
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/pulsepoint.md
+      - label: Purch
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/purch.md
+      - label: Quora
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/quoraad.md
+      - label: Rakuten Unified Ads
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/rakutenunifiedads.md
+      - label: Rb.Infox.SG
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/rbinfox.md
+      - label: Rcmwidget
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/rcmwidget.md
+      - label: ReadMo
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/readmo.md
+      - label: Realclick
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/realclick.md
+      - label: recomAD widget
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/recomad.md
+      - label: Recreativ
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/recreativ.md
+      - label: Relap
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/relap.md
+      - label: Relap
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/relappro.md
+      - label: Remixd
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/remixd.md
+      - label: Revcontent
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/revcontent.md
+      - label: RevJet
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/revjet.md
+      - label: Red for Publishers
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/rfp.md
+      - label: RnetPlus
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/rnetplus.md
+      - label: Rubicon Project
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/rubicon.md
+      - label: RUNative
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/runative.md
+      - label: SAS CI 360 Match
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/sas.md
+      - label: Seeding Alliance
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/seedingalliance.md
+      - label: Sekindo
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/sekindo.md
+      - label: Sharethrough
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/sharethrough.md
+      - label: SHE Media
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/shemedia.md
+      - label: Sklik.cz
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/sklik.md
+      - label: SlimCut Media
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/slimcutmedia.md
+      - label: SmartAdServer
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/smartadserver.md
+      - label: smartclip
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/smartclip.md
+      - label: Smi2
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/smi2.md
+      - label: SmileWanted
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/smilewanted.md
+      - label: Sogou
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/sogouad.md
+      - label: Sona
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/sona.md
+      - label: Sortable
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/sortable.md
+      - label: sovrn
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/sovrn.md
+      - label: Speakol
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/speakol.md
+      - label: SpotX
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/spotx.md
+      - label: Spring AdTechnology AmpAd Integration
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/springAds.md
+      - label: SSP
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/ssp.md
+      - label: Strossle
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/strossle.md
+      - label: Sulvo
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/sulvo.md
+      - label: SunMedia
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/sunmedia.md
+      - label: SVK Native
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/svknative.md
+      - label: Swoop
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/swoop.md
+      - label: Taboola
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/taboola.md
+      - label: TcsEmotion
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/tcsemotion.md
+      - label: Teads
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/teads.md
+      - label: TE Medya
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/temedya.md
+      - label: Torimochi
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/torimochi.md
+      - label: tracdelight
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/tracdelight.md
+      - label: TripleLift
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/triplelift.md
+      - label: Trugaze
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/trugaze.md
+      - label: UAS
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/uas.md
+      - label: ucfunnel
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/ucfunnel.md
+      - label: Unruly
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/unruly.md
+      - label: UZOU
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/uzou.md
+      - label: Valuecommerce
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/valuecommerce.md
+      - label: VDO.AI
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/vdoai.md
+      - label: VerizonMedia
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/verizonmedia.md
+      - label: video intelligence
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/videointelligence.md
+      - label: VideoNow
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/videonow.md
+      - label: Viralize
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/viralize.md
+      - label: vlyby
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/vlyby.md
+      - label: VMFIve
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/vmfive.md
+      - label: Webedia Adserver
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/webediads.md
+      - label: Weborama
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/weborama.md
+      - label: Whopa InFeed
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/whopainfeed.md
+      - label: Widespace
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/widespace.md
+      - label: Wisteria
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/wisteria.md
+      - label: WP Media (Wirtualna Polska)
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/wpmedia.md
+      - label: Xlift
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/xlift.md
+      - label: yahoo
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/yahoo.md
+      - label: Yahoo Native-Display Ads Federation
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/yahoofedads.md
+      - label: Yahoo JP
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/yahoojp.md
+      - label: Yahoo Native Ads
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/yahoonativeads.md
+      - label: Yandex
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/yandex.md
+      - label: Yektanet
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/yektanet.md
+      - label: Yengo
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/yengo.md
+      - label: Yieldbot
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/yieldbot.md
+      - label: Yieldmo
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/yieldmo.md
+      - label: Yield One
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/yieldone.md
+      - label: YieldPro
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/yieldpro.md
+      - label: Zedo
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/zedo.md
+      - label: Zen
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/zen.md
+      - label: ZergNet
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/zergnet.md
+      - label: Zucks
+        url: https://github.com/ampproject/amphtml/blob/master/extensions/amp-ad/../../ads/vendors/zucks.md
+  - title: Content Platforms
+    id: content-platforms
+    list:
+      - label: Bing
+        url: https://www.bing.com
+      - label: Baidu
+        url: https://www.baidu.com
+      - label: Distributed Media Lab
+        url: https://distributedmedialab.com/
+      - label: Flipboard
+        url: https://flipboard.com
+      - label: Google
+        url: https://google.com
+      - label: Ghost
+        url: https://ghost.org
+      - label: Hatena
+        url: https://www.hatena.com
+      - label: LinkedIn
+        url: https://www.linkedin.com
+      - label: Medium
+        url: https://medium.com
+      - label: Nuzzel
+        url: http://nuzzel.com
+      - label: Pinterest
+        url: https://pinterest.com
+      - label: Reddit
+        url: https://www.reddit.com
+      - label: Sogou
+        url: https://www.sogou.com
+      - label: Tencent qZone
+        url: https://qzone.qq.com
+      - label: Twitter
+        url: https://twitter.com
+      - label: Weibo
+        url: https://weibo.com
+      - label: Yahoo JP
+        url: https://www.yahoo.co.jp/
+  - title: CMS
+    id: cms
+    list:
+      - label: AMPize.me
+        url: https://www.ampize.me
+      - label: Arc Publishing
+        url: https://www.arcpublishing.com
+      - label: Canvas
+        url: https://www.roya.com/blog/roya-announces-addition-of-amp-to-canvas-cms-amp.html
+      - label: Drupal
+        url: https://www.drupal.org/project/amp
+      - label: Fastcommerce
+        url: https://www.fastcommerce.com.br/accelerated-mobile-pages-amp
+      - label: Hatena
+        url: http://help.hatenablog.com/entry/amp
+      - label: Kentico
+        url: https://github.com/Kentico/kentico-amp
+      - label: Marfeel
+        url: https://atenea.marfeel.com/atn/product/marfeel-press/360-platform/google-amp/marfeel-s-accelerated-mobile-pages-google-amp-solution
+      - label: Quintype
+        url: https://www.quintype.com/
+      - label: Rabbit
+        url: https://gomobile.jp/rabbit/
+      - label: RebelMouse
+        url: https://www.rebelmouse.com/AMP/
+      - label: Squarespace
+        url: https://support.squarespace.com/hc/en-us/articles/223766868-Using-AMP-with-Squarespace
+      - label: Textpattern
+        url: https://textpattern.com/weblog/401/textpattern-website-redesign/amp
+      - label: TownNews
+        url: https://www.townnews365.com/
+      - label: Tumblr
+        url: https://www.tumblr.com/about
+      - label: WordPress.com
+        url: https://en.support.wordpress.com/google-amp-accelerated-mobile-pages/
+      - label: WordPress.org
+        url: https://wordpress.org/plugins/amp/
+  - title: Audio/Video
+    id: audio-video
+    list:
+      - label: 3Q SN
+        url: https://www.3qsdn.com/
+      - label: AOL O2
+        url: http://on.aol.com/
+      - label: Beachfront Reach
+        url: http://beachfrontreach.com/
+      - label: Brid.tv
+        url: https://www.brid.tv/
+      - label: Brightcove
+        url: https://www.brightcove.com/
+      - label: Dailymotion
+        url: http://www.dailymotion.com/
+      - label: Gfycat
+        url: https://gfycat.com/
+      - label: Hulu
+        url: https://www.hulu.com/
+      - label: Izlesene
+        url: https://www.izlesene.com/
+      - label: JW Player
+        url: https://www.jwplayer.com/
+      - label: Kaltura
+        url: https://corp.kaltura.com/
+      - label: nexxOMNIA
+        url: https://www.nexx.tv/
+      - label: Ooyala
+        url: https://www.ooyala.com/
+      - label: Soundcloud
+        url: https://soundcloud.com/
+      - label: Springboard
+        url: http://springboardplatform.com/
+      - label: Vimeo
+        url: https://vimeo.com/
+      - label: Vine
+        url: https://vine.co/
+      - label: YouTube
+        url: https://www.youtube.com/
+  - title: Real Time Config
+    id: rtc
+    list:
+      - label: APS (Amazon Publishing Service)
+        url: https://aps.amazon.com/aps/index.html
+      - label: Automatad
+        url: https://automatad.com/
+      - label: Criteo
+        url: https://www.criteo.com/
+      - label: FLUX
+        url: https://flux-g.com/
+      - label: IndexExchange
+        url: https://www.indexexchange.com/
+      - label: Lotame
+        url: https://www.lotame.com/
+      - label: Media.net
+        url: https://www.media.net/
+      - label: PubMatic OpenWrap
+        url: https://pubmatic.com/
+      - label: Rubicon
+        url: https://rubiconproject.com/
+      - label: Salesforce
+        url: https://www.salesforce.com/
+      - label: Yieldbot
+        url: https://www.nexx.tv/
+      - label: Kargo
+        url: https://kargo.com/
+      - label: Xandr (formerly Appnexus)
+        url: https://www.xandr.com/
+      - label: Yieldlab
+        url: https://www.yieldlab.com/
+supported_browsers:
+  - title: Chrome
+    img: /static/img/platforms/chrome.png
+  - title: Firefox
+    img: /static/img/platforms/firefox.png
+  - title: Edge
+    img: /static/img/platforms/edge.png
+  - title: Safari
+    img: /static/img/platforms/safari.png
+  - title: Opera
+    img: /static/img/platforms/opera.png
+  - title: UC Browser
+    img: /static/img/platforms/uc_browser.png
+email:
+  clients:
+    title: Email Clients
+    list:
+      - label: Gmail
+        url: https://developers.google.com/gmail/ampemail/
+        image:
+          src: /static/img/email-clients/gmail.png
+      - label: Mail.ru
+        url: https://postmaster.mail.ru/amp
+        image:
+          src: /static/img/email-clients/mailru.png
+      - label: Yahoo Mail
+        url: https://developer.verizonmedia.com/mail/amp-for-email/
+        image:
+          src: /static/img/email-clients/yahoo-mail.png
+  partners:
+    - title: Email Platforms and Service Providers (ESPs)
+      id: esp
+      list:
+        - label: Adobe Campaign Classic
+          url: https://www.adobe.com/marketing/campaign.html
+        - label: Amazon Pinpoint
+          url: https://aws.amazon.com/pinpoint/
+        - label: Amazon Simple Email Service (SES)
+          url: https://aws.amazon.com/ses/
+        - label: AWeber
+          url: https://www.aweber.com/
+        - label: Blueshift
+          url: https://blueshift.com/
+        - label: Braze
+          url: https://www.braze.com/
+        - label: Cheetah Digital
+          url: https://www.cheetahdigital.com/
+        - label: Clang
+          url: https://www.e-village.com/clang/
+        - label: Copernica
+          url: https://www.copernica.com/
+        - label: Customer.io
+          url: https://customer.io/
+        - label: dotdigital
+          url: https://dotdigital.com/
+        - label: Elastic Email
+          url: https://elasticemail.com/
+        - label: eSputnik
+          url: https://esputnik.com/
+        - label: ExpressPigeon
+          url: https://expresspigeon.com/amp-dynamic-email
+        - label: Iterable
+          url: https://iterable.com/
+        - label: Klaviyo
+          url: https://www.klaviyo.com/
+        - label: MagNews
+          url: https://www.magnews.com/
+        - label: Mailrelay
+          url: https://mailrelay.com/
+        - label: Mapp Cloud
+          url: https://mapp.com/
+        - label: Maileon
+          url: https://www.maileon.com
+        - label: Mailgun
+          url: https://www.mailgun.com/
+        - label: Mailkit
+          url: https://www.mailkit.com/
+        - label: MessageGears
+          url: https://messagegears.com/
+        - label: MindBox
+          url: https://mindbox.cloud/
+        - label: MoonMail
+          url: https://www.moonmail.io
+        - label: Pepipost
+          url: https://pepipost.com/
+        - label: Salesforce
+          url: https://www.salesforce.com/
+        - label: SendPulse
+          url: https://sendpulse.com/
+        - label: SocketLabs
+          url: https://www.socketlabs.com/
+        - label: SparkPost
+          url: https://www.sparkpost.com/
+        - label: Tripolis
+          url: https://www.tripolis.com/
+        - label: Twilio SendGrid
+          url: https://www.twilio.com/sendgrid

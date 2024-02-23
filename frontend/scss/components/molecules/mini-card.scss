@@ -1,0 +1,53 @@
+/*
+
+###########################
+### MOLECULE: mini-card ###
+###########################
+
+*/
+
+@import '_extends.scss';
+@import '_functions.scss';
+@import '_mixins.scss';
+@import '_variables.scss';
+
+@import 'components/atoms/_color.scss';
+@import 'components/atoms/_text.scss';
+
+.#{molecule('mini-card')} {
+  @include txt;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 8px 16px 8px 8px;
+  margin: 0 0 10px;
+  box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  background: color('white');
+
+  amp-img {
+    width: 35px;
+    display: inline-block;
+    border: 1px solid color('athens-gray');
+    border-radius: 100%;
+    &.large {
+      width: 38px;
+      flex-shrink: 0;
+    }
+  }
+
+  span {
+    padding-left: 10px;
+    // just for the case if the small mini-card item gets two lines
+    line-height: 1.3em;
+  }
+
+  strong  {
+    @include txt-strong;
+  }
+
+  @media (max-width: 374px) {
+    font-size: .75em;
+  }
+}

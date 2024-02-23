@@ -1,0 +1,9 @@
+$title@: Support
+$view: /views/overview/support.j2
+$path: /support/{base}.html
+$localization:
+  path: /{locale}/support/{base}.html
+$order: 999
+flyout:
+  - /content/amp-dev/support/index.md
+  - /content/amp-dev/support/faq/index.html

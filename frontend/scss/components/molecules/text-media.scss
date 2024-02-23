@@ -1,0 +1,45 @@
+/*
+
+############################
+### MOLECULE: text-media ###
+############################
+
+### INFO:
+
+### MODIFIERS:
+
+*/
+
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+@import '../atoms/_headline';
+
+.#{molecule('text-media')} {
+
+  &.bg-gray, &.bg-gradient {
+    &:before {
+      @media (max-width: 767px) {
+        margin-top: 18%;
+      }
+    }
+
+    div {
+      margin-top: 10%;
+    }
+  }
+
+  &.bg-gray {
+    &:before {
+      background: color('athens-gray');
+    }
+  }
+
+  &.bg-gradient {
+    &:before {
+      background: linear-gradient(to right, color('blue-ribbon'), color('robins-egg'));
+    }
+  }
+}

@@ -1,0 +1,34 @@
+# If you would like to upload your .git directory, .gitignore file or files
+# from your .gitignore file, remove the corresponding line
+# below:
+.git
+.gitignore
+.github
+.cache
+.husky
+
+node_modules
+yarn.lock
+LICENSE
+MAINTENANCE.md
+README.md
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+packager/
+thumbor/
+frontend/
+frontend21/
+tests/
+artifacts/
+
+pages/static/
+pixi/dist/
+templates/
+
+# Infrastructure
+contributing
+jest.config.js
+smoke-tests
+renovate.json
+scripts
+tests

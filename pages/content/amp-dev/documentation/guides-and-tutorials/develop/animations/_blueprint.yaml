@@ -1,0 +1,10 @@
+$view: /views/detail/docs-detail.j2
+$path: /documentation/guides-and-tutorials/develop/animations/{base}.html
+$localization:
+  path: /{locale}/documentation/guides-and-tutorials/develop/animations/{base}.html
+$title@: Animate & Transition
+$order: 3
+
+formats:
+  - websites
+  - ads
