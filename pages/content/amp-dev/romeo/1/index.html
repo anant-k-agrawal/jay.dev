@@ -1,0 +1,35 @@
+---
+$title: Community
+$view: /views/2021/base.html
+$path: /1/index.html
+$localization:
+  path: /{locale}/1/{base}.html
+
+flyout:
+  description: Snackable Stories for everyone
+  icon: amp-stories
+---
+{% do doc.styles.addCssFile('css/components/templates/roadmap.css') %}
+
+<main class="ap--main ap-t-roadmap">
+  <section class="ap--stage ap--container-fluid">
+    {% do doc.styles.addCssFile('css/components/organisms/stage.css') %}
+    <div class="ap-o-stage">
+      <div class="ap--container-fluid">
+        <div class="ap-o-stage-content">
+          <h1 class="ap-o-stage-content-headline">{{ _('The latest news') }}</h1>
+        </div>
+        <div class="ap-o-stage-image">
+          {% do doc.icons.useIcon('icons/roadmap-header.svg') %}
+          <svg style="height: 80%; width: 100%;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#roadmap-header"></use></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ap-t-roadmap-intro">
+    <p class="ap-t-roadmap-intro-text">
+    {{ _('As a source for breaking news and information, Web Stories allow us to showcase our quality journalism when there are multiple elements we want to bring together. Combining reporting, photography, videos and motion graphics, this gives readers a more visual entry point when they are searching for our coverage.') }}
+    </p>
+  </section>
+</main>

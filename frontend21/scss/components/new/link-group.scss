@@ -1,0 +1,8 @@
+.#{organism('link-group')} {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .#{molecule('lnk')} {
+    padding-bottom: 0;
+  }
+}

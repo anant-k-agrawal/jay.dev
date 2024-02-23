@@ -1,0 +1,91 @@
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+@import '_text.scss';
+@import './_color';
+
+
+.#{utility('content')},
+.#{utility('section')} {
+  .intro {
+    @include txt-1;
+    padding: 0;
+
+    * {
+      font-size: inherit;
+    }
+  }
+
+  p {
+    @include txt;
+    @include txt-p;
+    @include txt-1;
+
+  	small {
+  		@include txt-2;
+  	}
+  }
+
+  code {
+    @include txt-mono-inline;
+  }
+
+  p, code {
+    overflow-wrap: break-word;
+  }
+
+  a {
+    position: relative;
+    z-index: 10;
+
+    code {
+      @include color-blue-ribbon;
+      z-index: -1;
+    }
+  }
+
+  pre {
+    @include txt-mono;
+    @include txt-1;
+    white-space: pre-wrap;
+  }
+
+  & > ul,
+  & > ol {
+    @include txt;
+    @include txt-p;
+    padding-left: 2em;
+    margin: 1.5em 0 1.5em;
+
+    ul,
+    ol {
+      padding-left: 2em;
+      margin: 0;
+    }
+
+    li {
+      padding-left: 0.5em;
+
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+
+  figure {
+    figcaption {
+      @include txt;
+      @include txt-3;
+      margin-top: 0.3em;
+    }
+  }
+
+  hr {
+    height: 1px;
+    margin: 0.75em 0;
+    background-color: color('athens-gray');
+    border: none;
+  }
+}

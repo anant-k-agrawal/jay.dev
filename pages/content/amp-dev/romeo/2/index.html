@@ -1,0 +1,34 @@
+---
+$title: Develop
+$view: /views/2021/base.html
+$path: /2/index.html
+$localization:
+  path: /{locale}/2/{base}.html
+
+flyout:
+  description: Super fast ads on the web
+  icon: amp-ads
+---
+{% do doc.styles.addCssFile('css/components/templates/roadmap.css') %}
+
+<main class="ap--main ap-t-roadmap">
+  <section class="ap--stage ap--container-fluid">
+    {% do doc.styles.addCssFile('css/components/organisms/stage.css') %}
+    <div class="ap-o-stage">
+      <div class="ap--container-fluid">
+        <div class="ap-o-stage-content">
+          <h1 class="ap-o-stage-content-headline">{{ _('Advanced Course') }}</h1>
+        </div>
+        <div class="ap-o-stage-image">
+        <amp-img alt="Working Group" width="800" height="435" src="/static/img/working-groups-top-desktop.png" layout="responsive" data-hero=""  ></amp-img>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ap-t-roadmap-intro">
+    <p class="ap-t-roadmap-intro-text">
+    {{ _('You can use CSS to customize your styling and dynamic data to fetch the freshest data where needed.') }}
+    </p>
+  </section>
+</main>

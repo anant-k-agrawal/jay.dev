@@ -1,0 +1,12 @@
+.#{molecule('tutorial-progress')} {
+  position: absolute;
+  top: 0;
+  left: -4px;
+  height: 100%;
+  width: 2px;
+  background-color: color('iron');
+
+  &-finished {
+    background-color: color('japan-laurel');
+  }
+}

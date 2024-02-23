@@ -1,0 +1,67 @@
+{# If the doc has content to render, render it and pluck out the TOC if needed #}
+{% if doc.html %}
+{% include '/views/partials/toc.j2' with context %}
+
+<section class="ap--content">
+  {% include '/views/partials/sidebar-toggle-button.j2' %}
+  {% include '/views/partials/breadcrumbs.j2' %}
+
+  {% if doc.title and doc.view in ['/views/detail/docs-detail.j2'] %}
+  <h1>{{ doc.title }}</h1>
+  {% endif %}
+
+  {% set formats = ['ads', 'email', 'stories', 'websites'] %}
+  {% if (doc.formats|sort or formats) != formats %}
+  {% do doc.styles.addCssFile('css/components/molecules/tip.css') %}
+  [% set availableFormats = {{ doc.formats|tojson }} %]
+  [% if not availableFormats.includes(format) %]
+  <div class="ap-m-tip">
+    <div class="ap-a-ico ap-m-tip-icon">
+      {% do doc.icons.useIcon('icons/warning-sign.svg') %}
+      <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#warning-sign"></use></svg>
+    </div>
+
+    <div class="ap-m-tip-content">
+      <p>{{ _('Important: this documentation is not applicable to your currently selected format') }} <b>[= format =]</b>!</p>
+    </div>
+  </div>
+  [% endif %]
+  {% endif %}
+
+  {% if doc.title and doc.view in ['/views/detail/component-detail.j2'] %}
+  {% include '/views/partials/component-headline.j2' %}
+
+  {% include '/views/partials/component-intro.j2' %}
+  {% endif %}
+
+  {# Adds the level toggle button if leveled: true is set in the frontmatter #}
+  {% if doc.leveled %}
+  {% include '/views/partials/level-toggle.j2' %}
+  {% endif %}
+
+  {{ doc.html|render|safe }}
+</section>
+
+{# If its a empty doc render short information about it #}
+{% else %}
+
+{% do doc.styles.addCssFile('css/components/molecules/tip.css') %}
+<section class="ap--content">
+  {% include '/views/partials/sidebar-toggle-button.j2' %}
+
+  <h1>{{ doc.title }}</h1>
+  <div class="ap-m-tip ap-m-tip-default">
+    <div class="ap-m-tip-content">
+      <h4>Empty space.</h4>
+      <p>For now this page is purposefully empty. Its only purpose is to have something to link to if the real content does not yet exist.</p>
+
+      <div class="ap-m-code-snippet">
+        <pre>
+<span class="l l-Scalar l-Scalar-Plain">view</span><span class="p p-Indicator">: </span><span class="s">"{{ doc.view }}"</span>
+<span class="l l-Scalar l-Scalar-Plain">collection_path</span><span class="p p-Indicator">: </span><span class="s">"{{ doc.collection.collection_path }}{{ doc.collection_path }}"</span>
+        </pre>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

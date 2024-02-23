@@ -1,0 +1,67 @@
+{% do doc.styles.addCssFile('css/components/organisms/case-grid.css') %}
+
+{% set cases = [
+  {
+    'index': 1,
+    'headline': _('Too much choice'),
+    'url': 'https://amp-article.herokuapp.com/',
+    'img': {
+      'src': '/static/img/case-grid-choices.jpg', 'width': 200, 'height': 220
+    }
+  },
+  {
+    'index': 3,
+    'headline': _('Parallax Storytelling in AMP'),
+    'url': 'https://amp-article.herokuapp.com/',
+    'img': {
+      'src': '/static/img/case-grid-data.jpg', 'width': 135, 'height': 99
+    }
+  },
+  {
+    'index': 2,
+    'headline': _('Editorial AMP Article'),
+    'url': 'https://amp-article.herokuapp.com/',
+    'img': {
+      'src': '/static/img/case-grid-education.jpg', 'width': 189, 'height': 125
+    }
+  },
+  {
+    'index': 4,
+    'headline': _('Band Page in AMP'),
+    'url': 'https://amp-concert.herokuapp.com/',
+    'img': {
+      'src': '/static/img/case-grid-band.jpg', 'width': 140, 'height': 121
+    }
+  }
+] %}
+
+{% do doc.icons.useIcon('icons/external.svg') %}
+
+<div class="ap-o-case-grid">
+  {% for case in cases %}
+  <div class="ap-o-case-grid-image ap-o-case-grid-image-{{ case.index }}">
+    <a target="_blank" rel="noopener" href="{{ case.url }}" title="{{ case.headline }}">
+      <div class="ap-o-case-grid-image-info">
+        <h4>{{ case.headline }}</h4>
+        <span class="ap-m-lnk">
+          <div class="ap-a-ico ap-m-lnk-icon">
+            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#external"></use></svg>
+          </div>
+          <span class="ap-m-lnk-text">{{ _('Open Use Case') }}</span>
+        </span>
+      </div>
+      <amp-img src="{{ case.img.src }}" layout="responsive" width="{{ case.img.width }}" height="{{ case.img.height }}" alt="{{ _('Screenshot of use case:') }} {{ case.headline }}"></amp-img>
+    </a>
+  </div>
+  {% endfor %}
+
+  <div class="ap-o-case-grid-link">
+    <a href="{{ g.doc('/content/amp-dev/about/use-cases.html').url.path }}" class="ap-m-lnk ap-m-lnk-square">
+      <div class="ap-a-ico ap-m-lnk-icon">
+        {% do doc.icons.useIcon('icons/internal.svg') %}
+        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#internal"></use></svg>
+      </div>
+      <span class="ap-m-lnk-text">{{ _('See all use cases') }}</span>
+    </a>
+  </div>
+</div>

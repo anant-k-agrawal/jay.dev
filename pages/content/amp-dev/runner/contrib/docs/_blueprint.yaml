@@ -1,0 +1,9 @@
+$title@: Design Templates
+$view: /views/2021/base.html
+$path: /runner/contrib/docs/{base}.html
+$localization:
+  path: /{locale}/runner/contrib/docs/{base}.html
+$order: 1
+
+flyout:
+    - /content/amp-dev/runner/contrib/docs/index.html

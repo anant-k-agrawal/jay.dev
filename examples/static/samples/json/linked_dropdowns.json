@@ -1,0 +1,130 @@
+{
+  "countries": [
+    {
+      "name": "Australia",
+      "cities": [
+        "Brisbane",
+        "Melbourne",
+        "Sydney"
+      ],
+      "citiesForm": [
+        "Perth",
+        "Adelaide",
+        "Cairns"
+      ]
+    },
+    {
+      "name": "Germany",
+      "cities": [
+        "Berlin",
+        "Hamburg",
+        "Munich",
+        "Frankfurt"
+      ],
+      "citiesForm": [
+        "Düsseldorf",
+        "Stuttgart",
+        "Cologne",
+        "Dortmund"
+      ]
+
+    },
+    {
+      "name": "India",
+      "cities": [
+        "Agra",
+        "Bangalore",
+        "Hyderabad"
+      ],
+      "citiesForm": [
+        "Dehli",
+        "Kolkata",
+        "Mumbai"
+      ]
+    },
+    {
+      "name": "Malaysia",
+      "cities": [
+        "George Town",
+        "Johor Bahru",
+        "Kuala Lumpur"
+      ],
+      "citiesForm": [
+        "Kuching",
+        "Ipoh",
+        "Malacca"
+      ]
+
+    },
+    {
+      "name": "New Zealand",
+      "cities": [
+        "Auckland",
+        "Christchurch",
+        "Dunedin"
+      ],
+      "citiesForm": [
+        "Wellington",
+        "Hamilton",
+        "Tauranga"
+      ]
+
+    },
+    {
+      "name": "Saudi Arabia",
+      "cities": [
+        "Jeddah",
+        "Mecca",
+        "Riyadh"
+      ],
+      "citiesForm": [
+        "Medina",
+        "Dammam",
+        "Tabuk"
+      ]
+
+    },
+    {
+      "name": "South Africa",
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg"
+      ],
+      "citiesForm": [
+        "Port Elizabeth",
+        "Pretoria",
+        "Soweto"
+      ]
+
+    },
+    {
+      "name": "United Kingdom",
+      "cities": [
+        "Birmingham",
+        "Leeds",
+        "London"
+      ],
+      "citiesForm": [
+        "Manchester",
+        "Edinburgh",
+        "Bristol"
+      ]
+
+    },
+    {
+      "name": "United States",
+      "cities": [
+        "Chicago",
+        "Houston",
+        "New York"
+      ],
+      "citiesForm": [
+        "Baltimore",
+        "San Francisco",
+        "Austin"
+      ]
+
+    }
+  ]
+}

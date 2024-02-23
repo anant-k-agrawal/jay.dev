@@ -1,0 +1,76 @@
+cards:
+  - icon: icon-flash
+    headline: Web page speed improves the user experience and core business metrics
+    text: AMP pages load near instantly, enabling you to offer a consistently fast experience across all devices and platforms.
+  - icon: icon-build
+    headline: Building AMP pages is easy and reduces developer overhead
+    text: You can often convert your entire archive in days especially if you use a popular CMS such as WordPress or Drupal.
+  - icon: icon-flexible
+    headline: AMP can be applied across various web touch points
+    text: 'Used by popular and global platforms like Google, Bing and Twitter, AMP allows you to ensure users from all these surfaces get an unparalleled, often instantaneous and native-feeling experience by defaulting to AMP pages when available.'
+  - icon: icon-performance
+    headline: Maintain flexibility and control and reduce complexity in your code
+    text: You can use CSS to customize your styling, dynamic data to fetch the freshest data where needed, to build the best possible user experience for your customers.
+  - icon: icon-touch-points
+    headline: Building blocks that ensure performance
+    text: It takes a lot of time and effort to build a great website. AMP components are already optimized for the best performance.
+  - icon: icon-heart
+    headline: Build for a sustainable future in the open web for everyone
+    text: The AMP Project is an open source initiative to protect the future of the web helping everyone deliver a better, faster more user-friendly experience.
+  - icon: icon-flash
+    headline: Web page speed improves the user experience and core business metrics
+    text: AMP pages load near instantly – across all devices and platforms.
+  - icon: icon-build
+    headline: Building AMP pages is easy
+    text: You can often convert your entire archive in days – especially when using common CMS like WordPress or Drupal.
+  - icon: icon-flexible
+    headline: AMP can be applied across various web touch points
+    text: Used by global platforms like Google, Bing and Twitter, AMP allows users a native-feeling experience across all platforms by defaulting to AMP pages when available.
+  - icon: icon-performance
+    headline: Maintain flexibility and control and reduce complexity in your code
+    text: You can use CSS to customize your styling and dynamic data to fetch the freshest data where needed.
+  - icon: icon-touch-points
+    headline: Building blocks that ensure performance
+    text: It takes a lot of time and effort to build a great website. AMP components are already optimized for the best performance.
+  - icon: icon-heart
+    headline: Build for a sustainable future in the open web for everyone
+    text: The AMP Project is an open source initiative to protect the future of the web by delivering a better, faster and more user-friendly experience.
+  - icon: icon-heart
+    headline: Track and measure
+    text: Supports analytics and bookend capabilities for viral sharing and monetization.
+  - icon: icon-flash
+    headline: Robust Advertising Support
+    text: Web Stories enable monetization capability for publishers using full-screen immersive story ads and using affiliate links. For advertisers, Stories is a way to reach a unique audience within a new storytelling experience.
+  - icon: icon-build
+    headline: Create beautiful and engaging content easily
+    text: Web Stories make the production of stories as easy as possible from a technical perspective.
+  - icon: icon-flexible
+    headline: Creative flexibility for editorial freedom and branding
+    text: The Web Stories format comes with preset but flexible layout templates, standardized UI controls, and components for sharing and adding follow-on content.
+  - icon: icon-performance
+    headline: Sharable and linkable on the open web
+    text: Web Stories are part of the open web and can be shared and embedded across sites and apps without being confined to a single ecosystem.
+  - icon: icon-touch-points
+    headline: Measurable viewability
+    text: AMPHTML ads are 6x faster than regular ads on AMP pages, making them more viewable, more effective and more likely to perform well. You can monitor performance and adjust pricing accordingly, and offer the most engaging ad products to optimize your ad placements. In AMP, tweaking your pages to drive higher viewability rate or views is easy for publishers using the ‘data-loading-strategy’ attribute on the `amp-ad` component.
+  - icon: icon-heart
+    headline: Maximize your revenue
+    text: In order to engage with your brand and improve the performance of your campaigns, you have to speed things up. AMP ads load on average 5x faster than the non-AMP version, leading to higher conversion rates. Because AMPHTML ads are 3x lighter, the AMP framework guarantees that these ads only behave as intended so users always have a positive experience with your brand.
+  - icon: icon-flash
+    headline: End to end experience is controlled
+    text: As the owner of your AMP websites and ads, no other parties can modify or add things, ensuring you are in control of the user experience and there won’t be any unexpected surprises. AMP ads are part of a user-first ecosystem and function the way a reasonable user would expect them to. Optimized AMP ads don’t drain the battery life of mobile devices, and clicking on them will lead to AMP pages, which are equally as fast and streamlined.
+  - icon: icon-build
+    headline: Reduce complexity in your operations
+    text: AMP is simple and straightforward and quickly becoming the turnkey solution for building pages. AMP supports both traditional ads, and the faster, more secure AMPHTML ads. Ads on AMP pages are like any external resource and must play within the same constraints placed on all resources in AMP.
+  - icon: icon-flexible
+    headline: Collaborative community
+    text: The AMP Project has a vast network of resources for getting started in the Documentation section including great-looking ad templates, demos and examples. AMPHTML ads are flexible and dynamic, allowing for many creative formats like carousel, parallax, and lightbox, to name a few.
+  - icon: icon-performance
+    headline: Increased personalization
+    text: AMP for email allows exciting smarter and efficient user engagement, as customers can take action directly within their email such as managing their subscriptions, responding to polls, doodles, and bookings. This is possible because the server retrieves fresh content from remote endpoints, keeping email up to date.
+  - icon: icon-touch-points
+    headline: Increased in-mail capabilities
+    text: Senders can include AMP components inside rich, engaging emails, making them dynamic and interactive. Users can engage with content and quickly take action such as RSVP to events, fill out questionnaires and personalize their content. AMP emails are always up to date and can function like digests, with fewer clicks necessary to achieve efficient results.
+  - icon: icon-heart
+    headline: Safe and secure
+    text: AMP for email has no arbitrary 3rd party features to limit security issues, and far surpasses the capabilities currently provided by third party providers. Ad components are not allowed in AMP email, keeping users safe. To maintain users’ expectations of security and privacy, only a conservative subset of AMP functionality will be allowed.

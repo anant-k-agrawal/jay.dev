@@ -1,0 +1,6 @@
+$title: Develop
+$view: /views/default.j2
+$path: /2/{base}.html
+$localization:
+  path: /{locale}/2/{base}.html
+$order: 2

@@ -1,0 +1,6 @@
+$title: Community
+$view: /views/default.j2
+$path: /1/{base}.html
+$localization:
+  path: /{locale}/1/{base}.html
+$order: 1

@@ -1,0 +1,102 @@
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+/*
+
+######################
+### ATOM: headline ###
+######################
+
+### MODIFIERS:
+
+h1 - h6
+  All values in em depending on base font-size of 16 px.
+
+light
+	Changes the text color to light (default is dark).
+
+stories-home
+  Changes text color depending on the destination. Websites text color is white, which has already been delcared with the -light modifier
+
+*/
+// TODO: implement mono font and modifier
+
+@mixin hl {
+  margin-top: 1.5rem;
+  margin-bottom: .75em;
+  font-family: 'Poppins',  system;
+  font-weight: 700;
+  line-height: 1.2em;
+  color: color('charade');
+}
+
+//64px TODO: Rename
+@mixin hl-xxlrg {
+  font-size: 2.125rem;
+
+  @media (min-width: 768px) {
+    font-size: 2.125rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 4.5rem;
+  }
+}
+
+@mixin hl-xlrg {
+  font-size: 1.65rem;
+
+  @media (min-width: 768px) {
+    font-size: 2.125rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 4rem;
+  }
+}
+
+@mixin hl-stage {
+  font-size: 1.65rem;
+
+  @media (min-width: 768px) {
+    font-size: 3.25rem;
+  }
+}
+
+// 56px TODO: Rename
+@mixin hl-lrg {
+  font-size: 2.5rem;
+
+  @media (min-width: 768px) {
+    font-size: 3.5rem;
+  }
+}
+
+@mixin hl-h1 {
+  font-size: 2.2rem;
+  margin-top: 3rem;
+}
+
+@mixin hl-h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+@mixin hl-h3 {
+  font-size: 1.414rem;
+  margin-top: 1.8rem;
+}
+
+@mixin hl-h4 {
+  font-size: 1.2rem;
+}
+
+@mixin hl-h5 {
+  font-size: 1rem;
+}
+
+@mixin hl-h6 {
+  font-size: 1rem;
+}
