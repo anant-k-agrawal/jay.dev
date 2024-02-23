@@ -1,0 +1,68 @@
+/*
+
+#####################
+### MOLECULE: tip ###
+#####################
+
+### INFO:
+
+The tip molecule shows text alongside a contextual icon
+
+*/
+
+@import 'extends';
+@import 'functions';
+@import 'mixins';
+@import 'variables';
+
+@import 'components/atoms/_text.scss';
+@import 'components/atoms/_icon.scss';
+
+.#{molecule('tip')} {
+  display: flex;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background-color: color('athens-gray');
+  border: 1px solid color('iron');
+
+  @media (min-width: 768px) {
+    padding: 30px;
+  }
+
+  code {
+    white-space: normal;
+  }
+
+  &-icon {
+    width: 36px;
+    height: 36px;
+    margin-top: 5px;
+    margin-right: 14px;
+
+    @media (min-width: 768px) {
+      margin-right: 26px;
+    }
+  }
+
+  &-content {
+    @include txt-2;
+    min-width: 0;
+
+    h4 {
+      @include txt-1;
+      margin: 0 0 0.75em;
+    }
+
+    p,
+    ul,
+    ol {
+      @include txt-2;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+  }
+}

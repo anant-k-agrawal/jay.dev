@@ -1,0 +1,40 @@
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+.#{utility('component-visual')} {
+  overflow: hidden;
+  margin-bottom: 7em;
+
+  @media (min-width: 768px) {
+    margin-bottom: 12vw;
+  }
+}
+
+.#{organism('component-visual')} {
+
+  &-copy {
+    grid-column: 4 / 10;
+    order: 2;
+    margin: auto 0;
+
+    @media (min-width: 768px) {
+      order: inherit;
+    }
+  }
+
+  &-link {
+    margin: 3em 1em 0 0;
+  }
+
+  &-image {
+    width: 100%;
+    grid-column: 13 / 25;
+    order: 1;
+
+    @media (min-width: 768px) {
+      order: inherit;
+    }
+  }
+}

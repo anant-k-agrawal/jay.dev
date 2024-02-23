@@ -1,0 +1,96 @@
+/*
+
+####################################
+### MOLECULE: ghost frame mobile ###
+####################################
+
+### INFO:
+
+The ghost frame mobile wraps an element with a mobile-like frame.
+
+*/
+
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+@import '../atoms/_color';
+
+.#{molecule('ghost-frame-mobile')} {
+  background: rgba(color('white'), .9);
+  border-radius: 8px;
+  box-shadow: 0 20px 50px -5px rgba(0, 0, 0, 0.25);
+  width: calc((3/5) * 100%);
+  padding: 8% 4% 5%;
+  position: relative;
+  z-index: 0;
+
+  &.left-flat, &.left, &.right-flat, &.right {
+    border-radius: 16px;
+  }
+
+  &.left-flat {
+    box-shadow:
+      -40px 40px 100px -35px rgba(0, 0, 0, 0.7),
+      inset 25px -25px 10px -25px rgba(255, 255, 255, 0.8),
+      inset 25px -25px 20px -30px rgba(0, 0, 0, 0.7);
+    transform-origin: center;
+    transform:
+      rotateX(45deg)
+      rotateY(5deg)
+      rotateZ(-50deg);
+  }
+
+  &.left {
+    box-shadow:
+      -40px 40px 100px -35px rgba(0, 0, 0, 0.7),
+      inset 25px -25px 10px -25px rgba(255, 255, 255, 0.8),
+      inset 25px -25px 20px -30px rgba(0, 0, 0, 0.7);
+    transform-origin: center;
+    transform: rotateY(30deg);
+  }
+
+  &.right-flat {
+    box-shadow:
+      40px 40px 100px -35px rgba(0, 0, 0, 0.7),
+      inset -25px -25px 10px -25px rgba(255, 255, 255, 0.8),
+      inset -25px -25px 20px -30px rgba(0, 0, 0, 0.7);
+    transform-origin: center;
+    transform:
+      rotateX(45deg)
+      rotateY(-5deg)
+      rotateZ(50deg);
+  }
+
+  &.right {
+    box-shadow:
+      40px 40px 100px -35px rgba(0, 0, 0, 0.7),
+      inset -25px -25px 10px -25px rgba(255, 255, 255, 0.8),
+      inset -25px -25px 20px -30px rgba(0, 0, 0, 0.7);
+    transform-origin: center;
+    transform: rotateY(-30deg);
+  }
+
+  // ui
+  &:before {
+    background-repeat: no-repeat;
+    background: color('iron');
+    border-radius: 50px;
+    content: '';
+    height: 1%;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    top: 2%;
+    width: 15%;
+    z-index: 1;
+  }
+
+  /* TODO(matthiasrohmer): Make all occurences use the actual class */
+  amp-img, amp-video, amp-vimeo, &-content {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}

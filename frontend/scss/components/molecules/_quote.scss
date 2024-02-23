@@ -1,0 +1,97 @@
+.#{utility('quote')} {
+  margin-bottom: 7em;
+
+  @media (min-width: 768px) {
+    margin-bottom: 8vw;
+  }
+}
+
+.#{molecule('quote')} {
+  grid-column: 6 / 20;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  &-source {
+    flex: 0 0 auto;
+    display: flex;
+    width: 80%;
+    align-items: flex-start;
+
+    @media (min-width: 768px) {
+      flex: 0 0 30%;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .#{atom('img')} {
+      position: relative;
+      width: 150px;
+      height: 30px;
+      
+      amp-img.contain img {
+        object-fit: contain;
+        object-position: right top;
+      }
+    }
+
+    .#{atom('ico')} {
+      width: 40px;
+      height: 40px;
+      margin: 0 1em 0 0;
+      fill: color('blue-ribbon');
+
+      @media (min-width: 768px) {
+        width: 100px;
+        height: 100px;
+        margin: 0 0 0.5em auto;
+      }
+    }
+  }
+
+  &-quote {
+    padding: 0 0 0 3.375em;
+
+    @media (min-width: 768px) {
+      padding: 50px 0 0 30px;
+    }
+
+    blockquote {
+      flex: 0 0 70%;
+      margin: 0 0 2em;
+
+      p.#{atom('txt')} {
+        @include hl;
+        @include hl-h6;
+        line-height: 1.8;
+        font-style: italic;
+        display: block;
+
+        @media (min-width: 768px) {
+          @include hl-h4;
+          line-height: 2;
+        }
+
+        &:before {
+          content: '\201C';
+        }
+
+        &:after {
+          content: '\201D';
+        }
+      }
+    }
+    & p {
+      @include txt;
+      @include txt-3;
+
+      @media (min-width: 768px) {
+        @include txt-2;
+      }
+    }
+  }
+}

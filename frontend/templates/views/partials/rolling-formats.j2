@@ -1,0 +1,12 @@
+{% do doc.styles.addCssFile('css/components/molecules/rolling-formats.css') %}
+
+{% set formats = ['websites', 'stories', 'ads', 'emails'] %}
+
+<span class="ap-m-rolling-formats-space"></span>
+<div class="ap-m-rolling-formats">
+  <div class="ap-m-rolling-formats-list">
+    {% for format in formats %}
+    <span class="ap-m-rolling-formats-item">{{ _(format) }}.</span>
+    {% endfor %}
+  </div>
+</div>
