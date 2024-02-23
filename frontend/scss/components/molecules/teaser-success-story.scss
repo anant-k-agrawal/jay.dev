@@ -1,0 +1,78 @@
+/*
+
+######################################
+### ORGANISM: teaser success story ###
+######################################
+
+### INFO:
+
+*/
+
+@import '_extends.scss';
+@import '_functions.scss';
+@import '_mixins.scss';
+@import '_variables.scss';
+
+@import 'components/molecules/_teaser.scss';
+
+.#{molecule('teaser-success-story')} {
+  &.#{molecule('teaser')} {
+    @include teaser;
+    margin-bottom: 20px;
+
+    & > a {
+      @include teaser-linking;
+
+      &:hover {
+        @include teaser-linking-hover;
+
+        .#{molecule('teaser')}-card {
+          @include teaser-card-hover;
+        }
+      }
+    }
+  }
+
+  .#{molecule('teaser')} {
+    &-tag {
+      @include teaser-tag;
+    }
+
+    &-card {
+      @include teaser-card;
+
+      @media (max-width: 767px) {
+        margin-bottom: 60px;
+      }
+
+      .#{molecule('teaser')} {
+
+        &-logo {
+          width: 100%;
+          max-width: 100px;
+          position: relative;
+          width: 110px;
+          height: 30px;
+          margin-bottom: 1em;
+
+          amp-img.contain img {
+            object-fit: contain;
+            object-position: left center;
+          }
+        }
+      }
+    }
+
+    &-content {
+      @include teaser-content;
+    }
+
+    &-image {
+      @include teaser-image;
+    }
+
+    &-headline {
+      @include teaser-headline;
+    }
+  }
+}
