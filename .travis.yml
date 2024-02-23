@@ -1,0 +1,42 @@
+language: node_js
+node_js:
+  - "lts/*"
+
+git:
+  depth: 3
+
+cache:
+  pip: true
+  yarn: true
+  directories:
+    - node_modules
+
+install:
+  - pip install grow==0.6.4 --user
+  - grow --version
+  - yarn global add gulp-cli
+  - yarn
+
+jobs:
+  include:
+    - stage: build
+      script:
+        - ./build_scripts/build.sh None en es
+    - stage: build
+      script:
+        - ./build_scripts/build.sh fr id ja
+    - stage: build
+      script:
+        - ./build_scripts/build.sh it ko pt_BR
+    - stage: build
+      script:
+        - ./build_scripts/build.sh tr zh_CN ru
+    - stage: deploy
+      install:
+        - yarn global add firebase-tools
+      script:
+        - ./build_scripts/deploy.sh
+branches:
+  only:
+  - legacy-production
+  - legacy-master
