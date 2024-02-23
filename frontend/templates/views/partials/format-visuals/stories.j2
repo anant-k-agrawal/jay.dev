@@ -1,0 +1,26 @@
+{% do doc.styles.addCssFile('css/components/molecules/format-visual.css') %}
+{% do doc.styles.addCssFile('css/components/molecules/format-visual-stories.css') %}
+{% do doc.styles.addCssFile('css/components/molecules/code-snippet.css') %}
+
+
+<div class="ap-m-format-visual ap-m-format-visual-stories">
+  <div class="ap-m-format-visual-image ap-m-format-visual-bottom-image">
+    <amp-img src="/static/img/amp-stories-base.png" layout="responsive" width="176" height="246"></amp-img>
+  </div>
+  <div class="ap-m-format-visual-image ap-m-format-visual-top-image" title="&lt;amp-story-grid-layer&gt;">
+    <amp-img src="/static/img/amp-stories-monde.jpg" layout="responsive" width="192" height="192"></amp-img>
+  </div>
+  <div class="ap-m-format-visual-code-snippet">
+    {% set code_snippet = '
+<amp-story-grid-layer
+  template="vertical">
+  <amp-img src="moons.jpg"
+    width="266" height="340"
+    layout="responsive">
+  </amp-img>
+</amp-story-grid-layer>
+    ' %}
+    {% set markdown = doc.pod.markdown %}
+    {{ markdown.convert('```html\n' + code_snippet + '\n```')|safe }}
+  </div>
+</div>

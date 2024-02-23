@@ -1,0 +1,102 @@
+cmsUsers:
+  - image:
+      src: '/static/img/docs/guides/cms_logos/ampizeme.jpg'
+      alt: AMPize.me logo
+    label: AMPize.me
+    url: https://www.ampize.me/
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/publive.jpg'
+      alt: Screenshot of thepublive.com
+    label: PubLive
+    url: https://thepublive.com/
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/arcpublishing.jpg'
+      alt: Arc XP
+    label: Arc XP
+    url: https://www.arcxp.com/
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/canvas.jpg'
+      alt: Canvas
+    label: Canvas
+    url: https://www.roya.com/blog/roya-announces-addition-of-amp-to-canvas-cms-amp.html
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/drupal.jpg'
+      alt: Drupal logo
+    label: Drupal
+    url: https://www.drupal.org/project/amp
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/fastcommerce.jpg'
+      alt: Fast Commerce logo
+    label: Fast Commerce
+    url: https://www.fastcommerce.com.br/accelerated-mobile-pages-amp
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/hatena.jpg'
+      alt: Hatena logo
+    label: Hatena
+    url: http://help.hatenablog.com/entry/amp
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/kentico.jpg'
+      alt: Kentico logo
+    label: Kentico
+    url: https://github.com/Kentico/kentico-amp
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/marfeel.jpg'
+      alt: Marfeel logo
+    label: Marfeel
+    url: https://atenea.marfeel.com/atn/product/marfeel-press/360-platform/google-amp/marfeel-s-accelerated-mobile-pages-google-amp-solution
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/rabbit.jpg'
+      alt: Rabbit logo
+    label: Rabbit
+    url: https://gomobile.jp/rabbit/
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/squarespace.jpg'
+      alt: Squarespace logo
+    label: Squarespace
+    url: https://support.squarespace.com/hc/en-us/articles/223766868-Using-AMP-with-Squarespace
+    
+  - image:
+      src: '/static/img/docs/guides/cms_logos/statamic.jpg'
+      alt: Statamic logo
+    label: Statamic
+    url: https://statamic.dev/amp
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/textpattern.jpg'
+      alt: Textpattern logo
+    label: Textpattern
+    url: https://textpattern.com/weblog/401/textpattern-website-redesign/amp
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/tn.jpg'
+      alt: TownNews logo
+    label: TownNews
+    url: https://www.townnews365.com/
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/tumblr.jpg'
+      alt: Tumblr logo
+    label: Tumblr
+    url: https://www.tumblr.com/about
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/wordpress.jpg'
+      alt: WordPress logo
+    label: WordPress.com
+    url: https://en.support.wordpress.com/google-amp-accelerated-mobile-pages/
+
+  - image:
+      src: '/static/img/docs/guides/cms_logos/wordpress.jpg'
+      alt: WordPress logo
+    label: WordPress.org
+    url: https://amp-wp.org/

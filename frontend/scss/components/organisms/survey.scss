@@ -1,0 +1,190 @@
+/*
+
+#############################
+### ORGANISM: survey ########
+#############################
+
+*/
+
+@import '_variables.scss';
+@import '_functions.scss';
+
+@import 'components/atoms/_button.scss';
+@import 'components/atoms/_text.scss';
+
+$delay: 0.25s;
+
+
+#fez-container {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #fez-container {
+    opacity: 0;
+    transform: translate3d(0,100vh,0);
+    display: block;
+    overflow: hidden;
+    min-height: 140px;
+    max-height: 90vh;
+    width: 400px;
+    max-width: 100%;
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+
+    @at-root {
+      html[dir="rtl"] #{&} {
+        left: 0;
+        right: auto;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    button,
+    li,
+    label {
+      cursor: pointer;
+    }
+
+    label {
+      display: block;
+      color: color('blue-ribbon');
+      @include txt-2;
+      @include txt-strong;
+      font-family: 'Noto Sans', system;
+    }
+
+
+    input[type=radio] {
+      display: none;
+    }
+
+    .button-affirm[disabled] {
+      background: lightgrey;
+      cursor: not-allowed;
+      color: white;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 150px;
+      padding: 0.25rem;
+      margin-bottom: var(--padding);
+    }
+
+    .ap-a-ico {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      fill: color('charade');
+      cursor: pointer;
+      z-index: 2;
+      &.hide {
+        display: none;
+      }
+    }
+
+  }
+
+  #fez {
+    --padding: 20px;
+    transition: all $delay ease 0s;
+    background: white;
+    font-family: Noto Sans, sans-serif;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 8px 12px 1px,
+                rgba(0, 0, 0, 0.12) 0px 3px 15px 3px,
+                rgba(0, 0, 0, 0.2) 0px 4px 5px -3px;
+    min-height: 0;
+    position: absolute;
+    width: calc(100% - (var(--padding)*2));
+    margin: auto;
+    height: 0;
+    bottom: 1rem;
+    right: 1rem;
+    pointer-events: all;
+    overflow: hidden;
+    padding: var(--padding);
+
+    .slide {
+      visibility: hidden;
+      position: absolute;
+      width: calc(100% - (var(--padding) * 3));
+
+      &.active {
+        visibility: visible;
+
+        label {
+          opacity: 1;
+        }
+      }
+
+      label {
+        transition-property: opacity;
+        transition-duration: $delay;
+        transition-timing-function: ease;
+        opacity: 0;
+      }
+
+    }
+
+    li {
+      padding: 10px 0 1em;
+      line-height: 1;
+    }
+  }
+
+  @for $i from 1 through 8 {
+    .active li:nth-child(#{$i}) label {
+      transition-delay: $delay + ($delay * ($i * 0.15));
+    }
+  }
+
+  .buttons {
+    margin-bottom: 10px;
+
+    button {
+      @include btn;
+      opacity: 1;
+      user-select: none;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .button-negative {
+      background: color('white');
+      color: color('blue-ribbon');
+    }
+  }
+
+  .surveyQuestion {
+    @include txt-hl;
+    @include txt-lrg;
+    @include txt-font-accent;
+    margin-top: -5px;
+    margin-bottom: var(--padding);
+    max-width: 90%;
+
+    &.thanks {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.ap--survey-position-observer {
+  position: absolute;
+  top: 250vh;
+  height: 100%;
+}

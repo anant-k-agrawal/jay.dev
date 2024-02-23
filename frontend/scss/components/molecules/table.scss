@@ -1,0 +1,95 @@
+/*
+
+#####################
+### MOLECULE: table ###
+#####################
+
+### INFO:
+
+Markdown generated table.
+
+example markup:
+
+| | Amp | Vue.js | React | Angluar | Misc |
+|-|-|-|-|-|-|
+|Requirement <br/> Lorem ipsum|
+|Requirement <br/> Lorem ipsum|
+|Requirement <br/> Lorem ipsum|
+|Requirement <br/> Lorem ipsum|
+|Requirement <br/> Lorem ipsum|
+
+*/
+
+@import '../../extends';
+@import '../../mixins';
+@import '../../functions';
+@import '../../variables';
+@import '../atoms/_color.scss';
+@import '../atoms/_text.scss';
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  position: relative;
+  border-collapse: collapse;
+  padding: 0 0 0 20px;
+  margin: 1.5em -20px 2em -20px;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  @include txt;
+  @include txt-2;
+
+  @media (min-width: 768px){
+    padding: 0;
+    margin: 1.5em 0 2em;
+  }
+}
+
+thead {
+  @include txt-strong;
+
+  tr {
+    text-align: left;
+
+    th {
+      padding: 20px;
+      border-bottom: 1px solid color('iron');
+    }
+  }
+}
+
+tbody {
+  tr {
+    border-bottom: 1px solid color('iron');
+
+    &:nth-child(odd) {
+      background-color: rgba(255, 255, 255, 0.5);
+
+    }
+
+    td:nth-child(1) {
+      border-right: 1px solid color('iron');
+    }
+  }
+
+  td {
+    padding: 10px 20px;
+    text-align: left;
+    vertical-align: top;
+    width: 50%;
+
+    @media (min-width: 768px){
+      padding: 20px;
+    }
+
+    @media (min-width: 1024px){
+      width: 25%;
+    }
+
+    code {
+      @include txt-mono-inline;
+      @include color-blue-ribbon;
+    }
+  }
+}

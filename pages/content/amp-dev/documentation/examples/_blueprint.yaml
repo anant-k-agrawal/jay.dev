@@ -1,0 +1,6 @@
+$title@: Examples
+$view: /views/overview/components-overview.j2
+$path: /documentation/examples/{base}
+$localization:
+  path: /{locale}/documentation/examples/{base}
+$order: 3
