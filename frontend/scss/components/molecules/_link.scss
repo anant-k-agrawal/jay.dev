@@ -1,0 +1,26 @@
+/*
+
+######################
+### MOLECULE: link ###
+######################
+
+### INFO:
+
+The link molecule is a combination of icon and text atom.
+The size of the icon should be 1 (xsmall) and text should be 3 (medium).
+
+### MODIFIERS:
+
+none
+
+*/
+
+@import '../atoms/_color.scss';
+
+@mixin link {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	padding: 0 0 1.5em;
+	margin: 0;
+}

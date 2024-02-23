@@ -1,0 +1,98 @@
+/*
+
+######################
+### MOLECULE: copy ###
+######################
+
+*/
+
+@import '_extends.scss';
+@import '_functions.scss';
+@import '_mixins.scss';
+@import '_variables.scss';
+
+@import 'components/atoms/_text.scss';
+
+.#{molecule('copy')} {
+  margin-bottom: 3em;
+
+  &.no-margin {
+    margin-bottom: 0;
+  }
+
+  p {
+    @include txt;
+  }
+
+  &-large p {
+    @include txt-1;
+  }
+
+  &-left {
+    grid-column: 3 / 17;
+
+    &-small {
+      grid-column: 4 / 13;
+    }
+
+    &-link {
+      grid-column: 3 / 12;
+      margin-top: 3em;
+    }
+
+    &-xsmall {
+      grid-column: 6 / 13;
+    }
+  }
+
+  &-right {
+    grid-column: 10 / 24;
+
+    &-centered {
+      width: 100%;
+      grid-column: 16 / 21;
+      margin: auto 0;
+    }
+
+    &-small {
+      grid-column: 11 / 20;
+    }
+
+    &-link {
+      grid-column: 10 / 19;
+      margin-top: 3em;
+    }
+
+    &-xsmall {
+      @media (min-width: 768px) {
+        grid-column: 8 / 20;
+      }
+
+      @media (min-width: 1024px) {
+        grid-column: 12 / 20;
+      }
+    }
+  }
+
+  &-center {
+    grid-column: 1 / -1;
+    text-align: center;
+
+    &-small {
+      grid-column: 6 / 19;
+      text-align: left;
+    }
+
+    &-medium {
+      grid-column: 4 / 22;
+      text-align: left;
+      max-width: 100%;
+    }
+
+    &-large {
+      grid-column: 3 / 22;
+      text-align: left;
+      max-width: 100%;
+    }
+  }
+}

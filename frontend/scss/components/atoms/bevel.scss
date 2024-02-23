@@ -1,0 +1,38 @@
+/*
+
+###################
+### ATOM: bevel ###
+###################
+
+### INFO:
+
+Displays a bavel as pseudo elements on a section.
+
+### MODIFIERS:
+
+bevel-left
+  Bevel from bottem left to top right
+
+bevel-right
+  Bevel from top left to bottom right
+*/
+
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+@import './_bevel.scss';
+@import './_color.scss';
+
+.#{atom('bevel')} {
+  @include bevel;
+}
+
+.#{atom('bevel-left')} {
+  @include bevel-left;
+}
+
+.#{atom('bevel-right')} {
+	@include bevel-right;
+}

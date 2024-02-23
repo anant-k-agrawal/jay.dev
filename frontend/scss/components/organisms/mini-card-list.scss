@@ -1,0 +1,38 @@
+/*
+
+#################################
+### ORGANSIM: mini-card-list ####
+#################################
+
+*/
+
+@import '_extends.scss';
+@import '_functions.scss';
+@import '_mixins.scss';
+@import '_variables.scss';
+
+ul.#{organism('mini-card-list')} {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  max-width: 1440px;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.#{organism('mini-card-list-item')} {
+  margin-bottom: 1.25rem;
+  padding-left: 0;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  &:hover {
+    transform: translateY(-0.125em);
+
+    & > .#{molecule('mini-card')} {
+      box-shadow: 0 15px 25px 0px rgba(0, 0, 0, 0.05);
+    }
+  }
+}
