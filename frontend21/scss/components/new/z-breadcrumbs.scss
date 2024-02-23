@@ -1,0 +1,14 @@
+.#{prefix(null, 'breadcrumbs')},
+.#{molecule('breadcrumbs')} {
+  display: flex;
+  align-items: center;
+  @include txt-font-accent;
+  @include txt-3;
+
+  &-angle {
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+    transform: rotate(-90deg);
+  }
+}

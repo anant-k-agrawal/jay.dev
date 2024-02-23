@@ -1,0 +1,11 @@
+.#{prefix(null, 'bevel')} {
+  @include bevel;
+}
+
+.#{prefix(null, 'bevel-left')} {
+  @include bevel-left;
+}
+
+.#{prefix(null, 'bevel-right')} {
+	@include bevel-right;
+}

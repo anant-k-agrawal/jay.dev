@@ -1,0 +1,57 @@
+/*
+
+#################################
+### ORGANISM: teaser use case ###
+#################################
+
+### INFO:
+
+*/
+@import './_teaser.scss';
+
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+@import 'teaser';
+
+.#{molecule('teaser-use-case')} {
+  &.#{molecule('teaser')} {
+    @include teaser;
+
+    & > a {
+      @include teaser-linking;
+
+      &:hover {
+        @include teaser-linking-hover;
+
+        .#{molecule('teaser')}-card {
+          @include teaser-card-hover;
+        }
+      }
+    }
+  }
+
+  .#{molecule('teaser')} {
+    &-tag {
+      @include teaser-tag;
+    }
+
+    &-card {
+      @include teaser-card;
+    }
+
+    &-content {
+      @include teaser-content;
+    }
+
+    &-image {
+      @include teaser-image;
+    }
+
+    &-headline {
+      @include teaser-headline;
+    }
+  }
+}

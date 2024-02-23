@@ -1,0 +1,5 @@
+$title: Success Stories
+$path: /runner/success-stories/{base}.html
+$view: /views/default.j2
+$localization:
+  path: /{locale}/runner/success-stories/{base}.html

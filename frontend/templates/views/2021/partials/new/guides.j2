@@ -1,0 +1,13 @@
+{% extends '/views/2021/base.html' %}
+
+{% block main %}
+{% include 'views/2021/partials/new/sidebar-toggle-observer.j2' %}
+<main class="ap--main ap-t-docs-guides-overview">
+  <div class="ap--container">
+    {% include 'views/2021/partials/new/sidebar-toggle.j2' %}
+    <span id="ap--sidebar-content" class="ap--sidebar"></span>
+    {% include 'views/2021/partials/new/content.j2' %}
+  </div>
+</main>
+{% include 'views/2021/partials/new/sidebar.j2' %}
+{% endblock %}

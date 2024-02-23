@@ -1,0 +1,97 @@
+---
+$title: JSON for Linking Data
+$order: 1
+descriptions: Data is messy and disconnected. JSON-LD organizes and connects it, creating a better Web.
+$view: /views/overview/custom-content.j2
+---
+{% do doc.styles.addCssFile('css/components/templates/custom-content.css') %}
+{% do doc.styles.addCssFile('css/components/molecules/code-snippet.css') %}
+
+<section class="ap--container">
+  {% do doc.styles.addCssFile('/css/components/molecules/jumbo.css') %}
+  <div class="ap-m-jumbo">
+    <div class="ap-a-ico">
+      {% do doc.icons.useIcon('/icons/code-architecture.svg') %}
+      <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#code-architecture"></use></svg>
+    </div>
+    <h1 class="ap-m-jumbo-headline">{{ _('JSON for Linking Data') }}</h1>
+    <p class="ap-m-jumbo-copy">{{ _('Data is messy and disconnected. JSON-LD organizes and connects it, creating a better Web.  Here is an explainer video:') }}</p>
+
+    {% do doc.styles.addCssFile('css/components/atoms/video.css') %}
+    <figure class="ap-a-video">
+      <amp-youtube class="ap-a-video-video" data-videoid="UmvWk_TQ30A" layout="responsive" width="16" height="9"></amp-youtube>
+    </figure>
+  </div>
+
+  {% do doc.styles.addCssFile('/css/components/molecules/copy.css') %}
+  <div class="ap-m-copy ap-m-copy-left-small">
+    <h2>{{ _('Linked Data') }}</h2>
+    <p>{{ _('Linked Data empowers people that publish and use information on the Web.') }}</p>
+    <p>{{ _('It is a way to create a network of standards-based, machine-readable data across Web sites.') }}</p>
+    <p>{{ _('It allows an application to start at one piece of Linked Data, and follow embedded links to other pieces of Linked Data that are hosted on different sites across the Web.') }}</p>
+  </div>
+
+  <div class="ap-m-copy ap-m-copy-center-small">
+    <h2>{{ _('JSON-LD') }}</h2>
+    <p>{{ _('JSON-LD is a lightweight Linked Data format. It is easy for humans to read and write. It is based on the already successful JSON format and provides a way to help JSON data interoperate at Web-scale.') }}</p>
+    <p>{{ _('JSON-LD is an ideal data format for programming environments, REST Web services, and unstructured databases such as Apache CouchDB and MongoDB.') }}</p>
+  </div>
+
+  <div class="ap-m-copy ap-m-copy-right-small">
+    <h2>{{ _('JSON-LD Playground') }}</h2>
+    <p>{{ _('The JSON-LD Playground is a web-based JSON-LD viewer and debugger.') }}</p>
+    <p>{{ _('If you are interested in learning JSON-LD, this tool will be of great help to you.') }}</p>
+
+    {% do doc.styles.addCssFile('css/components/molecules/code-snippet.css') %}
+    {% set code_snippet = '<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>' %}
+    {% set markdown = doc.pod.markdown %}
+    {{ markdown.convert('```html\n' + code_snippet + '\n```')|safe }}
+  </div>
+
+  <div class="ap-m-copy ap-m-copy-left-small">
+    <h2>{{ _('Getting Help') }}</h2>
+    <p>{{ _('JSON-LD 1.1 was being formally specified by the W3C JSON-LD Working Group. Although the Working Group has completed, it remains open as a Maintanence Group and may release revised specifications in the future.') }}</p>
+    <p>{{ _('To participate in this work, please join the W3C and then join the Working Group.') }}</p>
+    <p>{{ _('The Working Group mailing list is visible to the public and participation in the specification repositories is encouraged. Additionally, discussions and exploration continue in the Community Group spaces mentioned below.') }}</p>
+  </div>
+
+  <div class="ap-m-copy ap-m-copy-center-small">
+    <h2>{{ _('JSON-LD Community Group') }}</h2>
+    <p>{{ _('JSON-LD has been developed by the W3C JSON-LD Community Group. It is a W3C Recommendation as of 16 January 2014. Participation is open to the public. There is a JSON-LD Github repository.') }}</p>
+    <p>{{ _('If you need immediate help, we have a #json-ld IRC support channel on irc.w3.org and a Gitter channel. There is also a JSON-LD mailing list. All weekly meetings are open to the public, and are minuted, recorded, and archived.') }}</p>
+  </div>
+
+  <div class="ap-m-copy ap-m-copy-right-small">
+    <h2>{{ _('Schema.org') }}</h2>
+    <p>{{ _('Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.') }}</p>
+    <p>{{ _('Schema.org vocabulary can be used with many different encodings, including RDFa, Microdata and JSON-LD. These vocabularies cover entities, relationships between entities and actions, and can easily be extended through a well-documented extension model. Over 10 million sites use Schema.org to markup their web pages and email messages. Many applications from Google, Microsoft, Pinterest, Yandex and others already use these vocabularies to power rich, extensible experiences.') }}</p>
+  </div>
+
+  <div class="ap-m-copy ap-m-copy-left-small">
+    <h2>{{ _('How structured data works in Google Search') }}</h2>
+    <p>{{ _('Google uses structured data that it finds on the web to understand the content of the page, as well as to gather information about the web and the world in general, such as information about the people, books, or companies that are included in the markup.') }}</p>
+    <p>{{ _('Google Search also uses structured data to enable special search result features and enhancements. For example, a recipe page with valid structured data is eligible to appear in a graphical search result.') }}</p>
+  </div>
+
+  <div class="ap-m-copy ap-m-copy-center-small">
+    <h2>{{ _('Structured data vocabulary and format') }}</h2>
+    <p>{{ _('This documentation describes which properties are required, recommended, or optional for structured data with special meaning to Google Search. Most Search structured data uses schema.org vocabulary, but you should rely on the Google Search Central documentation as definitive for Google Search behavior, rather than the schema.org documentation. There are more attributes and objects on schema.org that aren\'t required by Google Search; they may be useful for other search engines, services, tools, and platforms.') }}</p>
+    <p>{{ _('You must include all the required properties for an object to be eligible for appearance in Google Search with enhanced display. In general, defining more recommended features can make it more likely that your information can appear in Search results with enhanced display. However, it is more important to supply fewer but complete and accurate recommended properties rather than trying to provide every possible recommended property with less complete, badly-formed, or inaccurate data.') }}</p>
+  </div>
+
+  <div class="ap-m-copy ap-m-copy-left-small">
+    <h2>{{ _('Supported formats') }}</h2>
+    <p>{{ _('Structured data is coded using in-page markup on the page that the information applies to. The structured data on the page describes the content of that page. Don\'t create blank or empty pages just to hold structured data, and don\'t add structured data about information that is not visible to the user, even if the information is accurate.') }}</p>
+    <p>{{ _('Google Search supports structured data in the following formats, unless documented otherwise. In general, we recommend using a format that\'s easiest for you to implement and maintain (in most cases, that\'s JSON-LD); all 3 formats are equally fine for Google, as long as the markup is valid and properly implemented per the feature\'s documentation.') }}</p>
+    <p>{{ _('Be sure to follow the general structured data guidelines, as well as any guidelines specific to your structured data type; otherwise your structured data might be ineligible for rich result display in Google Search.') }}</p>
+  </div>
+
+  <div class="ap-m-copy ap-m-copy-right-small">
+    <h2>{{ _('Get started with structured data') }}</h2>
+    <p>{{ _('If you\'re new to structured data, check out schema.org beginner\'s guide to structured data. While the guide focuses on Microdata, the basic ideas are relevant for JSON-LD and RDFa. For a step-by-step guide on how to add structured data to a web page, check out our structured data codelab.') }}</p>
+    <p>{{ _('Once you\'re comfortable with the basics of structured data, explore the list of structured data features in Google Search and pick a feature to implement. Each guide goes into detail on how to implement the structured data in a way that makes your site eligible for a rich result appearance on Google Search.') }}</p>
+    <p>{{ _('You probably want to compare performance of your pages with structured data with those pages that don\'t have structured data, in order to decide if it\'s worth your effort.') }}</p>
+    <p>{{ _('The best way to do that is to run a before and after test on a few pages on your site. This can be a little tricky, since page views can vary for a single page for various reasons.') }}</p>
+  </div>
+
+</section>

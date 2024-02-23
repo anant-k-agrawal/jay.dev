@@ -1,0 +1,161 @@
+@import '_functions.scss';
+@import '_variables.scss';
+
+@mixin default-section-padding {
+	padding-left: 30px;
+	padding-right: 30px;
+	@media (min-width: 768px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@mixin box-shadow {
+  box-shadow: 0 30px 30px -15px rgba(0, 0, 0, 0.25);
+}
+
+@mixin drop-shadow {
+  filter: drop-shadow(0 30px 30px -15px rgba(0, 0, 0, 0.25));
+}
+
+@mixin content-shadow {
+  box-shadow: 0 25px 40px 0 rgba(0,0,0,0.05);
+}
+
+@mixin benefit-card-left-shadow {
+  box-shadow: 0 50px 100px 0 rgba(0,0,0,0.25);
+}
+
+@mixin benefit-card-right-shadow {
+box-shadow: 0 25px 50px 0 rgba(0,0,0,0.21);
+}
+
+@mixin stage-button-shadow-regular {
+  box-shadow: 0 15px 25px 0 rgba(0,0,0,0.25);
+}
+
+@mixin filter-bubble-shadow-regular {
+  box-shadow: 0 10px 25px 0px rgba(0, 0, 0, 0.15);
+}
+
+@mixin filter-bubble-shadow-selected {
+  box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+@mixin format-bubble-shadow {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.12);
+}
+
+@mixin slider-button-shadow {
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.4);
+}
+
+@mixin jumpto-list-shadow {
+	box-shadow: 0 10px 15px 0 rgba(0,0,0,0.07);
+}
+
+@mixin agenda-list-shadow {
+	box-shadow: 0 25px 25px 0 rgba(0,0,0,0.15);
+}
+
+@mixin roadshow-video-shadow {
+  box-shadow: 0 15px 50px 0 rgba(0,0,0,0.50);
+}
+
+@mixin roadshow-event-shadow {
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
+}
+
+@mixin ampconf-events-shadow {
+  box-shadow: 0 15px 25px -10px rgba(0,0,0,0.15);
+}
+
+@mixin ampconf-speaker-shadow {
+  box-shadow: 0 15px 25px 0 rgba(0,0,0,0.15);
+}
+
+@mixin agenda-button-shadow {
+  box-shadow: 0 10px 25px 0 rgba(0,0,0,0.20);
+}
+
+@mixin flyout {
+  box-shadow: 0 10px 25px 0 rgba(0,0,0,0.2);
+}
+
+@mixin heroEnterAnimation {
+	@keyframes growDown {
+		from {
+			padding-top: 0%;
+		}
+		to {
+			padding-top: 45%;
+		}
+	}
+}
+
+@mixin rollingAnimation {
+	@keyframes roll {
+
+		0% {
+			opacity: 0;
+			transform: translateY(-100%);
+		}
+
+		6% {
+			opacity: 1;
+			transform: translateY(0%);
+		}
+
+		24% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		32% {
+			opacity: 1;
+			transform: translateY(100%);
+		}
+
+		42% {
+			opacity: 0;
+			transform: translateY(100%);
+		}
+
+		100% {
+			opacity: 0;
+			transform: translateY(100%);
+		}
+  }
+}
+
+@mixin levitateAnimation {
+	@keyframes levitate {
+	  0% {
+	    transform: translate3d(0, -2.3%, 0);
+	  }
+
+	  50% {
+	    transform: translate3d(0, 2.3%, 0);
+	  }
+
+	  100% {
+	    transform: translate3d(0, -2.3%, 0);
+	  }
+	}
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: color('oslo-gray');
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}

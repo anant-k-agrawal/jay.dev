@@ -1,0 +1,85 @@
+/*
+
+##################################
+### ORGANSIM: text-media-block ###
+##################################
+
+### INFO:
+
+### MODIFIERS:
+
+*/
+
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+.#{organism('text-media-block')} {
+  position: relative;
+  align-items: center;
+
+  .#{molecule('text-media')} {
+    h2 {
+      margin-top: 0;
+    }
+
+    &.media {
+      &:before {
+        content: '';
+        display: inline-block;
+        height: 220px;
+        margin-top: -2%;
+        position: absolute;
+        width: 145%;
+      }
+    }
+  }
+
+  &:nth-child(odd) {
+    .#{molecule('text-media')} {
+      grid-row: 1;
+      perspective: 80rem;
+
+      &.media {
+        grid-column: 2/10;
+
+        &.bg-gray, &.bg-gradient {
+          &:before {
+            left: -45%;
+          }
+        }
+      }
+
+      &.text {
+        grid-column: 11/21;
+
+        h2 {
+          margin-top: 0;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    .#{molecule('text-media')} {
+      grid-row: 1;
+      perspective: 80rem;
+
+      &.media {
+        grid-column: 14/23;
+
+        &.bg-gray, &.bg-gradient {
+          &:before {
+            right: -45%;
+          }
+        }
+      }
+
+      &.text {
+        grid-column: 3/12;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+$title@: Lunch
+$path: /romeo/{base}.html
+$view: /views/default.j2
+$localization:
+  path: /{locale}/romeo/{base}.html
+$order: 6
+
+flyout:
+    - /content/amp-dev/romeo/index.html
+    - /content/amp-dev/romeo/1/index.html
+    - /content/amp-dev/romeo/2/index.html
+    - /content/amp-dev/romeo/3/index.html
+    - /content/amp-dev/romeo/4/index.html
