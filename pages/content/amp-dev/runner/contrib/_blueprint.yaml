@@ -1,0 +1,10 @@
+$title@: Contribute
+$view: /views/2021/base.html
+$path: /runner/contrib/{base}.html
+$localization:
+  path: /{locale}/runner/contrib/{base}.html
+$order: 1
+
+flyout:
+    - /content/amp-dev/runner/contrib/index.html
+    - /content/amp-dev/runner/contrib/docs/index.html

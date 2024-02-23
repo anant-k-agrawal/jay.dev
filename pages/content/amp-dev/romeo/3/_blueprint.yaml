@@ -1,0 +1,6 @@
+$title: Roadmap
+$view: /views/default.j2
+$path: /3/{base}.html
+$localization:
+  path: /{locale}/3/{base}.html
+$order: 3

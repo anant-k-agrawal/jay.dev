@@ -1,0 +1,13 @@
+$path: /documentation/guides-and-tutorials/develop/login_requiring/{base}.html
+$view: /views/detail/docs-detail.j2
+$localization:
+  path: /{locale}/documentation/guides-and-tutorials/develop/login_requiring/{base}.html
+$title@: Create a login-requiring AMP page
+$order: 101
+
+targeted: true
+chaptered: true
+tutorial: true
+
+formats:
+  - websites

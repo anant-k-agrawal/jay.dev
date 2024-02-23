@@ -1,0 +1,59 @@
+/*
+
+###########################
+### TEMPLATE: use cases ###
+###########################
+
+### INFO:
+
+*/
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+@import '../atoms/_text.scss';
+@import '../atoms/_color.scss';
+@import '../atoms/_headline.scss';
+
+@import '../templates/_default.scss';
+
+.#{template('use-cases')} {
+
+  .#{utility('container')} {
+    @include container;
+    max-width: 100vw;
+  }
+
+  .#{utility('container-fluid')} {
+    @include container-fluid;
+  }
+
+  .#{utility('stage')} {
+      overflow: visible;
+  }
+
+  .#{organism('stage')} {
+    .#{utility('container')} {
+      @include container-fluid;
+    }
+
+    &-content {
+      grid-column: 1 / -1;
+      padding: 82% 0 0;
+      margin: 0;
+      @media (min-width: 768px) {
+        padding: 52% 0 0;
+      }
+    }
+  }
+
+  .#{organism('fragment-slider')} {
+    grid-column: 1 / -1;
+    margin-top: -76%;
+    overflow: hidden;
+    @media (min-width: 768px) {
+      margin-top: -56%;
+    }
+  }
+}

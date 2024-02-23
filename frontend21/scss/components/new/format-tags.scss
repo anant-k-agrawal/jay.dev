@@ -1,0 +1,25 @@
+.#{atom('format-tag')} {
+  display: inline-block;
+  padding: 0 12px;
+  border-radius: 14px;
+/*  @include txt-font-accent;*/
+  color: color('white');
+
+  &-websites {
+    @include gradient-websites;
+  }
+
+  &-stories {
+    @include gradient-stories;
+    @include color-stories;
+  }
+
+  &-ads {
+    @include gradient-ads;
+  }
+
+  &-email {
+    @include gradient-e-mails;
+    @include color-e-mails;
+  }
+}

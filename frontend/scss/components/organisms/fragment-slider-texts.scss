@@ -1,0 +1,134 @@
+/*
+
+#################################
+### ORGANISM: fragment-slider ###
+#################################
+
+*/
+
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+@import '../atoms/_color.scss';
+@import '../atoms/_headline.scss';
+
+$BIG_WDITH: 1224px;
+$MED_WIDTH: 768px;
+
+
+.#{organism('fragment-slider')} {
+  &-text {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 40vw;
+    max-width: 100%;
+    @media (min-width: $MED_WIDTH) {
+      margin-top: 30vw;
+    }
+    @media (min-width: $BIG_WDITH) {
+      margin-top: -20px;
+      grid-column: 14 / 22;
+    }
+    h2,h3 {
+      @media (min-width: $BIG_WDITH) {
+        @include color-white;
+      }
+    }
+    > div {
+      min-width: 100%;
+    }
+    div {
+      &.copy {
+        min-width: 100%;
+      }
+      opacity: 0;
+      transition: opacity 400ms, transform 400ms;
+      transition-delay: 400ms;
+      &.active {
+        opacity: 1;
+        div {
+          opacity: 1;
+        }
+
+        .#{organism('fragment-slider-component')},
+        .#{organism('fragment-slider-ctas')} a {
+          visibility: visible;
+          transition-delay: 0s;
+        }
+      }
+    }
+
+    &.slide2 {
+      > div {
+        transform: translateX(100%);
+      }
+    }
+    &.slide3 {
+      > div {
+        transform: translateX(200%);
+      }
+    }
+    &.slide4 {
+      > div {
+        transform: translateX(300%);
+      }
+    }
+    &.slide5 {
+      > div {
+        transform: translateX(400%);
+      }
+    }
+    &.slide6 {
+      > div {
+        transform: translateX(500%);
+      }
+    }
+  }
+
+  &-component-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  &-component {
+    visibility: hidden;
+    flex: 1 0 50%;
+    line-height: 1.8em;
+    transition-delay: 400ms;
+  }
+
+  &-preheadline {
+    margin: 0;
+  }
+
+  &-ctas {
+    display: flex;
+
+    a {
+      visibility: hidden;
+      padding: 0 1.5em 1.5em 0;
+      transition-delay: 400ms;
+
+      div {
+        transition-delay: 0s;
+      }
+    }
+  }
+
+  &-headline {
+    @include hl-lrg;
+    margin: 0 0 30px 0;
+    @media (min-width: $BIG_WDITH) {
+      margin: 0 0 25% 0;
+      min-height: 2.5em;
+    }
+    @media (min-width: 1280px) {
+      margin: 0 0 13vw 0;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+/*
+
+###################################
+### TEMPLATE: Examples / Manual ###
+###################################
+
+*/
+
+@import 'extends.scss';
+@import 'functions.scss';
+@import 'mixins.scss';
+@import 'variables.scss';
+
+@import 'components/atoms/_text.scss';
+@import 'components/atoms/_color.scss';
+@import 'components/atoms/_headline.scss';
+
+@import 'components/templates/_default.scss';
+
+.#{template('examples-manual')} {
+
+  .#{utility('container')} {
+    @include container;
+    @include container-nogap;
+  }
+
+  .#{utility('content')},
+  .#{utility('help')} {
+    @include content;
+    background: color('whisper');
+    @media (min-width: 768px) {
+      grid-column: 8 / 25;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @media (min-width: 1024px) {
+      grid-column: 6 / 25;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+    .#{utility('ctas')} {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+
+      @media (min-width: 768px) {
+        flex-wrap: nowrap;
+      }
+
+      .#{atom('btn')} {
+        flex: 1 0 auto;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        @media (min-width: 768px) {
+          flex: 1 0 50%;
+          max-width: 250px;
+        }
+      }
+    }
+
+  .#{utility('playground-link')} {
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    &-hollow {
+      color: color('blue-ribbon');
+      box-shadow: none;
+      background: transparent;
+    }
+  }
+
+  .#{utility('sidebar')} {
+    @include sidebar;
+  }
+
+  .#{utility('toc')} {
+    @include toc-white-bg;
+  }
+
+  .#{utility('sidebar')} + .#{utility('content')},
+  .#{utility('toc')} + .#{utility('content')} {
+    @include content-with-sidebar;
+  }
+
+  .#{utility('content')} {
+    h1 {@include hl-h2;}
+    h2 {@include hl-h3;}
+    h3 {@include hl-h4;}
+    h4 {@include hl-h5;}
+  }
+
+    .#{utility('title')} {
+      margin-top: 20px;
+    }
+
+    .#{utility('format-tags')} {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .#{molecule('code-snippet')} {
+      max-height: 500px;
+    }
+}

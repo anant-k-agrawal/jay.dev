@@ -1,0 +1,26 @@
+{% do doc.styles.addCssFile('css/components/molecules/format-visual.css') %}
+{% do doc.styles.addCssFile('css/components/molecules/format-visual-email.css') %}
+{% do doc.styles.addCssFile('css/components/molecules/code-snippet.css') %}
+
+<div class="ap-m-format-visual ap-m-format-visual-email">
+  <div class="ap-m-format-visual-image ap-m-format-visual-bottom-image">
+    <amp-img src="/static/img/amp-email-base.jpg" layout="responsive" width="144" height="227"></amp-img>
+  </div>
+  <div class="ap-m-format-visual-image ap-m-format-visual-top-image" title="&lt;amp-state&gt;">
+    <amp-img src="/static/img/amp-email-top.jpg" layout="responsive" width="176" height="120"></amp-img>
+  </div>
+  <div class="ap-m-format-visual-code-snippet">
+    {% set code_snippet = '
+<button
+  class="false"
+  [class]="clicked"
+  role="button" tabindex="0"
+  on="tap:AMP.setState({
+    clicked: !clicked
+  })">
+</button>
+    ' %}
+    {% set markdown = doc.pod.markdown %}
+    {{ markdown.convert('```html\n' + code_snippet + '\n```')|safe }}
+  </div>
+</div>
