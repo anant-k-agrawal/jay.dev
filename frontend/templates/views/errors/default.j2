@@ -1,0 +1,15 @@
+{% extends '/layouts/default.j2' %}
+
+{% block styles %}
+{{ super() }}
+
+{% do doc.styles.addCssFile('css/components/templates/default.css') %}
+{% endblock %}
+
+{% block main %}
+<main class="ap--main ap-t-default">
+  <div class="ap--container">
+    <h1>Something went wrong.</h1>
+  </div>
+</main>
+{% endblock %}

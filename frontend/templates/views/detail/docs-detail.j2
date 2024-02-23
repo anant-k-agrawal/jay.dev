@@ -1,0 +1,71 @@
+{% extends '/layouts/default.j2' %}
+
+{% block styles %}
+{{ super() }}
+
+{% do doc.styles.addCssFile('css/components/molecules/table.css') %}
+{% do doc.styles.addCssFile('css/components/molecules/code-snippet.css') %}
+
+{% if doc.has_inline_preview %}
+  {% do doc.styles.addCssFile('css/components/atoms/fab.css') %}
+  {% do doc.styles.addCssFile('css/components/organisms/code-preview.css') %}
+  {% do doc.icons.useIcon('icons/reload.svg') %}
+  {% do doc.icons.useIcon('icons/orientation-toggle.svg') %}
+{% endif %}
+
+{% do doc.styles.addCssFile('css/components/templates/docs-detail.css') %}
+{% endblock %}
+
+{% block main %}
+{% include 'views/partials/sidebar-toggle-observer.j2' %}
+{% include 'views/partials/format-filter-hint.j2' %}
+<main class="ap--main ap-t-docs-detail">
+  <div class="ap--container">
+    {% include 'views/partials/sidebar-toggle.j2' %}
+    <span id="ap--sidebar-content" class="ap--sidebar"></span>
+    {% include 'views/partials/content.j2' %}
+
+    {% if doc.collection.chaptered %}
+    <section class="ap--content">
+      <div class="ap--chapter-indicator">
+        {# If the document hasn't got a previous document, it's the first one #}
+        {% set document_list = doc.collection.list_docs(locale=doc.locale, include_hidden=True) %}
+
+        {% set previous_document = doc.prev(docs=document_list) %}
+        {% set next_document = doc.next(docs=document_list) %}
+
+        {% if not previous_document and next_document %}
+        {% do doc.styles.addCssFile('css/components/atoms/button.css') %}
+        <a href="{{ next_document.url.path }}" class="ap-a-btn">
+          {{ _('Get started') }}
+        </a>
+        {% else %}
+        {% if previous_document %}
+        {% do doc.icons.useIcon('icons/internal.svg') %}
+        <a href="{{ previous_document.url.path }}" class="ap-m-lnk ap-m-lnk-square ap--previous">
+          <div class="ap-a-ico ap-m-lnk-icon">
+            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#internal"></use></svg>
+          </div>
+          <span class="ap-m-lnk-text">{{ _('Previous chapter') }}</span>
+        </a>
+        {% endif %}
+        {% if next_document %}
+        {% do doc.icons.useIcon('icons/internal.svg') %}
+        <a href="{{ next_document.url.path }}" class="ap-m-lnk ap-m-lnk-square ap--next">
+          <span class="ap-m-lnk-text">{{ _('Next chapter') }}</span>
+          <div class="ap-a-ico ap-m-lnk-icon">
+            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#internal"></use></svg>
+          </div>
+        </a>
+        {% endif %}
+        {% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% include 'views/partials/author.j2' %}
+
+  </div>
+</main>
+{% include 'views/partials/sidebar.j2' %}
+{% endblock %}

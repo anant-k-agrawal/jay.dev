@@ -1,0 +1,227 @@
+/*
+
+################################
+### TEMPLATE: custom content ###
+################################
+
+### INFO:
+
+*/
+@import '../../extends';
+@import '../../functions';
+@import '../../mixins';
+@import '../../variables';
+
+@import '../atoms/_text.scss';
+@import '../atoms/_color.scss';
+@import '../atoms/_headline.scss';
+
+@import '../molecules/_teaser.scss';
+
+@import '../templates/_default.scss';
+
+.#{template('custom-content')} {
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top right;
+  background-attachment: fixed;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768"><defs><linearGradient id="a" x1="239.67" y1="855.23" x2="606.28" y2="-152.04" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="%23fff" stop-opacity="0"/><stop offset="1" stop-color="%23EDEDF1"/></linearGradient></defs><g><path fill="url(%23a)" d="M0 0h1024v214L786.37 768H0V0z"/></g></svg>');
+
+  section {
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .#{utility('container')} {
+    @include container;
+
+    &.mission {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .#{utility('container-fluid')} {
+    @include container-fluid;
+  }
+
+  .#{utility('content')} {
+    @include content;
+  }
+
+  .#{utility('divider')} {
+    width: 100%;
+    margin: 25px 0 50px;
+    border-bottom: 1px solid color('iron');
+
+    @media (min-width: 768px) {
+      grid-column: 6 / 19;
+      margin: 0;
+    }
+  }
+
+  .#{utility('video')} {
+    width: 100%;
+    margin-bottom: 5em;
+    @include agenda-list-shadow;
+  }
+
+  .#{utility('content')} {
+    @include default-section-padding;
+    margin-bottom: 7em;
+
+    @media (min-width: 768px) {
+      margin-bottom: 8vw;
+    }
+
+    .#{utility('container')} {
+      padding: 0;
+    }
+
+    .#{molecule('copy')} {
+      &:last-child,
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .#{utility('component-visual')} {
+    .#{organism('component-visual')} {
+      &-copy {
+        @include default-section-padding;
+      }
+    }
+  }
+
+  .#{utility('case-band')} {
+    .#{molecule('copy')} {
+      @include default-section-padding;
+    }
+  }
+
+  .#{utility('stage')} {
+    .#{organism('stage')} {
+      margin-bottom: 50px;
+
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
+
+      &-content {
+        margin: 20em 0 4em;
+
+        @media (min-width: 768px) {
+          margin: 7vw 0 11vw;
+        }
+      }
+
+    }
+
+    & + .#{utility('content')} {
+      @media (min-width: 768px) {
+        margin-top: -15%;
+      }
+
+      h1 {
+        @include hl-xxlrg;
+      }
+    }
+  }
+
+  .#{molecule('teaser')} {
+    @include teaser;
+    @include teaser-linking;
+    height: 100%;
+
+    & > a {
+      @include teaser-linking;
+    }
+
+    &-tags {
+      @include teaser-tag-zero;
+    }
+
+    &-card {
+      @include teaser-card;
+      height: 100%;
+      border-radius: 0;
+    }
+
+    &-content {
+      @include teaser-content;
+    }
+
+    &-headline {
+      @include teaser-headline;
+      margin-bottom: 0.65em;
+    }
+
+    &-copy {
+      @include teaser-copy;
+    }
+
+    &-image, &-icon {
+      + .#{molecule('teaser-card')} {
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+
+        .#{molecule('teaser-content')} {
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 25px;
+        }
+      }
+    }
+
+    &-image {
+      @include teaser-image;
+      @include box-shadow;
+
+      &:before {
+        height: 100%;
+      }
+
+      &.no-shadow {
+        box-shadow: none;
+      }
+    }
+
+    &-icon {
+      @include box-shadow;
+
+      align-items: center;
+      background: color('charade');
+      background: linear-gradient(225deg, color('charade') 0%, color('river-bed') 75%);
+      display: flex;
+      justify-content: center;
+      left: 0;
+      min-height: 100px;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+
+      .#{atom('ico')} {
+        @include ico-10;
+        fill: #fff;
+
+        svg {
+          padding: 1.75rem 0;
+        }
+      }
+    }
+  }
+
+  .#{organism('teaser-grid-list')} {
+    @media (max-width: 767px) {
+      padding: 1.25rem
+    }
+  }
+
+}
