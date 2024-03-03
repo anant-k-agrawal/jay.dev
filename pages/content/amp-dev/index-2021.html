@@ -27,16 +27,6 @@ format_explainer:
     description: "Serve lightning fast and secure eye-catching creatives."
     link: "All about AMP Ads"
     url: /about/ads.html
-  - name: wrench
-    headline: Components
-    description: "Now is the time for action."
-    link: "All about components"
-    url: /about/websites.html
-  - name: code-architecture
-    headline: Functionality
-    description: "The sun is a star."
-    link: "All about functionality"
-    url: /about/websites.html
 
 success_stories:
   - !g.doc /content/amp-dev/about/success-stories/washingtonpost.yaml
@@ -47,7 +37,6 @@ success_stories:
 
 <main class="ap--main">
   <section class="ap-home-stage">
-<!--
     <div class="ap-home-stage-logo">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194 194">
         <defs>
@@ -63,7 +52,6 @@ success_stories:
         </g>
       </svg>
     </div>
--->
     <div class="ap-home-stage-text">
       <h1 class="ap-h1">{{ _('AMP is a web component framework to easily create user-first experiences for the web.') }}</h1>
     </div>
@@ -146,7 +134,7 @@ success_stories:
     </div>
     {% endfor %}
   </section>
-<!--
+
   <section class="ap-intro ap-section --col-left">
     <h1>{{ _('The latest news') }}</h1>
     <p>{{ _('Don\'t want to miss any of the great stuff that happens around AMP? Then always be first in line and subscribe to our newsletter!') }}</p>
@@ -166,9 +154,6 @@ success_stories:
       {% include '/views/2021/partials/content/link.j2' %}
     {% endwith %}
   </section>
--->
-
-<!--
   <section class="ap-teaser-carousel --news">
     [% set posts = []|importBlog %]
     [% if posts|length %]
@@ -242,7 +227,7 @@ success_stories:
     </amp-selector>
     [% endif %]
   </section>
--->
+
   <section class="ap-intro ap-section --col-right">
     <div class="ap-text-block">
       <h1>{{ _('Explore AMP success stories') }}</h1>
