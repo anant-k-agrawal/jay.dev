@@ -375,7 +375,7 @@ async function handleTestSearchRequest(request, response, next) {
     pages.push({
       title: 'test ' + query + ' a ' + ((page - 1) * PAGE_SIZE + i),
       description: 'description page a ' + ((page - 1) * PAGE_SIZE + i),
-      url: 'https://ngfalls.netlify.app',
+      url: 'https://ngfalls.netlify.app/',
     });
   }
 
