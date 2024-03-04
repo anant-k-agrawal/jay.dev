@@ -95,6 +95,14 @@ $gap: 10px;
         &.email {
           fill: url('#gradient-email') color('black');
         }
+
+        &.code-architecture {
+          fill: url('#gradient-websites') color('black');
+        }
+
+        &.wrench {
+          fill: url('#gradient-email') color('black');
+        }
       }
 
       svg {
@@ -140,7 +148,9 @@ $gap: 10px;
     }
 
     &.websites,
-    &.ads {
+    &.ads,
+    &.code-architecture,
+    &.wrench {
       color: color('white');
     }
 
@@ -193,7 +203,8 @@ $gap: 10px;
     }
 
     @include respond-to('large') {
-      flex: 1 0 calc(25% - (4 * #{$gap}));
+      /* flex: 1 0 calc(25% - (4 * #{$gap})); */
+      flex: 1 0 calc(25% - (6 * #{$gap}));
     }
   }
 
@@ -207,8 +218,10 @@ $gap: 10px;
       display: initial;
 
       .websites &,
-      .ads & {
-        fill: color('white');
+      .ads &,
+      .code-architecture &,
+      .wrench & {
+        color: color('white');
       }
     }
   }
@@ -244,6 +257,14 @@ $gap: 10px;
 
     .ads & {
       @include ci-ads;
+    }
+
+    .code-architecture & {
+      @include ci-code-architecture;
+    }
+
+    .wrench & {
+      @include ci-wrench;
     }
 
     svg {
