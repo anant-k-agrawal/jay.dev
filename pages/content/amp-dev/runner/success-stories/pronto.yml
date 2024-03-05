@@ -1,4 +1,5 @@
 $title: Pronto
+$view: /views/detail/success-story-detail.j2
 $category: finance
 $date: 2024-03-05
 description: Description aboout Pronto
@@ -71,7 +72,7 @@ contents:
     direction: right-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000142161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000142161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -86,7 +87,7 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000152161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000152161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -101,7 +102,7 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000162161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000162161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -116,7 +117,7 @@ contents:
     direction: right-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000192161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000192161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -131,7 +132,7 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000222161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000222161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -151,7 +152,7 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000252161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000252161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -161,7 +162,7 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000282161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000282161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -171,7 +172,7 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000312161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000312161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -186,7 +187,7 @@ contents:
     direction: right-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000322161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000322161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -196,7 +197,7 @@ contents:
     direction: right-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000332161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000332161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -206,7 +207,7 @@ contents:
     direction: right-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000362161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000362161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -216,7 +217,7 @@ contents:
     direction: right-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000392161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000392161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -231,7 +232,7 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000422161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000422161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -241,7 +242,7 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000432161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000432161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -251,7 +252,7 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000462161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000462161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -261,7 +262,7 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000492161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000492161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -276,7 +277,7 @@ contents:
     direction: right-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000522161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000522161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -286,7 +287,7 @@ contents:
     direction: right-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000552161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000552161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -296,7 +297,7 @@ contents:
     direction: right-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000562161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000562161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -311,7 +312,7 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000592161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000592161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -321,7 +322,7 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000622161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000622161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -331,7 +332,7 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000652161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000652161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -347,7 +348,7 @@ contents:
     direction: right-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000682161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000682161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
@@ -357,7 +358,7 @@ contents:
     direction: right-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000692161/vector-w140-h120.svg.svg"
+    image_src: "/static/img/success-stories/pronto/21001100001000692161/vector-w140-h120.svg"
     width: 140
     height: 120
     type: mobile
