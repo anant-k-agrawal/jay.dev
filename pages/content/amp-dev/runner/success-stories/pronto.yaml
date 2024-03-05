@@ -43,8 +43,8 @@ stage:
       alt: Pronto
 
     - video_src: "/static/img/success-stories/pronto/stage-mobile-800×800.jpg"
-      width: 800
-      height: 800
+      width: 3
+      height: 5
       type: mobile
       alt: Pronto
 
