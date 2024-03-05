@@ -1,48 +1,48 @@
 $title: Pronto
 $view: /views/detail/success-story-detail.j2
-$category: finance
+$category: e-commerce
 $date: 2024-03-05
-description: Description aboout Pronto
+description: With the addition of AMP pages to the purchase funnel, Ontomatica’s performance continues to improve...
 formats:
   - websites
 
 teaser:
   image:
-    src: "/static/img/success-stories/pronto/teaser-image-2700×1800.jpg"
+    src: '/static/img/success-stories/pronto/teaser-image-2700×1800.jpg'
     width: 1
     height: 1
     alt: Pronto
   logo:
-    src: "/static/img/success-stories/pronto/teaser-logo-595x135.webp"
+    src: '/static/img/success-stories/pronto/teaser-logo-595x135.webp'
     width: 595
     height: 135
     alt: Pronto
-  text: text
+  text: Ontmatica’s mobile-first design helps users navigate 70% faster
 
 stage:
-  headline: text
+  headline: Ontmatica’s mobile-first design helps users navigate 70% faster
   subline: MARCH 5, 2024
   layout: all
   logo:
-    src: "/static/img/success-stories/pronto/stage-logo-313x313.webp"
+    src: '/static/img/success-stories/pronto/stage-logo-313x313.webp'
     width: 1
     height: 1
     alt: Pronto
   devices:
 
-    - image_src: "/static/img/success-stories/pronto/stage-desktop-2700×1800.jpg"
+    - image_src: '/static/img/success-stories/pronto/stage-desktop-2700×1800.jpg'
       width: 8
       height: 5
       type: desktop
       alt: Pronto
 
-    - image_src: "/static/img/success-stories/pronto/stage-tablet-3072×2304.jpg"
+    - image_src: '/static/img/success-stories/pronto/stage-tablet-3072×2304.jpg'
       width: 3
       height: 4
       type: tablet
       alt: Pronto
 
-    - video_src: "/static/img/success-stories/pronto/stage-mobile-2448×2448.jpg"
+    - video_src: '/static/img/success-stories/pronto/stage-mobile-2448×2448.jpg'
       width: 2448
       height: 2448
       type: mobile
@@ -59,10 +59,6 @@ contents:
   - layout: text
     headline: Goal
     text: "<ul><li>text 1</li><li>text 2</li><li>text 3</li><li>text 4</li><li>text 5</li></ul>"
-
-  - layout: text
-    headline: Problem Set
-    text: "<ul><li>How to 1.</li><li>How to 2.</li><li>How to 3.</li></ul>"
 
   - layout: text
     headline: Contributing Solution
