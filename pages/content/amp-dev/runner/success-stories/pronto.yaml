@@ -1,6 +1,6 @@
 $title: Pronto
 $view: /views/detail/success-story-detail.j2
-$category: e-commerce
+$category: finance
 $date: 2024-03-05
 description: With the addition of AMP pages to the purchase funnel, Ontomatica’s performance continues to improve...
 formats:
@@ -8,57 +8,54 @@ formats:
 
 teaser:
   image:
-    src: '/static/img/success-stories/pronto/teaser-image-2700×1800.jpg'
+    src: "/static/img/success-stories/pronto/teaser-image-2700×1800.jpg"
     width: 1
     height: 1
     alt: Pronto
   logo:
-    src: '/static/img/success-stories/pronto/teaser-logo-595x135.webp'
+    src: "/static/img/success-stories/pronto/teaser-logo-595x135.webp"
     width: 595
     height: 135
     alt: Pronto
-  text: Ontmatica’s mobile-first design helps users navigate 70% faster
+  text: text
 
 stage:
-  headline: Ontmatica’s mobile-first design helps users navigate 70% faster
-  subline: MARCH 5, 2024
+  headline: text
+  subline: <no subline>
   layout: all
   logo:
-    src: '/static/img/success-stories/pronto/stage-logo-313x313.webp'
+    src: "/static/img/success-stories/pronto/stage-logo-313x313.webp"
     width: 1
     height: 1
     alt: Pronto
   devices:
 
-    - image_src: '/static/img/success-stories/pronto/stage-desktop-2700×1800.jpg'
+    - image_src: "/static/img/success-stories/pronto/stage-desktop-2700×1800.jpg"
       width: 8
       height: 5
       type: desktop
       alt: Pronto
 
-    - image_src: '/static/img/success-stories/pronto/stage-tablet-3072×2304.jpg'
+    - image_src: "/static/img/success-stories/pronto/stage-tablet-3072×2304.jpg"
       width: 3
       height: 4
       type: tablet
       alt: Pronto
 
-    - video_src: '/static/img/success-stories/pronto/stage-mobile-2448×2448.jpg'
+    - video_src: "/static/img/success-stories/pronto/stage-mobile-800×800.jpg"
       width: 2448
       height: 2448
       type: mobile
       alt: Pronto
 
-kpis:
-  - value: 133%
-    text: Average growth in CPMs
-
-  - value: 220%
-    text: Average growth in CTRs
-
 contents:
   - layout: text
     headline: Goal
     text: "<ul><li>text 1</li><li>text 2</li><li>text 3</li><li>text 4</li><li>text 5</li></ul>"
+
+  - layout: text
+    headline: Problem Set
+    text: "<ul><li>How to 1.</li><li>How to 2.</li><li>How to 3.</li></ul>"
 
   - layout: text
     headline: Contributing Solution
@@ -72,4 +69,300 @@ contents:
   - layout: text
     headline: Chemical Substance
     text: "A chemical substance is a form of matter that has constant chemical composition and characteristic properties. It cannot be separated into components by physical separation methods, i.e., without breaking chemical bonds. Chemical substances can be chemical elements, chemical compounds, ions or alloys. Chemical substances exist as solids, liquids, gases or plasma, and may change between these phases of matter with changes in temperature or pressure. Chemical substances may be combined or converted to others by means of chemical reactions."
+    direction: right-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000142161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Chemical Substance Data Kit
+    text: "Chemical Substance Data Kit describes approximately 400 pesticides and metabolites organized by chemical group (e.g. organochlorine) and function group (e.g. fungicide). Single metabolites and degradants from multiple sources are properly documented."
+    direction: right-flat
+
+  - layout: text
+    headline: Food Substance
+    text: "Food is any substance consumed to provide nutritional support for a body. It is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. The substance is ingested by an organism and assimilated by the organism's cells to provide energy, maintain life, or stimulate growth."
+    direction: left-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000152161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Food Substance Data Kit
+    text: "Food Substance Data Kit describes approximately 300 nutrients and additives organized by chemical group (e.g. lipids, proteins, phenols) and by function group (e.g. fortifiers, colors, preservatives)."
+    direction: left-flat
+
+  - layout: text
+    headline: Drug Substance
+    text: "A drug is any substance other than food, that when inhaled, injected, smoked, consumed, absorbed via a patch on the skin or dissolved under the tongue causes a physiological change in the body. In pharmacology, a pharmaceutical drug, also called a medication or medicine, is a chemical substance used to treat, cure, prevent, or diagnose a disease or to promote well-being. Traditionally drugs were obtained through extraction from medicinal plants, but more recently also by organic synthesis."
+    direction: left-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000162161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Drug Substance Data Kit
+    text: "Drug Substance Data Kit describes approximately 1,000 substances in human and animal drugs."
+    direction: left-flat
+
+  - layout: text
+    headline: Cosmetics Substance
+    text: "Cosmetics are substances or products used to enhance the appearance or fragrance of the human body. Many cosmetics are designed for use of applying to the face and hair. They are generally mixtures of chemical compounds; some being derived from natural sources (such as coconut oil), and some being synthetics. Common cosmetics include lipstick, mascara, eye shadow, foundation, rouge, skin cleansers and skin lotions, shampoo, hairstyling products (gel, hair spray, etc.), perfume, and cologne."
+    direction: right-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000192161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Cosmetics Substance Data Kit
+    text: "Cosmetics Substance Data Kit describes approximately 500 substances in cosmetics."
+    direction: right-flat
+
+  - layout: text
+    headline: Textile Substance
+    text: "A textile or cloth is a flexible material consisting of a network of natural or artificial fibers (yarn or thread). Yarn is produced by spinning raw fibers of wool, flax, cotton, or other material to produce long strands. Textiles are formed by weaving, knitting, crocheting, knotting, or felting. The words fabric and cloth are used in textile assembly trades (such as tailoring and dressmaking) as synonyms for textile. However, there are subtle differences in these terms in specialized usage. Textile refers to any material made of interlacing fibers. Fabric refers to any material made through weaving, knitting, spreading, crocheting, or bonding that may be used in production of further goods (garments, etc.). Cloth may be used synonymously with fabric but often refers to a finished piece of fabric used for a specific purpose (e.g., table cloth)."
+    direction: left-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000222161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Textile Substance Data Kit
+    text: "Textile Substance Data Kit describes approximately 800 substances in textiles."
+    direction: left-flat
+
+  - layout: text
+    headline: Product Data Kit
+    text: "Ontomatica offers pre-defined product descriptions. Descriptions are organized into Kits. Each product (each item) is described using a specific Product Markup Language - Linked Data (PRML-LD) based on ISO 11238 structurally diverse substances standard for defining products. Each item is facet classified and accessible through a facet search interface."
+    direction: left-flat
+
+  - layout: text
+    headline: Chemical Product
+    text: "Chemical products are the species formed from chemical reactions. During a chemical reaction, reactants are transformed into products after passing through a high energy transition state. This process results in the consumption of the reactants. It can be a spontaneous reaction or mediated by catalysts which lower the energy of the transition state, and by solvents which provide the chemical environment necessary for the reaction to take place."
+    direction: left-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000252161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Basic Chemical Data Kit
+    text: "Basic Chemical Data Kit describes approximately 450 items as identified in EPA FCID and US HHS NIH NCBI PubChem. Basic Chemical Data Kit describes items using Chemical Markup Language - Linked Data (CHML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: left-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000282161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Generic Chemical Data Kit
+    text: "Generic Chemical Data Kit describes approximately 1,800 items as identified in EPA FCID and US HHS NIH NCBI PubChem. Generic Chemical Data Kit describes items using Chemical Markup Language - Linked Data (CHML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: left-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000312161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Advanced Chemical Data Kit
+    text: "Advanced Chemical Data Kit describes approximately 600 items as identified in EPA FCID and US HHS NIH NCBI PubChem. Advanced Chemical Data Kit describes items using Chemical Markup Language - Linked Data (CHML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: left-flat
+
+  - layout: text
+    headline: Food Product
+    text: "Food products are."
+    direction: right-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000322161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Basic Food Data Kit
+    text: "Basic Food Data Kit describes approximately 450 items as identified in EPA FCID, IR-4; their equivalents in USDA ARS NDL SR2x; and, related datasets. Basic Food Data Kit describes items using Food Markup Language - Linked Data (FOML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: right-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000332161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Common Food Data Kit
+    text: "Common Food Data Kit describes approximately 2,700 adult and baby foods from USDA ARS NDL SR2x. Common Food Data Kit describes items using Food Markup Language - Linked Data (FOML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: right-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000362161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Generic Food Data Kit
+    text: "Generic Food Data Kit describes approximately 6,000 generic foods from USDA ARS NDL SR2x. Generic Food Data Kit describes items using Food Markup Language - Linked Data (FOML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: right-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000392161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Advanced Food Data Kit
+    text: "Advanced Food Data Kit describes approximately 10,000 items as identified in USDA ARS FSRG Food and Nutrient Database for Dietary Studies [FNDDS3] meals; 110,000 values of consumption of EPA FCIDs included in the meals; and, their equivalents in USDA ARS NDL SR2x. Advanced Food Data Kit describes items using Food Markup Language - Linked Data (FOML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: right-flat
+
+  - layout: text
+    headline: Drug Product
+    text: "Drug products are ..."
+    direction: left-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000422161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Prescription Drug Data Kit
+    text: "Prescription Drug Data Kit describes approximately 20,000 items as identified in US HHS NLM and US HHS FDA datasets. Prescription Drug Data Kit describes items using Drug Markup Language - Linked Data (DRML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: left-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000432161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Over-the-Counter Drug Data Kit
+    text: "Over-the-Counter Drug Data Kit describes approximately 24,000 items as identified in US HHS NLM and US HHS FDA datasets. Over-the-Counter Drug Data Kit describes items using Drug Markup Language - Linked Data (DRML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: left-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000462161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Homeopathic Drug Data Kit
+    text: "Homeopathic Drug Data Kit describes approximately 200 items as identified in US HHS NLM and US HHS FDA datasets. Homeopathic Drug Data Kit describes items using Drug Markup Language - Linked Data (DRML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: left-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000492161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Animal Drug Data Kit
+    text: "Animal Drug Data Kit describes approximately 1,200 items as identified in US HHS FDA Center for Veterinary Medicine. Animal Drug Data Kit describes items using Drug Markup Language - Linked Data (DRML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: left-flat
+
+  - layout: text
+    headline: Cosmetic Product
+    text: "Cosmetic products are ..."
+    direction: right-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000522161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Basic Cosmetics Data Kit
+    text: "Basic Cosmetics Data Kit describes approximately 1,200 items as identified in US HHS FDA and related datasets. Basic Cosmetics Data Kit describes items using Cosmetics Markup Language - Linked Data (COML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: right-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000552161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Generic Cosmetics Data Kit
+    text: "Generic Cosmetics Data Kit describes approximately 28,000 items as identified in US HHS FDA and related datasets. Generic Cosmetics Data Kit describes items using Cosmetics Markup Language - Linked Data (COML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: right-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000562161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Advanced Cosmetics Data Kit
+    text: "Advanced Cosmetics Data Kit describes approximately 800 items as identified in US HHS FDA and related datasets. Advanced Cosmetics Data Kit describes items using Cosmetics Markup Language - Linked Data (COML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: right-flat
+
+  - layout: text
+    headline: Textile Product
+    text: "Textile products are ..."
+    direction: left-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000592161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Basic Textiles Data Kit
+    text: "Basic Textiles Data Kit describes approximately 800 items as identified in US Department of Commerce textiles and apparel datasets. Basic Textiles Data Kit describes items using Textile Markup Language - Linked Data (TXML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: left-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000622161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Generic Textiles Data Kit
+    text: "Generic Textiles Data Kit describes approximately 12,000 items as identified in US Department of Commerce textiles and apparel datasets. Generic Textiles Data Kit describes items using Textile Markup Language - Linked Data (TXML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: left-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000652161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Advanced Textiles Data Kit
+    text: "Advanced Textiles Data Kit describes approximately 1,400 items as identified in US Department of Commerce textiles and apparel datasets. Advanced Textiles Data Kit describes items using Textile Markup Language - Linked Data (TXML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
+    direction: left-flat
+
+
+  - layout: text
+    headline: Linked Data Indexing
+    text: "Ontomatica offers a service to index chemicals, foods, drugs, cosmetics and textiles."
+    direction: right-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000682161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Linked Data Indexing - Commodity
+    text: "Linked Data Indexing - Commodity uses appropriate Controlled Vocabularies and ISO 11238 Group 1 specifications to describe chemical, food, drug, cosmetic and textile substances and commodities."
+    direction: right-flat
+
+  - layout: text-media
+    image_src: "/static/img/success-stories/pronto/21001100001000692161/vector-w140-h120.svg"
+    width: 140
+    height: 120
+    type: mobile
+    alt: Pronto
+    headline: Linked Data Indexing - Product
+    text: "Linked Data Indexing - Product uses appropriate Controlled Vocabularies and ISO 11238 Group 1 and Group 4 specifications to describe chemical, food, drug, cosmetic and textile products."
     direction: right-flat
