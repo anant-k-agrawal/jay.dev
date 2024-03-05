@@ -20,8 +20,8 @@ teaser:
   text: text
 
 stage:
-  headline: text
-  subline: <no subline>
+  headline: Ontomatica’s mobile-first design helps users navigate 70% faster
+  subline: Add a subline here
   layout: all
   logo:
     src: "/static/img/success-stories/pronto/stage-logo-313x313.webp"
@@ -52,10 +52,6 @@ contents:
   - layout: text
     headline: Goal
     text: "<ul><li>text 1</li><li>text 2</li><li>text 3</li><li>text 4</li><li>text 5</li></ul>"
-
-  - layout: text
-    headline: Problem Set
-    text: "<ul><li>How to 1.</li><li>How to 2.</li><li>How to 3.</li></ul>"
 
   - layout: text
     headline: Contributing Solution
