@@ -48,6 +48,21 @@ stage:
       type: mobile
       alt: Pronto
 
+kpis:
+  - value: 10X
+    text: Increase in page speed
+
+  - value: 95%
+    text: Increase in partner conversion rates
+
+  - text: Increase in search-to-conversion rates. Increase in search-to-conversion rates. Increase in search-to-conversion rates.
+
+  - layout: text-media
+    image_src: "/static/img/icons/icon-72x72.png"
+    width: 72
+    height: 72
+    text: Increase in ad CTRs
+
 contents:
   - layout: text
     headline: Goal
