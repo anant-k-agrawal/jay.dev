@@ -134,12 +134,10 @@
     </aside>
     {% endif %}
 
-{# note: we no longer use this
     {% block analytics %}
     {% include 'views/partials/analytics.j2' %}
     {% include 'views/partials/consent.j2' %}
     {% endblock %}
-#}
 
     {% block serviceWorker %}
     {% include 'views/partials/service-worker.j2' %}
