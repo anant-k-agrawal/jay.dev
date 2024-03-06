@@ -1,5 +1,0 @@
-$path: /documentation/templates/{base}.html
-$view: /views/default.j2
-$title: Templates
-$localization:
-  path: /{locale}/documentation/templates/{base}.html
