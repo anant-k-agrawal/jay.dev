@@ -9,15 +9,15 @@ formats:
 teaser:
   image:
     src: "/static/img/success-stories/pronto/teaser-image-2700×1800.jpg"
-    width: 2700
-    height: 1800
+    width: 2
+    height: 1
     alt: Pronto
   logo:
     src: "/static/img/success-stories/pronto/teaser-logo-595x135.webp"
     width: 595
     height: 135
     alt: Pronto
-  text: text
+  text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder. Pudding croissant biscuit icing.
 
 stage:
   headline: Ontomatica’s mobile-first design helps users navigate 70% faster
@@ -49,12 +49,13 @@ stage:
       alt: Pronto
 
 kpis:
-  - value: 10X
-    text: Increase in page speed
+  - value: value
+    text: Jelly jujubes marshmallow donut.
 
   - value: significant
-    text: Increase in partner conversion rates
+    text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder.
 
+  - value: good
   - text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon. Gingerbread biscuit gummies cupcake. Powder sugar plum chocolate cake chocolate cake cake.
 
 contents:
