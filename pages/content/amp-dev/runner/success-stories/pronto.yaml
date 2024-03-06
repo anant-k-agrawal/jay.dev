@@ -9,8 +9,8 @@ formats:
 teaser:
   image:
     src: "/static/img/success-stories/pronto/teaser-image-2700×1800.jpg"
-    width: 1
-    height: 1
+    width: 2700
+    height: 1800
     alt: Pronto
   logo:
     src: "/static/img/success-stories/pronto/teaser-logo-595x135.webp"
