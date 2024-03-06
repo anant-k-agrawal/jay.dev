@@ -52,16 +52,10 @@ kpis:
   - value: 10X
     text: Increase in page speed
 
-  - value: 95%
+  - value: significant
     text: Increase in partner conversion rates
 
-  - text: Increase in search-to-conversion rates. Increase in search-to-conversion rates. Increase in search-to-conversion rates.
-
-  - layout: text-media
-    image_src: "/static/img/icons/icon-72x72.png"
-    width: 72
-    height: 72
-    text: Increase in ad CTRs
+  - text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon. Gingerbread biscuit gummies cupcake. Powder sugar plum chocolate cake chocolate cake cake.
 
 contents:
   - layout: text
