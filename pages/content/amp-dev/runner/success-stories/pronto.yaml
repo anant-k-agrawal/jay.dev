@@ -49,13 +49,13 @@ stage:
       alt: Pronto
 
 kpis:
-  - value: value
+  - value: Value
     text: Jelly jujubes marshmallow donut.
 
-  - value: significant
+  - value: Significant cost savings
     text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder.
 
-  - value: good
+  - value: Better alignment between sales and product management 
   - text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon. Gingerbread biscuit gummies cupcake. Powder sugar plum chocolate cake chocolate cake cake.
 
 contents:
