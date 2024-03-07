@@ -60,14 +60,14 @@ module.exports = {
 
   // A set of global variables that need to be available in all test environments
   // globals: {
-    // API_ENDPOINT_PAGE_SPEED_INSIGHTS:
-      // pixiConfig.development.API_ENDPOINT_PAGE_SPEED_INSIGHTS,
-    // API_ENDPOINT_LINTER: pixiConfig.development.API_ENDPOINT_LINTER,
-    // API_ENDPOINT_LINTER_CANARY:
-      // pixiConfig.development.API_ENDPOINT_LINTER_CANARY,
-    // API_ENDPOINT_MOBILE_FRIENDLINESS:
-      // pixiConfig.development.API_ENDPOINT_MOBILE_FRIENDLINESS,
-    // AMP_DEV_PIXI_APIS_KEY: '',
+  // API_ENDPOINT_PAGE_SPEED_INSIGHTS:
+    // pixiConfig.development.API_ENDPOINT_PAGE_SPEED_INSIGHTS,
+  // API_ENDPOINT_LINTER: pixiConfig.development.API_ENDPOINT_LINTER,
+  // API_ENDPOINT_LINTER_CANARY:
+    // pixiConfig.development.API_ENDPOINT_LINTER_CANARY,
+  // API_ENDPOINT_MOBILE_FRIENDLINESS:
+    // pixiConfig.development.API_ENDPOINT_MOBILE_FRIENDLINESS,
+  // AMP_DEV_PIXI_APIS_KEY: '',
   // },
 
   // An array of directory names to be searched recursively up from the requiring module's location
