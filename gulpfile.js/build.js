@@ -191,17 +191,17 @@ async function buildPlayground() {
 // async function buildPixi() {
 //  await sh('mkdir -p pixi/dist');
 //  return sh('npm run build:pixi');
-//}
+// }
 
 /**
  * Builds the pixi cloud functions project
  * 2024/03/07
  */
-//function buildPixiFunctions() {
+// function buildPixiFunctions() {
 //  return sh('npm install', {
 //    workingDir: PIXI_CLOUD_ROOT,
 //  });
-//}
+// }
 
 /**
  * Builds the boilerplate generator
@@ -788,7 +788,7 @@ exports.templates = templates;
 exports.importAll = importAll;
 exports.importComponents = importComponents;
 exports.buildPlayground = buildPlayground;
-//exports.buildPixi = buildPixi;
+// exports.buildPixi = buildPixi;
 exports.buildBoilerplate = buildBoilerplate;
 exports.buildFrontend = buildFrontend;
 exports.buildSamples = buildSamples;
@@ -800,7 +800,7 @@ exports.staticify = staticify;
 exports.unpackArtifacts = unpackArtifacts;
 exports.collectStatics = collectStatics;
 exports.whoAmI = whoAmI;
-//exports.buildPixiFunctions = buildPixiFunctions;
+// exports.buildPixiFunctions = buildPixiFunctions;
 exports.buildFinalize = gulp.series(
   gulp.parallel(collectStatics, persistBuildInfo),
   thumborImageIndex
