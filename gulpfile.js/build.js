@@ -292,7 +292,7 @@ function buildPrepare(done) {
     gulp.parallel(
       buildPlayground,
       buildBoilerplate,
-//      buildPixi,
+      // buildPixi,
       buildFrontend21,
       importAll,
       zipTemplates
