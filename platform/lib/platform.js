@@ -27,7 +27,7 @@ const subdomain = require('./middleware/subdomain.js');
 const webSocketServer = require('@examples/socket-server/socket-server');
 
 const routers = {
-  //  boilerplate: require('../../boilerplate/backend/'),
+  boilerplate: require('../../boilerplate/backend/'),
   cspReport: require('@lib/routers/cspReport.js'),
   example: {
     api: require('@examples'),
@@ -45,11 +45,11 @@ const routers = {
   log: require('@lib/routers/runtimeLog.js'),
   notFound: require('@lib/routers/notFound.js'),
   // packager: require('@lib/routers/packager.js'),
-  // pixi: require('../../pixi/backend/'),
-  // playground: require('../../playground/backend/'),
+  pixi: require('../../pixi/backend/'),
+  playground: require('../../playground/backend/'),
   search: require('@lib/routers/search.js'),
   static: require('@lib/routers/static.js'),
-  // survey: require('@lib/routers/surveyComponent.js'),
+  survey: require('@lib/routers/surveyComponent.js'),
   templates: require('@lib/routers/templates.js'),
   thumbor: require('@lib/routers/thumbor.js').thumborRouter,
   whoAmI: require('@lib/routers/whoAmI.js'),
@@ -176,10 +176,10 @@ class Platform {
     this.server.use(routers.whoAmI);
     this.server.use(routers.healthCheck);
     this.server.use(routers.example.api);
-    // this.server.use(routers.pixi);
-    // this.server.use(routers.survey);
-    // this.server.use(routers.boilerplate);
+    this.server.use(routers.pixi);
+    this.server.use(routers.survey);
     this.server.use(routers.search);
+    this.server.use(routers.boilerplate);
     this.server.use(routers.static);
     this.server.use(routers.templates);
     // XMLs rendered by Grow as well as all pages located under /shared

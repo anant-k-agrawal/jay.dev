@@ -42,7 +42,7 @@ const {whoAmI} = require('./whoAmI.js');
 const importAdVendorList = require('./import/importAdVendorList.js');
 const {thumborImageIndex} = require('./thumbor.js');
 const CleanCSS = require('clean-css');
-// const {PIXI_CLOUD_ROOT} = require('@lib/utils/project').paths;
+const {PIXI_CLOUD_ROOT} = require('@lib/utils/project').paths;
 const {copyFile} = require('fs/promises');
 const nunjucks = require('nunjucks');
 const {importBlog} = require('@lib/templates/ImportBlogFilter.js');
@@ -186,22 +186,20 @@ async function buildPlayground() {
 /**
  * Builds Pixi
  * @return {Promise}
- * 2024/03/07
  */
-// async function buildPixi() {
-//  await sh('mkdir -p pixi/dist');
-//  return sh('npm run build:pixi');
-// }
+async function buildPixi() {
+  await sh('mkdir -p pixi/dist');
+  return sh('npm run build:pixi');
+}
 
 /**
  * Builds the pixi cloud functions project
- * 2024/03/07
  */
-// function buildPixiFunctions() {
-//  return sh('npm install', {
-//    workingDir: PIXI_CLOUD_ROOT,
-//  });
-// }
+function buildPixiFunctions() {
+  return sh('npm install', {
+    workingDir: PIXI_CLOUD_ROOT,
+  });
+}
 
 /**
  * Builds the boilerplate generator
@@ -282,7 +280,6 @@ function importComponents() {
  * builds samples, lints Grow pod and JavaScript.
  *
  * @return {undefined}
- * 2024/03/07
  */
 function buildPrepare(done) {
   return gulp.series(
@@ -292,7 +289,7 @@ function buildPrepare(done) {
     gulp.parallel(
       buildPlayground,
       buildBoilerplate,
-      // buildPixi,
+      buildPixi,
       buildFrontend21,
       importAll,
       zipTemplates
@@ -764,7 +761,6 @@ function collectStatics(done) {
  * inspect the current version on /who-am-i
  *
  * @return {undefined}
- * 2024/03/07
  */
 function persistBuildInfo(done) {
   const buildInfo = {
@@ -788,7 +784,7 @@ exports.templates = templates;
 exports.importAll = importAll;
 exports.importComponents = importComponents;
 exports.buildPlayground = buildPlayground;
-// exports.buildPixi = buildPixi;
+exports.buildPixi = buildPixi;
 exports.buildBoilerplate = buildBoilerplate;
 exports.buildFrontend = buildFrontend;
 exports.buildSamples = buildSamples;
@@ -800,7 +796,7 @@ exports.staticify = staticify;
 exports.unpackArtifacts = unpackArtifacts;
 exports.collectStatics = collectStatics;
 exports.whoAmI = whoAmI;
-// exports.buildPixiFunctions = buildPixiFunctions;
+exports.buildPixiFunctions = buildPixiFunctions;
 exports.buildFinalize = gulp.series(
   gulp.parallel(collectStatics, persistBuildInfo),
   thumborImageIndex
