@@ -187,19 +187,19 @@ async function buildPlayground() {
  * Builds Pixi
  * @return {Promise}
  */
-// async function buildPixi() {
-//  await sh('mkdir -p pixi/dist');
-//  return sh('npm run build:pixi');
-// }
+async function buildPixi() {
+  await sh('mkdir -p pixi/dist');
+  return sh('npm run build:pixi');
+}
 
 /**
  * Builds the pixi cloud functions project
  */
-// function buildPixiFunctions() {
-//  return sh('npm install', {
-//    workingDir: PIXI_CLOUD_ROOT,
-//  });
-// }
+function buildPixiFunctions() {
+  return sh('npm install', {
+    workingDir: PIXI_CLOUD_ROOT,
+  });
+}
 
 /**
  * Builds the boilerplate generator
