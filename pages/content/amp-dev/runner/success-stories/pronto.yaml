@@ -21,7 +21,7 @@ teaser:
 
 stage:
   headline: Ontomatica’s mobile-first design helps users navigate 70% faster
-  subline: Add a subline here
+  subline: Starting point for machine readable data
   layout: all
   logo:
     src: "/static/img/success-stories/pronto/stage-logo-313x313.webp"
@@ -49,13 +49,13 @@ stage:
       alt: Pronto
 
 kpis:
-  - value: Value
-    text: Jelly jujubes marshmallow donut.
-
-  - value: Significant cost savings
+  - value: Big value
     text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder.
 
-  - value: Better alignment between sales and product management 
+  - value: Significant savings
+    text: Jelly jujubes marshmallow donut.  Pudding croissant biscuit icing.
+
+  - value: Better sales/product management alignment
   - text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon. Gingerbread biscuit gummies cupcake. Powder sugar plum chocolate cake chocolate cake cake.
 
 contents:
