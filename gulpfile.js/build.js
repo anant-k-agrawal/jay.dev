@@ -35,7 +35,7 @@ const ComponentReferenceImporter = require('@lib/pipeline/componentReferenceImpo
 const SpecImporter = require('@lib/pipeline/specImporter');
 const RecentGuides = require('@lib/pipeline/recentGuides');
 const gulpSass = require('gulp-sass')(require('sass'));
-const importRoadmap = require('./import/importRoadmap.js');
+// const importRoadmap = require('./import/importRoadmap.js');
 const importWorkingGroups = require('./import/importWorkingGroups.js');
 const {staticify} = require('./staticify.js');
 const {whoAmI} = require('./whoAmI.js');
@@ -260,7 +260,7 @@ function importAll() {
     new ComponentReferenceImporter().import(),
     new SpecImporter().import(),
     new RecentGuides().import(),
-    importRoadmap.importRoadmap(),
+    // importRoadmap.importRoadmap(),
     importWorkingGroups.importWorkingGroups(),
     importAdVendorList.importAdVendorList(),
   ]);
