@@ -1,6 +1,6 @@
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
-const pixiConfig = require('./pixi/config.js');
+// const pixiConfig = require('./pixi/config.js');
 
 module.exports = {
   // All imported modules in your tests should be mocked automatically
