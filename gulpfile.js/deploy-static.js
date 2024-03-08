@@ -23,7 +23,7 @@ const {NETLIFY_DEPLOY_TOKEN} = process.env;
 const SITES = [
   {
     NAME: 'ngfalls.netlify.app',
-    ID: '7235a350-a231-4df3-9ed8-a1d7157ad331',
+    ID: 'dff91c68-0a3a-4ccd-a5d5-ada619a2ed40',
     DIR: PAGES_DEST,
   },
   // {
