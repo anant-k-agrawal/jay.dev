@@ -22,7 +22,7 @@ const {PAGES_DEST} = require('@lib/utils/project').paths;
 const {NETLIFY_DEPLOY_TOKEN} = process.env;
 const SITES = [
   {
-    NAME: 'amp.dev',
+    NAME: 'ngfalls.netlify.app',
     ID: '7235a350-a231-4df3-9ed8-a1d7157ad331',
     DIR: PAGES_DEST,
   },
