@@ -44,12 +44,12 @@ const {thumborImageIndex} = require('./thumbor.js');
 const CleanCSS = require('clean-css');
 const {PIXI_CLOUD_ROOT} = require('@lib/utils/project').paths;
 const {copyFile} = require('fs/promises');
-// const nunjucks = require('nunjucks');
-// const {importBlog} = require('@lib/templates/ImportBlogFilter.js');
-// const {
-//  importYouTubeChannel,
-// } = require('@lib/templates/ImportYouTubeChannel.js');
-// const {survey} = require('@lib/templates/SurveyFilter.js');
+const nunjucks = require('nunjucks');
+const {importBlog} = require('@lib/templates/ImportBlogFilter.js');
+const {
+  importYouTubeChannel,
+} = require('@lib/templates/ImportYouTubeChannel.js');
+const {survey} = require('@lib/templates/SurveyFilter.js');
 const {
   SupportedFormatsExtension,
 } = require('@lib/templates/SupportedFormatsExtension.js');
@@ -499,7 +499,138 @@ function buildPages(done) {
   )(done);
 }
 
+/**
+ * creates a new nunjucks environment for rendering
+ *
+ */
+function nunjucksEnv() {
+  const env = new nunjucks.Environment(null, {
+    tags: {
+      blockStart: '[%',
+      blockEnd: '%]',
+      variableStart: '[=',
+      variableEnd: '=]',
+      commentStart: '[[[[#',
+      commentEnd: '#]]]]',
+    },
+  });
 
+  env.addExtension(
+    'SupportedFormatsExtension',
+    new SupportedFormatsExtension()
+  );
+  env.addFilter('importBlog', importBlog, true);
+
+  env.addFilter('importYouTubeChannel', importYouTubeChannel, true);
+  env.addFilter('survey', survey, true);
+
+  return env;
+}
+
+function optimizeFiles(cb) {
+  return gulp
+    .src([
+      `${project.paths.PAGES_DEST}/**/*.html`,
+      `!${project.paths.PAGES_DEST}/static/samples/**/*.html`,
+    ])
+    .pipe(
+      through.obj((file, encoding, callback) => {
+        const unoptimizedFile = file.contents.toString();
+
+        console.log(`running optimize on ${file.path}...`);
+
+        optimize({query: ''}, unoptimizedFile, {}, file.path).then(
+          (optimizedFile) => {
+            file.contents = Buffer.from(optimizedFile);
+            callback(null, file);
+          }
+        );
+      })
+    )
+    .pipe(gulp.dest((f) => f.base))
+    .on('end', cb);
+}
+
+function newPost(text, img, id) {
+  return {
+    id: id,
+    text: text,
+    img: '/static/samples/img/' + img,
+    timestamp: Number(new Date()),
+  };
+}
+
+async function renderExamples(done) {
+  const logger = require('@lib/utils/log')('Static File Generator');
+  const env = nunjucksEnv();
+  const blogItems = [
+    newPost('A green landscape with trees.', 'landscape_green_1280x853.jpg', 1),
+    newPost(
+      'Mountains reflecting on a lake.',
+      'landscape_mountains_1280x657.jpg',
+      2
+    ),
+    newPost(
+      'A road leading to a lake with mountains on the back.',
+      'landscape_lake_1280x857.jpg',
+      3
+    ),
+    newPost(
+      'Forested hills with a grey sky in the background.',
+      'landscape_trees_1280x960.jpg',
+      4
+    ),
+    newPost(
+      'Scattered houses in a mountain village.',
+      'landscape_village_1280x853.jpg',
+      5
+    ),
+    newPost('A deep canyon.', 'landscape_canyon_1280x1700.jpg', 6),
+    newPost(
+      'A desert with mountains in the background.',
+      'landscape_desert_1280x853.jpg',
+      7
+    ),
+    newPost('Colorful houses on a street.', 'landscape_houses_1280x803.jpg', 8),
+    newPost('Blue sea surrounding a cave.', 'landscape_sea_1280x848.jpg', 9),
+    newPost(
+      'A ship sailing the sea at sunset.',
+      'landscape_ship_1280x853.jpg',
+      10
+    ),
+  ];
+
+  const configObj = {
+    time: new Date().toLocaleTimeString(),
+    timestamp: Number(new Date()),
+    // send a random list of blog items to make it also work on the cache
+    blogItems: blogItems.filter(() =>
+      Math.floor(Math.random() * Math.floor(2))
+    ),
+  };
+
+  return gulp
+    .src(`${project.paths.DIST}/examples/sources/**/*.html`)
+    .pipe(
+      through.obj(async (file, enc, callback) => {
+        const srcHTML = file.contents.toString();
+
+        env.renderString(srcHTML, configObj, (err, result) => {
+          if (err) {
+            logger.error(`Error rendering ${file.path}`);
+            return callback(err);
+          }
+
+          file.contents = Buffer.from(result);
+          callback(null, file);
+        });
+      })
+    )
+    .pipe(gulp.dest((f) => f.base))
+    .on('end', () => {
+      done();
+    });
+}
 
 /**
  * Removes unnecessary whitespace from rendered pages and minifies their CSS
