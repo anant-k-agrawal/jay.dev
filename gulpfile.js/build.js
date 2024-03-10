@@ -551,50 +551,6 @@ function optimizeFiles(cb) {
     .on('end', cb);
 }
 
-function newPost(text, img, id) {
-  return {
-    id: id,
-    text: text,
-    img: '/static/samples/img/' + img,
-    timestamp: Number(new Date()),
-  };
-}
-
-async function renderExamples(done) {
-  const logger = require('@lib/utils/log')('Static File Generator');
-  const env = nunjucksEnv();
-
-  const configObj = {
-    time: new Date().toLocaleTimeString(),
-    timestamp: Number(new Date()),
-    // send a random list of blog items to make it also work on the cache
-    blogItems: blogItems.filter(() =>
-      Math.floor(Math.random() * Math.floor(2))
-    ),
-  };
-
-  return gulp
-    .src(`${project.paths.DIST}/examples/sources/**/*.html`)
-    .pipe(
-      through.obj(async (file, enc, callback) => {
-        const srcHTML = file.contents.toString();
-
-        env.renderString(srcHTML, configObj, (err, result) => {
-          if (err) {
-            logger.error(`Error rendering ${file.path}`);
-            return callback(err);
-          }
-
-          file.contents = Buffer.from(result);
-          callback(null, file);
-        });
-      })
-    )
-    .pipe(gulp.dest((f) => f.base))
-    .on('end', () => {
-      done();
-    });
-}
 
 /**
  * Removes unnecessary whitespace from rendered pages and minifies their CSS
