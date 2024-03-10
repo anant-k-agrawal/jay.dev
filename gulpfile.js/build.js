@@ -35,8 +35,8 @@ const ComponentReferenceImporter = require('@lib/pipeline/componentReferenceImpo
 const SpecImporter = require('@lib/pipeline/specImporter');
 const RecentGuides = require('@lib/pipeline/recentGuides');
 const gulpSass = require('gulp-sass')(require('sass'));
-// const importRoadmap = require('./import/importRoadmap.js');
-// const importWorkingGroups = require('./import/importWorkingGroups.js');
+const importRoadmap = require('./import/importRoadmap.js');
+const importWorkingGroups = require('./import/importWorkingGroups.js');
 const {staticify} = require('./staticify.js');
 const {whoAmI} = require('./whoAmI.js');
 const importAdVendorList = require('./import/importAdVendorList.js');
@@ -45,11 +45,11 @@ const CleanCSS = require('clean-css');
 const {PIXI_CLOUD_ROOT} = require('@lib/utils/project').paths;
 const {copyFile} = require('fs/promises');
 const nunjucks = require('nunjucks');
-// const {importBlog} = require('@lib/templates/ImportBlogFilter.js');
+const {importBlog} = require('@lib/templates/ImportBlogFilter.js');
 const {
   importYouTubeChannel,
 } = require('@lib/templates/ImportYouTubeChannel.js');
-// const {survey} = require('@lib/templates/SurveyFilter.js');
+const {survey} = require('@lib/templates/SurveyFilter.js');
 const {
   SupportedFormatsExtension,
 } = require('@lib/templates/SupportedFormatsExtension.js');
@@ -260,8 +260,8 @@ function importAll() {
     new ComponentReferenceImporter().import(),
     new SpecImporter().import(),
     new RecentGuides().import(),
-    // importRoadmap.importRoadmap(),
-    // importWorkingGroups.importWorkingGroups(),
+    importRoadmap.importRoadmap(),
+    importWorkingGroups.importWorkingGroups(),
     importAdVendorList.importAdVendorList(),
   ]);
 }
