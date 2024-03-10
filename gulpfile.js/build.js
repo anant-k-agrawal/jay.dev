@@ -31,8 +31,8 @@ const yaml = require('js-yaml');
 // const {samplesBuilder} = require('@lib/build/samplesBuilder');
 const {project} = require('@lib/utils');
 const git = require('@lib/utils/git');
-const ComponentReferenceImporter = require('@lib/pipeline/componentReferenceImporter');
-const SpecImporter = require('@lib/pipeline/specImporter');
+// const ComponentReferenceImporter = require('@lib/pipeline/componentReferenceImporter');
+// const SpecImporter = require('@lib/pipeline/specImporter');
 const RecentGuides = require('@lib/pipeline/recentGuides');
 const gulpSass = require('gulp-sass')(require('sass'));
 // const importRoadmap = require('./import/importRoadmap.js');
@@ -257,8 +257,8 @@ function zipTemplates() {
  */
 function importAll() {
   return Promise.all([
-    new ComponentReferenceImporter().import(),
-    new SpecImporter().import(),
+    // new ComponentReferenceImporter().import(),
+    // new SpecImporter().import(),
     new RecentGuides().import(),
     // importRoadmap.importRoadmap(),
     // importWorkingGroups.importWorkingGroups(),
@@ -271,9 +271,9 @@ function importAll() {
  *
  * @return {Promise}
  */
-function importComponents() {
-  return new ComponentReferenceImporter().import();
-}
+// function importComponents() {
+//   return new ComponentReferenceImporter().import();
+// }
 
 /**
  * Builds playground and boilerplate generator, imports all remote documents,
@@ -786,7 +786,7 @@ exports.sass = sass;
 exports.icons = icons;
 exports.templates = templates;
 exports.importAll = importAll;
-exports.importComponents = importComponents;
+// exports.importComponents = importComponents;
 exports.buildPlayground = buildPlayground;
 exports.buildPixi = buildPixi;
 exports.buildBoilerplate = buildBoilerplate;
