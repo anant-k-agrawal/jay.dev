@@ -560,7 +560,7 @@ function optimizeFiles(cb) {
 //   };
 // }
 
-//async function renderExamples(done) {
+// async function renderExamples(done) {
 //  const logger = require('@lib/utils/log')('Static File Generator');
 //  const env = nunjucksEnv();
 //  const blogItems = [
