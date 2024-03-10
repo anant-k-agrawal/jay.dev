@@ -24,11 +24,11 @@ const nunjucks = require('nunjucks');
 const through = require('through2');
 const {htmlContent} = require('@lib/utils/cheerioHelper');
 const {project} = require('@lib/utils');
-// const {survey} = require('@lib/templates/SurveyFilter.js');
-// const {importBlog} = require('@lib/templates/ImportBlogFilter.js');
-// const {
-//   importYouTubeChannel,
-// } = require('@lib/templates/ImportYouTubeChannel.js');
+const {survey} = require('@lib/templates/SurveyFilter.js');
+const {importBlog} = require('@lib/templates/ImportBlogFilter.js');
+const {
+  importYouTubeChannel,
+} = require('@lib/templates/ImportYouTubeChannel.js');
 const {
   SupportedFormatsExtension,
 } = require('@lib/templates/SupportedFormatsExtension.js');
