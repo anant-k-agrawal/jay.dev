@@ -473,7 +473,7 @@ function buildPages(done) {
       done();
     },
     staticify,
-    renderExamples,
+    // renderExamples,
     optimizeFiles,
     // eslint-disable-next-line prefer-arrow-callback
     function sitemap() {
