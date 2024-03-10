@@ -36,7 +36,7 @@ const SpecImporter = require('@lib/pipeline/specImporter');
 const RecentGuides = require('@lib/pipeline/recentGuides');
 const gulpSass = require('gulp-sass')(require('sass'));
 const importRoadmap = require('./import/importRoadmap.js');
-const importWorkingGroups = require('./import/importWorkingGroups.js');
+// const importWorkingGroups = require('./import/importWorkingGroups.js');
 const {staticify} = require('./staticify.js');
 const {whoAmI} = require('./whoAmI.js');
 const importAdVendorList = require('./import/importAdVendorList.js');
@@ -261,7 +261,7 @@ function importAll() {
     new SpecImporter().import(),
     new RecentGuides().import(),
     importRoadmap.importRoadmap(),
-    importWorkingGroups.importWorkingGroups(),
+    // importWorkingGroups.importWorkingGroups(),
     importAdVendorList.importAdVendorList(),
   ]);
 }
