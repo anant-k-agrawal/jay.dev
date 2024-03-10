@@ -672,7 +672,7 @@ function minifyPages() {
 }
 
 /**
- * Collects the static files of all sub projcts to dist while creating ZIPs
+ * Collects the static files of all sub projects to dist while creating ZIPs
  * from folders ending on .zip
  *
  * @return {Stream}
