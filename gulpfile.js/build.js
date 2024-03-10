@@ -45,7 +45,7 @@ const CleanCSS = require('clean-css');
 const {PIXI_CLOUD_ROOT} = require('@lib/utils/project').paths;
 const {copyFile} = require('fs/promises');
 const nunjucks = require('nunjucks');
-const {importBlog} = require('@lib/templates/ImportBlogFilter.js');
+// const {importBlog} = require('@lib/templates/ImportBlogFilter.js');
 const {
   importYouTubeChannel,
 } = require('@lib/templates/ImportYouTubeChannel.js');
@@ -519,7 +519,7 @@ function nunjucksEnv() {
     'SupportedFormatsExtension',
     new SupportedFormatsExtension()
   );
-  env.addFilter('importBlog', importBlog, true);
+  // env.addFilter('importBlog', importBlog, true);
 
   env.addFilter('importYouTubeChannel', importYouTubeChannel, true);
   env.addFilter('survey', survey, true);
@@ -560,6 +560,9 @@ function newPost(text, img, id) {
   };
 }
 
+/**
+ * creates a new nunjucks environment for rendering
+ * 
 async function renderExamples(done) {
   const logger = require('@lib/utils/log')('Static File Generator');
   const env = nunjucksEnv();
@@ -608,6 +611,8 @@ async function renderExamples(done) {
       Math.floor(Math.random() * Math.floor(2))
     ),
   };
+ *
+ */
 
   return gulp
     .src(`${project.paths.DIST}/examples/sources/**/*.html`)
