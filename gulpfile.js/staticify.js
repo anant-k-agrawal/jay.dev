@@ -25,7 +25,7 @@ const through = require('through2');
 const {htmlContent} = require('@lib/utils/cheerioHelper');
 const {project} = require('@lib/utils');
 const {survey} = require('@lib/templates/SurveyFilter.js');
-// const {importBlog} = require('@lib/templates/ImportBlogFilter.js');
+const {importBlog} = require('@lib/templates/ImportBlogFilter.js');
 const {
   importYouTubeChannel,
 } = require('@lib/templates/ImportYouTubeChannel.js');
@@ -74,7 +74,7 @@ function nunjucksEnv() {
     'SupportedFormatsExtension',
     new SupportedFormatsExtension()
   );
-  // env.addFilter('importBlog', importBlog, true);
+  env.addFilter('importBlog', importBlog, true);
 
   env.addFilter('importYouTubeChannel', importYouTubeChannel, true);
   env.addFilter('survey', survey, true);
