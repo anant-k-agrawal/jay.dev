@@ -499,57 +499,6 @@ function buildPages(done) {
   )(done);
 }
 
-/**
- * creates a new nunjucks environment for rendering
- *
- */
-function nunjucksEnv() {
-  const env = new nunjucks.Environment(null, {
-    tags: {
-      blockStart: '[%',
-      blockEnd: '%]',
-      variableStart: '[=',
-      variableEnd: '=]',
-      commentStart: '[[[[#',
-      commentEnd: '#]]]]',
-    },
-  });
-
-  env.addExtension(
-    'SupportedFormatsExtension',
-    new SupportedFormatsExtension()
-  );
-  // env.addFilter('importBlog', importBlog, true);
-
-  env.addFilter('importYouTubeChannel', importYouTubeChannel, true);
-  env.addFilter('survey', survey, true);
-
-  return env;
-}
-
-function optimizeFiles(cb) {
-  return gulp
-    .src([
-      `${project.paths.PAGES_DEST}/**/*.html`,
-      `!${project.paths.PAGES_DEST}/static/samples/**/*.html`,
-    ])
-    .pipe(
-      through.obj((file, encoding, callback) => {
-        const unoptimizedFile = file.contents.toString();
-
-        console.log(`running optimize on ${file.path}...`);
-
-        optimize({query: ''}, unoptimizedFile, {}, file.path).then(
-          (optimizedFile) => {
-            file.contents = Buffer.from(optimizedFile);
-            callback(null, file);
-          }
-        );
-      })
-    )
-    .pipe(gulp.dest((f) => f.base))
-    .on('end', cb);
-}
 
 
 /**
