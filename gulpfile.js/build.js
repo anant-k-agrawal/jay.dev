@@ -49,7 +49,7 @@ const {importBlog} = require('@lib/templates/ImportBlogFilter.js');
 const {
   importYouTubeChannel,
 } = require('@lib/templates/ImportYouTubeChannel.js');
-const {survey} = require('@lib/templates/SurveyFilter.js');
+// const {survey} = require('@lib/templates/SurveyFilter.js');
 const {
   SupportedFormatsExtension,
 } = require('@lib/templates/SupportedFormatsExtension.js');
@@ -522,7 +522,7 @@ function nunjucksEnv() {
   env.addFilter('importBlog', importBlog, true);
 
   env.addFilter('importYouTubeChannel', importYouTubeChannel, true);
-  env.addFilter('survey', survey, true);
+  // env.addFilter('survey', survey, true);
 
   return env;
 }
