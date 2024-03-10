@@ -514,16 +514,16 @@ function buildPages(done) {
 //       commentEnd: '#]]]]',
 //     },
 //   });
-// 
+
 //   env.addExtension(
 //     'SupportedFormatsExtension',
 //     new SupportedFormatsExtension()
 //   );
 //   env.addFilter('importBlog', importBlog, true);
-// 
+
 //   env.addFilter('importYouTubeChannel', importYouTubeChannel, true);
 //   env.addFilter('survey', survey, true);
-// 
+
 //   return env;
 // }
 
