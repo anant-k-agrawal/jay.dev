@@ -120,11 +120,9 @@
     {{ doc.html|render|safe }}
     {% endblock %}
 
-{# note: we no longer use this
     {% block footer %}
     {% include 'views/partials/footer.j2' %}
     {% endblock %}
-#}
 
     {# Add hint that we might use help to translate untranslated docs #}
     {% if not '@' in doc.pod_path and not doc.locale == podspec.default_locale and doc.pod_path.startswith('/content/amp-dev/documentation') %}
