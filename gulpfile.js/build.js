@@ -809,4 +809,5 @@ exports.build = gulp.series(
   gulp.parallel(collectStatics, persistBuildInfo)
 );
 
-exports.buildForGrowTests = gulp.series(buildBoilerplate, buildPages);
+// exports.buildForGrowTests = gulp.series(buildBoilerplate, buildPages);
+exports.buildForGrowTests = gulp.series(buildPages);
