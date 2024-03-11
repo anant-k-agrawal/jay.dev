@@ -50,18 +50,18 @@ stage:
 
 kpis:
   - value: Big value
-    text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder.
+    text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon.
 
   - value: Significant savings
-    text: Jelly jujubes marshmallow donut.  Pudding croissant biscuit icing.
+    text: Jelly jujubes marshmallow donut.  Pudding croissant biscuit icing. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon.
 
-  - value: Better sales/product management alignment
-  - text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon. Gingerbread biscuit gummies cupcake. Powder sugar plum chocolate cake chocolate cake cake.
+  - value: Align sales & product management
+  - text: Jelly jujubes marshmallow donut.
 
 contents:
   - layout: text
     headline: Goal
-    text: "<ul><li>text 1</li><li>text 2</li><li>text 3</li><li>text 4</li><li>text 5</li></ul>"
+    text: "<ul><li>text 1</li><li>text 2</li><li>text 3</li></ul>"
 
   - layout: text
     headline: Contributing Solution
