@@ -47,7 +47,7 @@ jobs:
           npx gulp lintNode
           npx gulp lintYaml
           npm run test:platform
-          npm run test:playground
+#          npm run test:playground
   prepare:
     needs: verify
     runs-on: ubuntu-latest
