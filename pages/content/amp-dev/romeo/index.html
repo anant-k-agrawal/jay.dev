@@ -6,34 +6,17 @@ $localization:
  path: /{locale}/romeo/{base}.html
 
 flyout:
-  description: Get started with AMP
-  icon: guides-documents
+  description: Begin building
+  icon: wrench
 
-frameworks:
-  - name: Next.js
-    headline: Next.js
-    logo:
-      id: nextjs
-      width: 102
-      height: 64
-    text: "Turn any React page into an AMP page."
-    url: https://nextjs.org/docs/advanced-features/amp-support/introduction
-  - name: WordPress
-    headline: WordPress
-    logo:
-      id: wordpress-inverted
-      width: 64
-      height: 64
-    text: "All the AMP benefits in the WordPress CMS."
-    url: https://amp-wp.org/documentation/success-with-wordpress/
-  - name: Eleventy
-    headline: 11ty
-    logo:
-      id: eleventy
-      width: 67
-      height: 65
-    text: "Build performant static sites quickly."
-    url: https://github.com/ampproject/eleventy-plugin-amp
+categories:
+- creation
+- platforms
+- providers
+- developer
+
+tools: !g.yaml /shared/data/tools.yaml
+
 ---
 <main>
   <section class="ap-logo-stage">
@@ -51,160 +34,82 @@ frameworks:
       </div>
     </div>
   </section>
-  </section>
-  <section class="ap-section ap-text-aside">
-    <div class="ap-text-aside-item --start">
-      <div class="ap-text-block">
-        <h2 class="ap-h2">
-          {{ _('Create a website') }}
-        </h2>
-        <p>
-          {{ _('AMP is the ultimate team player. Many CMS\' and frameworks have AMP integrations to get your site up and
-          running as quickly as an AMP page loads! If you\'re using an in-house solution, AMP provides tools and
-          optimizations for easy integration. Keep scrolling to find the best solution to amplify your site and delight
-          your users.') }}
-        </p>
-      </div>
-    </div>
-    <div class="ap-text-aside-item --right">
-      <div class="ap-text-block">
-        <h2>
-          {{ _('Learn AMP') }}
-        </h2>
-        <p>
-          {{ _('AMP is different from other frameworks. Build rich and interactive web experiences with an extensive
-          library of HTML components. Copy, paste and customize components to quickly and easily build pages that put the
-          user-first and keep your site performant. Start coding your first AMP page to begin learning the basics or start
-          mastering web development, the AMP way.') }}
-        </p>
-      </div>
-      <a class="ap-button"
-        href="{{ g.doc('/content/amp-dev/documentation/guides-and-tutorials/start/create/index.md', locale=doc.locale).url.path }}">
-        {{ _('Build your first AMP page') }}</a>
-    </div>
-    <div class="ap-text-aside-item --end">
-      <div class="ap-text-block">
-        <h2 class="ap-h2">
-          {{ _('Start building, quickly') }}
-        </h2>
-        <p>
-          {{ _('Select a ready-to-go framework or integration-enabled CMS to get an AMP valid site up and running, fast.
-          These platforms give you all the benefits of AMP without all the built-from-scratch hassle.') }}
-        </p>
-      </div>
-      {% with %}
-        {% set square = true %}
-        {% set href = g.doc("/content/amp-dev/support/faq/platform-and-vendor-partners.md", locale=doc.locale).url.path %}
-        {% set text = _("View all frameworks") %}
-        {% include '/views/2021/partials/content/link.j2' %}
-      {% endwith %}
-    </div>
-  </section>
-  <section class="ap-cards --no-background">
-    <div class="ap-cards-grid" role="list">
-      {% for framework in doc.frameworks %}
-      <div class="ap-cards-item --stretch-column" role="listitem">
-        <div class="ap-cards-item-icon">
-          <svg width="{{ framework.logo.width }}" height="{{ framework.logo.height }}">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/static/frontend/sprite.svg#{{framework.logo.id }}"
-            ></use>
-          </svg>
-        </div>
 
-        <h3>{{ _(framework.headline) }}</h3>
-        <p>{{ _(framework.text) }}</p>
+<section class="ap--stage ap--container-fluid">
+  {% do doc.styles.addCssFile('css/components/organisms/stage.css') %}
 
-        {% with %}
-          {% set href = framework.url %}
-          {% set text = _("Start with") + ' ' + framework.name %}
-          {% include '/views/2021/partials/content/link.j2' %}
-        {% endwith %}
-      </div>
+  <div class="ap-o-stage">
+    <div class="ap--container-fluid">
+      <div class="ap-o-stage-content">{{ _('<h1 class="ap-o-stage-content-headline">Tools</h1> <h2 class="ap-o-stage-content-subline">for creation, design and development</h2>') }}</div>
+    </div>
+  </div>
+
+  {% include 'views/partials/tools-visual.j2' %}
+</section>
+
+<section class="ap--tools">
+
+<section class="ap-o-tool-section ap-o-tool-format-filter-container ap--container">
+  <p class="ap-o-tool-format-filter-caption">{{ _('Find the right tools to build') }}</p>
+  {% do doc.icons.useIcon('icons/close.svg') %}
+  {% do doc.styles.addCssFile('css/components/atoms/pill.css', -100) %}
+  <ul class="ap-o-tool-format-filter none" [class]="activeFilter.chosenFilter != 'none' ? 'ap-o-tool-format-filter filtered' : 'ap-o-tool-format-filter none' ">
+    {% for link in doc.filters %}
+      <li>
+        <a href="{{ g.doc('/content/amp-dev/documentation/tools.html', locale=doc.locale).url.path }}/{{link|slug}}" class="ap-a-pill {{link|slug}} [% if requestedFormat == '{{link}}'|lower or not requestedFormat%]active[% endif %]" >
+          <div class="ap-a-pill-icon ap-a-ico {{link|lower}}">
+            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#amp-{{link|lower}}"></use></svg>
+          </div>
+          <span class="ap-a-pill-text">{{ _(link) }}</span>
+          <div tabindex="-1" role="reset"
+            class="ap-a-pill-reset ap-a-ico [% if requestedFormat == '{{link}}'|lower %]show[% endif %]"
+            on="tap:AMP.navigateTo(url='{{ g.doc('/content/amp-dev/documentation/tools.html', locale=doc.locale).url.path }}')">
+            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg>
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% for category in doc.categories %}
+
+  <section class="ap-o-tool-section ap--container">
+    <div class="ap-o-tool-section-title">
+      {% for tool in doc.tools[category] %}
+      <span hidden class="[% if format in '{{tool.formats}}' %]show[% else %]hide[% endif %]"></span>
       {% endfor %}
+
+      <h2 id="{{ category }}">
+        {% if category == 'creation' %}
+        {{ _('Creation &amp; Design') }}
+        {% elif category == 'platforms'  %}
+        {{ _('CMS &amp; Platforms') }}
+        {% elif category == 'developer' %}
+        {{ _('Developer Tools') }}
+        {% elif category == 'providers' %}
+        {{ _('Service providers') }}
+        {% endif %}
+      </h2>
     </div>
 
-    <amp-base-carousel
-      class="ap-cards-carousel"
-      height="320"
-      layout="fixed-height"
-      role="list"
-      visible-count="(min-width: 1024px) 3, (min-width: 768px) 2, 1"
-      aria-label="{{ _('Frameworks') }}">
-      {% for framework in doc.frameworks %}
-      <div class="ap-cards-item --stretch-column" role="listitem">
-        <div class="ap-cards-item-icon">
-          <svg width="{{ framework.logo.width }}" height="{{ framework.logo.height }}">
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/static/frontend/sprite.svg#{{framework.logo.id }}"
-            ></use>
-          </svg>
-        </div>
+    {% if category == 'creation' %}
+    <p [% if format == 'stories' %][% else %]hidden[% endif %] class="ap-o-tool-format-filter-caption">{{ _('Looking to get your Story creation resource listed? <a href="https://github.com/ampproject/amp.dev/issues/new?assignees=&labels=&template=story_creation_tool.md&title=">Create a request here!</a>') }}</p>
+    {% endif %}
 
-        <h3>{{ _(framework.headline) }}</h3>
-        <p>{{ _(framework.text) }}</p>
+    {% if category == 'providers' %}
+    <p [% if format == 'email' %][% else %]hidden[% endif %] class="ap-o-tool-format-filter-caption">{{ _('Looking for supported email service providers? <a href="../support/faq/email-support.md">They are now listed in the FAQ</a>.') }}</p>
+    {% endif %}
 
-        {% with %}
-          {% set href = framework.url %}
-          {% set text = _("Start with") + ' ' + framework.name %}
-          {% include '/views/2021/partials/content/link.j2' %}
-        {% endwith %}
-      </div>
-      {% endfor %}
-    </amp-base-carousel>
-  </section>
-  <section class="ap-section --col-3-22">
-    <div class="ap-text-media">
-      <div class="ap-text-media-col">
-        <amp-img alt="{{ _('A white gear with a bolt inside') }}" src="/static/img/documentation/amp-optimizer.png"
-          width="1020" height="702" layout="responsive">
-        </amp-img>
-      </div>
-      <div class="ap-text-media-col">
-        <div class="ap-text-block">
-          <h2 class="ap-h2">
-            {{ _('Page Experience, optimized') }}
-          </h2>
-          <p>
-            {{ _('If you’re working with a custom or in-house solution, AMP can meet you there! Through tools like the
-            AMP optimizer, you can apply common performance best practices to your websites, automagically.') }}
-          </p>
-        </div>
-        {% with %}
-          {% set square = true %}
-          {% set href = g.doc("/content/amp-dev/documentation/guides-and-tutorials/optimize-measure/amp-optimizer-guide/index.md", locale=doc.locale).url.path %}
-          {% set text = _("Using an AMP Optimizer") %}
-          {% include '/views/2021/partials/content/link.j2' %}
-        {% endwith %}
+    <div class="ap-o-teaser-grid">
+      <div class="ap-o-teaser-grid-list">
+        {% for tool in doc.tools[category] %}
+        {% include '/views/partials/tools-teaser.j2' %}
+        {% endfor %}
       </div>
     </div>
   </section>
-  <section class="ap-section --col-3-22">
-    <div class="ap-text-media">
-      <div class="ap-text-media-col">
-        <amp-img alt="{{ _('Bento components') }}" src="/static/img/documentation/bento.png" width="1020" height="696"
-          layout="responsive">
-        </amp-img>
-      </div>
-      <div class="ap-text-media-col">
-        <div class="ap-text-block">
-          <h2 class="ap-h2">
-            {{ _('Powerful components, anywhere') }}
-          </h2>
-          <p>
-            {{ _('Not ready to fully commit to AMP but love our components? No problem! Through Bento, you can use
-            AMP\'s well-tested, cross-browser compatible and accessible components anywhere on the web!') }}
-          </p>
-        </div>
-        {% with %}
-          {% set square = true %}
-          {% set href = "https://bentojs.dev" %}
-          {% set text = _("Bento Guide") %}
-          {% include '/views/2021/partials/content/link.j2' %}
-        {% endwith %}
-      </div>
-    </div>
-  </section>
+{% endfor %}
+</section>
+
 </main>
