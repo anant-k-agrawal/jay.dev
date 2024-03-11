@@ -165,19 +165,19 @@ function buildFrontend(done) {
 // async function buildPlayground() {
 //   await sh('mkdir -p playground/dist');
 //   await sh('npm run build:playground');
-// 
+
 //   await gulp
 //     .src(project.absolute('netlify/configs/preview.amp.dev/netlify.toml'))
 //     .pipe(gulp.dest(`${project.paths.DIST}/examples`));
-// 
+
 //   await gulp
 //     .src([project.absolute('pages/static/**/*')])
 //     .pipe(gulp.dest(`${project.paths.DIST}/playground/static`));
-// 
+
 //   await gulp
 //     .src(project.absolute('playground/dist/**/*'))
 //     .pipe(gulp.dest(`${project.paths.DIST}/playground`));
-// 
+
 //   return await gulp
 //     .src(project.absolute('playground/netlify.toml'))
 //     .pipe(gulp.dest(`${project.paths.DIST}/playground`));
