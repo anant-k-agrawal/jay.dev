@@ -95,7 +95,7 @@ function createResult(
       encodeURIComponent(query) +
       '&locale=' +
       encodeURIComponent(locale) +
-      '&page=https://amp.dev/'
+      '&page=https://ngfalls.netlify.app/'
   ).toString();
 
   if (page < lastPage && page < LAST_PAGE) {
