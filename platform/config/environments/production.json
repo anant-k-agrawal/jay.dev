@@ -3,22 +3,22 @@
 	"hosts": {
 		"pages": {
 			"scheme": "https",
-			"host": "amp.dev",
+			"host": "ngfalls.netlify.app",
 			"port": ""
 		},
 		"api": {
 			"scheme": "https",
-			"host": "amp-dev-staging.appspot.com",
+			"host": "ngfalls.netlify.app",
 			"port": ""
 		},
 		"platform": {
 			"scheme": "https",
-			"host": "amp.dev",
+			"host": "ngfalls.netlify.app",
 			"port": ""
 		},
 		"websocket": {
 			"scheme": "wss",
-			"host": "amp.dev",
+			"host": "ngfalls.netlify.app",
 			"port": ""
 		},
 		"playground": {
@@ -36,13 +36,13 @@
 		"go": {
 			"scheme": "https",
 			"subdomain": "go",
-			"host": "amp.dev",
+			"host": "ngfalls.netlify.app",
 			"port": ""
 		},
 		"log": {
 			"scheme": "https",
 			"subdomain": "log",
-			"host": "amp.dev",
+			"host": "ngfalls.netlify.app",
 			"port": ""
 		},
 		"packager": {
