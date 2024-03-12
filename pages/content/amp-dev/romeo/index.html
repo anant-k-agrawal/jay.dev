@@ -1,6 +1,7 @@
 ---
 $title: Get Started
-$view: /views/2021/base.html
+$view: /views/overview/tools.j2
+# $view: /views/2021/base.html
 $path: /romeo/index.html
 $localization:
  path: /{locale}/romeo/{base}.html
@@ -40,7 +41,7 @@ tools: !g.yaml /shared/data/tools.yaml
   </section>
 
   <section class="ap--tools">
-    <section class="ap-o-tool-section ap-o-tool-format-filter-container ap--container">
+    <div class="ap-o-tool-section ap-o-tool-format-filter-container ap--container">
       <p class="ap-o-tool-format-filter-caption">{{ _('Find the right tools to build') }}</p>
       {% do doc.icons.useIcon('icons/close.svg') %}
       {% do doc.styles.addCssFile('css/components/atoms/pill.css', -100) %}
@@ -61,10 +62,10 @@ tools: !g.yaml /shared/data/tools.yaml
           </li>
         {% endfor %}
       </ul>
-    </section>
+    </div>
 
   {% for category in doc.categories %}
-    <section class="ap-o-tool-section ap--container">
+    <div class="ap-o-tool-section ap--container">
       <div class="ap-o-tool-section-title">
         {% for tool in doc.tools[category] %}
         <span hidden class="[% if format in '{{tool.formats}}' %]show[% else %]hide[% endif %]"></span>
@@ -98,7 +99,7 @@ tools: !g.yaml /shared/data/tools.yaml
           {% endfor %}
         </div>
       </div>
-    </section>
+    </div>
   {% endfor %}
   </section>
 
