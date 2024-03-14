@@ -12,8 +12,8 @@
       {% set scope.categoryFormats = scope.categoryFormats + formats %}
     {% endfor %}
   {% if category %}
-  {% if format in scope.categoryFormats|unique %}
   {% set category_slug = category.split('.')[1] if category and category.split('.')|length == 2 else category %}
+  {% if format in scope.categoryFormats|unique %}
   <a class="ap-a-pill {% if category_slug|slug in filter_categories and category_slug|slug == category_slug|slug %}filtered{% endif %}"
       href="{{ doc.url.path }}?category={{category_slug|slug}}#filter"
       name="{{ _(category_slug) }}">
