@@ -49,13 +49,13 @@ stage:
       alt: Pronto
 
 kpis:
-  - value: Big value
+  - value: "&#8599; value"
     text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon.
 
-  - value: Reduce expenses
+  - value: "&#8601; expenses"
     text: Jelly jujubes marshmallow donut. Pudding croissant biscuit icing. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon.
 
-  - value: "&#128200; Coordination"
+  - value: "&#128200; Coordinate"
     text: Wafer cheesecake lollipop fruitcake danish powder. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon.
 
 contents:
