@@ -199,7 +199,9 @@ recent_examples:
         {% endfor %}
 
         {% set filter_categories = request.args.get('category', '').split(',') if request is not none else [] %}
-        {% include '/views/partials/category-filter-new.j2'%}
+
+        {% set format = request.args.get('format', 'websites') %}
+        {% include '/views/partials/category-filter-new.j2' with context %}
 
         <h2>{{ _('Filter by category') }}</h2>
         {% for category, documents in categories %}
