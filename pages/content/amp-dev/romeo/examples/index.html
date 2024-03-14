@@ -236,7 +236,7 @@ recent_examples:
         {% set category = (category.split('.')[1] if category and category.split('.')|length == 2 else category)|slug %}
         {% do filter_categories.append(category) %}
         {% endfor %}
-        {% set filter_categories = filter_categories|sort %}
+        {% set filter_categories = filter_categories|tojson %}
 
         <h2>{{ _('Filter by category') }}</h2>
         {% include '/views/partials/category-filter.j2'%}
