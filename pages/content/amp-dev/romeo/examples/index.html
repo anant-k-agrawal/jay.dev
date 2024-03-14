@@ -186,13 +186,6 @@ recent_examples:
         {% endfor %}
       </section>
 
-
-
-
-      
-      
-
-
       <section id="filter" class="ap-m-table-component-container">
         {% set categories = g.categories('/content/amp-dev/documentation/examples/documentation', locale=doc.locale) %}
         {% do doc.styles.addCssFile('css/components/organisms/teaser-grid.css') %}
@@ -204,7 +197,7 @@ recent_examples:
           {% set category_slug = category.split('.')[1] if category and category.split('.')|length == 2 else category %}
           {% do filter_categories.append(category_slug|slug) %}
         {% endfor %}
-      
+
         {% set filter_categories = request.args.get('category', '').split(',') %}
         {% include '/views/partials/category-filter-new.j2'%}
 
@@ -212,7 +205,7 @@ recent_examples:
         {% for category, documents in categories %}
           {% set category_name = category.split('.')[1] if category and category.split('.')|length == 2 else category %}
           {% if category_name|slug not in filter_categories or (category_name|slug in filter_categories and category_name|slug == category_name|slug) %}
-            {% if format in documents|map(attribute='formats')|sum(start=[])|unique|list|tojson %}
+            {% if format in documents|map(attribute='formats')|sum(start=[])|unique|list %}
               <h4 id="{{ category_name }}">{{ _(category_name) }}</h4>
             {% endif %}
             <div class="ap-o-teaser-grid">
