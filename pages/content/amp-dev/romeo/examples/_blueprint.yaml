@@ -1,6 +1,6 @@
 $title@: Examples
 $view: /views/overview/components-overview.j2
-$path: /documentation/examples/{base}
+$path: /romeo/examples/{base}
 $localization:
-  path: /{locale}/documentation/examples/{base}
+  path: /{locale}/romeo/examples/{base}
 $order: 3
