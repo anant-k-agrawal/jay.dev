@@ -178,36 +178,39 @@ recent_examples:
       <section class="ap--card-grid">
         <h2 class="ap-o-card-grid-text">Featured examples</h2>
         {% for format in doc.examples %}
-        [% if format == '{{ format }}' %]
           {% for item in doc.examples[format] %}
           {% set card_grid_items_custom = [] %}
           {% do card_grid_items_custom.append(item) %}
           {% include '/views/partials/card-grid.j2' %}
           {% endfor %}
-        [% endif %]
         {% endfor %}
       </section>
+
+
+
+
+      
+      
+
 
       <section id="filter" class="ap-m-table-component-container">
         {% set categories = g.categories('/content/amp-dev/documentation/examples/documentation', locale=doc.locale) %}
         {% do doc.styles.addCssFile('css/components/organisms/teaser-grid.css') %}
         {% do doc.styles.addCssFile('/css/components/molecules/table-component.css') %}
-      
+
         {# Category names might contain indices for sorting. Tidy them up #}
         {% set filter_categories = [] %}
         {% for category in categories|map(attribute=0)|list %}
-          {% set category_slug = category.split('.')[1] if category and category.split('.')|length == 2 else category %}{% endif %}
+          {% set category_slug = category.split('.')[1] if category and category.split('.')|length == 2 else category %}
           {% do filter_categories.append(category_slug|slug) %}
         {% endfor %}
-
+      
         {% set filter_categories = request.args.get('category', '').split(',') %}
         {% include '/views/partials/category-filter-new.j2'%}
 
         <h2>{{ _('Filter by category') }}</h2>
-      
         {% for category, documents in categories %}
-          {% set category_name = category.split('.')[1] if category and category.split('.')|length == 2 else category %}{% endif %}
-      
+          {% set category_name = category.split('.')[1] if category and category.split('.')|length == 2 else category %}
           {% if category_name|slug not in filter_categories or (category_name|slug in filter_categories and category_name|slug == category_name|slug) %}
             {% if format in documents|map(attribute='formats')|sum(start=[])|unique|list|tojson %}
               <h4 id="{{ category_name }}">{{ _(category_name) }}</h4>
