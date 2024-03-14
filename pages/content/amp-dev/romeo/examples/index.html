@@ -198,7 +198,7 @@ recent_examples:
           {% do filter_categories.append(category_slug|slug) %}
         {% endfor %}
 
-        {% set filter_categories = request.args.get('category', '').split(',') %}
+        {% set filter_categories = request.args.get('category', '').split(',') if request is not none else [] %}
         {% include '/views/partials/category-filter-new.j2'%}
 
         <h2>{{ _('Filter by category') }}</h2>
