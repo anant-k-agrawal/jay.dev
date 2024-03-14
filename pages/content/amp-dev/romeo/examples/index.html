@@ -233,7 +233,7 @@ recent_examples:
         {# Category names might contain indices for sorting. Tidy them up #}
         {% set filter_categories = [] %}
         {% for category in categories|map(attribute=0)|list %}
-          {% set category_slug = category.split('.')[1] if category and category.split('.')|length == 2 else category %}
+          {% set category_slug = category.split('.')[1] if category and category.split('.')|length == 2 else category %}{% endif %}
           {% do filter_categories.append(category_slug|slug) %}
         {% endfor %}
         {% set filter_categories = filter_categories|tojson %}
