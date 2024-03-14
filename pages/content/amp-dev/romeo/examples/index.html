@@ -242,13 +242,12 @@ recent_examples:
         {% include '/views/partials/category-filter-new.j2' %}
       
         {% for category, documents in categories %}
-          {% set category_name = category.split('.')[1] if category and category.split('.')|length == 2 else category %}
+          {% set category_name = category.split('.')[1] if category and category.split('.')|length == 2 else category %}{% endif %}
       
           {% if category_name|slug not in filter_categories or (category_name|slug in filter_categories and category_name|slug == category_name|slug) %}
             {% if format in documents|map(attribute='formats')|sum(start=[])|unique|list|tojson %}
               <h4 id="{{ category_name }}">{{ _(category_name) }}</h4>
             {% endif %}
-            {# {% if format in documents|map(attribute='formats')|sum(start=[])|unique|list|tojson %} #}
             <div class="ap-o-teaser-grid">
               {# Hardcode to a length of 9 teasers as there will be at least that much #}
               <div class="ap-o-teaser-grid-list ap-o-teaser-grid-list-count-9">
@@ -259,7 +258,6 @@ recent_examples:
                 {% endfor %}
               </div>
             </div>
-            {# {% endif %} #}
             <div class="ap-m-table-component{% if category_name == 'components' %}-components{% endif %}" {% if format not in documents|map(attribute='formats')|sum(start=[])|unique|list|tojson %}hidden{% endif %}>
               {% for document in documents if not document.teaser %}
                 <a class="ap-m-table-component-link" href="{{ document.url.path }}" {% if format not in document.formats and forcedFiltered != true %}hidden{% endif %}>
