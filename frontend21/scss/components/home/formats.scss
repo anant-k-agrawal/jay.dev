@@ -246,6 +246,14 @@ $gap: 10px;
       @include ci-ads;
     }
 
+    .alpha & {
+      @include ci-alpha;
+    }
+
+    .beta & {
+      @include ci-beta;
+    }
+
     svg {
       position: absolute;
       height: 100%;
