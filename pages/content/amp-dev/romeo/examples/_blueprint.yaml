@@ -1,6 +1,0 @@
-$title@: Examples
-$view: /views/overview/components-overview.j2
-$path: /romeo/examples/{base}
-$localization:
-  path: /{locale}/romeo/examples/{base}
-$order: 3
