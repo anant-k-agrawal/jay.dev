@@ -6,18 +6,18 @@
     {{ _('All') }}
   </a>
   {% for category, components in categories %}
-  {% set scope = namespace(categoryFormats = []) %}
+    {% set scope = namespace(categoryFormats = []) %}
     {% for component in components %}
       {% set formats = component.formats or ['websites'] %}
       {% set scope.categoryFormats = scope.categoryFormats + formats %}
     {% endfor %}
-  {% if category %}
-  {% set category_slug = category.split('.')[1] if category and category.split('.')|length == 2 else category %}
-  <a class="ap-a-pill {% if category_slug|slug in filter_categories %}filtered{% endif %}"
-      href="{{ doc.url.path }}?category={{category_slug|slug}}#filter"
-      name="{{ _(category_slug) }}">
-    {{ _(category_slug) }}
-  </a>
-  {% endif %}
+    {% if category %}
+      {% set category_slug = category.split('.')[1] if category and category.split('.')|length == 2 else category %}
+      <a class="ap-a-pill {% if category_slug|slug in filter_categories %}filtered{% endif %}"
+          href="{{ doc.url.path }}?category={{category_slug|slug}}#filter"
+          name="{{ _(category_slug) }}">
+        {{ _(category_slug) }}
+      </a>
+    {% endif %}
   {% endfor %}
 </div>
