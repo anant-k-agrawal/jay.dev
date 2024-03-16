@@ -27,7 +27,7 @@ $gap: 10px;
       margin-top: 200px;
     }
   }
-here
+
   @include respond-to('large') {
     grid-column: 1/-1;
     .ap-formats-format {
