@@ -26,10 +26,10 @@ cards:
     headline: Open web
     text: 'The AMP Project is an open source initiative to protect the future of the web by delivering a better, faster and more user-friendly experience.'
 success_stories:
-  - !g.doc /content/amp-dev/about/success-stories/washingtonpost.yaml
-  - !g.doc /content/amp-dev/about/success-stories/teads.yaml
-  - !g.doc /content/amp-dev/about/success-stories/carved.yaml
-  - !g.doc /content/amp-dev/about/success-stories/wompmobile.yaml
+  - !g.doc /content/amp-dev/runner/success-stories/washingtonpost.yaml
+  - !g.doc /content/amp-dev/runner/success-stories/teads.yaml
+  - !g.doc /content/amp-dev/runner/success-stories/carved.yaml
+  - !g.doc /content/amp-dev/runner/success-stories/wompmobile.yaml
 ---
 
 <main>
@@ -37,9 +37,9 @@ success_stories:
     <div class="ap-stage-text">
       <div class="ap-text-block">
         <h2>{{ _('AMP Websites') }}</h2>
-        <h1>{{ _('A framework that amplifies page experience.') }}</h1>
+        <h1>{{ _('A framework that amplifies page experience.') }}</h1>
         <p class="ap-p-large">
-          {{ _('AMP is a simple and robust web components framework that makes
+          {{ _('AMP is a simple and robust web components framework that makes
           it easy to build fast websites that are user-first and make money. AMP
           provides long-term success for your web strategy with distribution
           across popular platforms and reduced operating costs.') }}
@@ -140,8 +140,8 @@ success_stories:
           ></use>
         </svg>
 
-        <h3>{{ card.headline }}</h3>
-        <p>{{ card.text }}</p>
+        <h3>{{ card.headline }}</h3>
+        <p>{{ card.text }}</p>
       </div>
       {% endfor %}
     </div>
@@ -161,7 +161,7 @@ success_stories:
           <svg class="ap-cards-item-icon" width="30" height="30">
             <use
               xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/static/frontend/sprite.svg#{{ card.icon }}"
+              xlink:href="/static/frontend/sprite.svg#{{ card.icon }}"
             ></use>
           </svg>
 
@@ -227,8 +227,9 @@ success_stories:
     </div>
   </section>
 
-  {% set slider_id = 'success-stories' %} {% set teaser_docs =
-  doc.success_stories %} {% include '/views/2021/partials/teaser-slider.j2' %}
+  {% set slider_id = 'success-stories' %}
+  {% set teaser_docs = doc.success_stories %}
+  {% include '/views/2021/partials/teaser-slider.j2' %}
 
   <section class="ap-section --offset">
     <div class="ap-text-media">
