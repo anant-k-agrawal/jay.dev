@@ -1,10 +1,14 @@
 ---
 $title@: Success Stories
-$path: /success-stories/index.html
-$localization:
-  path: /{locale}/success-stories/index.html
 $view: /views/custom.j2
 $hidden: true
+$path: /runner/success-stories/index.html
+$localization:
+  path: /{locale}/runner/success-stories/index.html
+flyout:
+  description: Ready to use
+  icon: template
+
 stage:
   layout: all
   devices:
@@ -28,10 +32,18 @@ stage:
 ---
 {% do doc.styles.addCssFile('css/components/templates/success-story.css') %}
 
-{% block main %}
 <main class="ap--main ap-t-success-story">
 <section class="ap--stage ap--container-fluid">
   {% do doc.styles.addCssFile('css/components/organisms/stage.css') %}
+
+    <amp-state id="activeFilter">
+        <script type="application/json">
+          {
+            "chosenFilter": "none"
+          }
+        </script>
+      </amp-state>
+
   <div class="ap-o-stage ap-o-stage-websites {{doc.stage.layout}}">
     <div class="ap--container-fluid">
       <div class="ap-o-stage-content">
@@ -83,8 +95,8 @@ stage:
       {% endfor %}
     </div>
   {% endif %}
-</section>
 
+</section>
   {% set categories = g.categories('/content/amp-dev/about/success-stories', locale=doc.locale) %}
   <section class="ap--intro ap--container">
     <div class="ap--content">
@@ -94,25 +106,16 @@ stage:
     {% do doc.styles.addCssFile('css/components/organisms/filter-bubbles-list.css') %}
     {% do doc.styles.addCssFile('css/components/atoms/pill.css', -100) %}
     <div class="ap-o-filter-bubbles-list">
-      <button
-        [% if not category or category not in '{{ categories }}' %]
-        class="ap-a-pill filtered"
-        [% else %]
-        class="ap-a-pill"
-        [% endif %]
-        name="all">
+      <button class="ap-a-pill filtered"
+        [class]="activeFilter.chosenFilter == 'none' ? 'ap-a-pill filtered' : 'ap-a-pill'"
+        on="tap:AMP.setState({ activeFilter: {chosenFilter: 'none' } })">
         {{ _('All') }}
       </button>
       {% for category, stories in categories %}
-      <button
-          [% if category == '{{ category|slug }}' %]
-          class="ap-a-pill filtered"
-          [% else %]
-          class="ap-a-pill"
-          [% endif %]
-          on="tap:AMP.navigateTo(url='{{ g.doc('/content/amp-dev/about/success-stories/index.html', locale=doc.locale).url.path }}?category={{ category|slug }}')"
-          name="{{ category|slug }}">
-          {{ _(category) }}
+      <button class="ap-a-pill"
+        [class]="activeFilter.chosenFilter == '{{ category|slug }}' && chosenFilter != 'none' ? 'ap-a-pill filtered' : 'ap-a-pill'"
+        on="tap:AMP.setState({ activeFilter: {chosenFilter: '{{ category|slug }}' } })">
+        {{ _(category) }}
       </button>
       {% endfor %}
     </div>
@@ -121,14 +124,12 @@ stage:
   <section class="ap--teaser-grid ap--container">
     <div class="ap-o-teaser-grid">
       <div class="ap-o-teaser-grid-list">
-        {% for teaser_doc in doc.collection.list_docs(locale=doc.locale, order_by='date')|reverse %}
+        {% for category, stories in categories %}
+        {% for teaser_doc in stories %}
         {% include '/views/partials/teaser.j2' %}
-{#
-        {% include '/views/2021/partials/teaser.j2' %}
-#}
+        {% endfor %}
         {% endfor %}
       </div>
     </div>
   </section>
 </main>
-{% endblock %}
