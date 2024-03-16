@@ -27,24 +27,9 @@ $gap: 10px;
       margin-top: 200px;
     }
   }
-here
+
   @include respond-to('large') {
     grid-column: 1/-1;
-    .ap-formats-format {
-      flex: 1 0 calc(16.666% - (2 * #{$gap})); /* Adjusted for 6 boxes per row */
-    }
-  }
-
-  @include respond-to('xlarge') {
-    .ap-formats-format {
-      flex: 1 0 calc(16.666% - (2 * #{$gap})); /* Adjusted for 6 boxes per row */
-    }
-  }
-
-  @include respond-to('max') {
-    .ap-formats-format {
-      flex: 1 0 calc(16.666% - (2 * #{$gap})); /* Adjusted for 6 boxes per row */
-    }
   }
 
   &-navigation {
