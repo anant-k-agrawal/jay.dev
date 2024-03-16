@@ -225,7 +225,7 @@ recent_examples:
           </amp-img>
         </div>
       </section>
-<!--
+
       <section id="filter" class="ap-m-table-component-container">
         {% set categories = g.categories('/content/amp-dev/documentation/examples/documentation', locale=doc.locale) %}
         {% do doc.styles.addCssFile('css/components/organisms/teaser-grid.css') %}
@@ -305,48 +305,6 @@ recent_examples:
         [% endif %]
         {% endfor %}
       </section>
--->
-<section id="filter" class="ap-m-table-component-container">
-
-  {% set categories = g.categories('/content/amp-dev/documentation/examples/documentation', locale=doc.locale) %}
-  {% do doc.styles.addCssFile('css/components/organisms/teaser-grid.css') %}
-  {% do doc.styles.addCssFile('/css/components/molecules/table-component.css') %}
-
-  {# Category names might contain indices for sorting. Tidy them up #}
-  {% set filter_categories = [] %}
-  {% for category in categories|map(attribute=0)|list %}
-    {% set category_slug = (category.split('.')[1] if category and category.split('.')|length == 2 else category)|slug %}
-    {% do filter_categories.append(category_slug) %}
-  {% endfor %}
-  {% set filter_categories_json = filter_categories|tojson %}
-
-  <h2>{{ _('Filter by category') }}</h2>
-  
-  {% do doc.styles.addCssFile('css/components/organisms/filter-bubbles-list.css') %}
-  {% do doc.styles.addCssFile('css/components/atoms/pill.css') %}
-  
-  <div class="ap-o-filter-bubbles-list">
-    <a class="ap-a-pill {% if not filter_categories_json.includes(category) %}filtered{% endif %}" href="{{ doc.url.path }}#filter" name="all">
-      {{ _('All') }}
-    </a>
-    {% for category, components in categories %}
-      {% set scope = namespace(categoryFormats = []) %}
-      {% for component in components %}
-        {% set formats = component.formats or ['websites'] %}
-        {% set scope.categoryFormats = scope.categoryFormats + formats %}
-      {% endfor %}
-      {% if category %}
-        {% if format in scope.categoryFormats|unique|list %}
-          {% set category_slug = category.split('.')[1] if category and category.split('.')|length == 2 else category %}
-          <a class="ap-a-pill {% if filter_categories_json.includes(category_slug) and category_slug == 'your_desired_category' %}filtered{% endif %}" href="{{ doc.url.path }}#filter" name="{{ category_slug }}">
-            {{ category_slug }}
-          </a>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-</section>
-
     </section>
   </div>
 </main>
