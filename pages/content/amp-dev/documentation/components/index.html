@@ -20,7 +20,6 @@ teaser:
     alt: lorem ipsum
   text: Each component reference page provides detailed information on how to integrate.
 
-
 highlighted_components:
   - /content/amp-dev/documentation/components/reference/amp-analytics-v0.1.md
   - /content/amp-dev/documentation/components/reference/amp-autocomplete-v0.1.md
@@ -46,7 +45,7 @@ recent_components:
 
       <h1>The AMP Component Catalogue</h1>
       <p>The AMP HTML library consists of a basic runtime that brings the core functionalities of AMP to your page. If you want to add additional features you can do so by using one or more of the ready-to-use AMP components. They are classified as:</p>
-
+<!--
       {% do doc.styles.addCssFile('/css/components/organisms/benefits-overview.css') %}
       <div class="ap--benefits--list">
         {% do doc.styles.addCssFile('/css/components/molecules/benefit.css') %}
@@ -89,9 +88,9 @@ recent_components:
           </div>
         </div>
       </div>
-
+-->
       <hr>
-
+<!--
       {% do doc.styles.addCssFile('css/components/molecules/teaser-component-code.css') %}
       <section class="ap--section">
         <h2>Highlighted Components</h2>
@@ -108,6 +107,7 @@ recent_components:
           </div>
         </div>
       </section>
+
       {% if doc.recent_components %}
       <section class="ap--section">
         <h2>Recent Components</h2>
@@ -125,6 +125,7 @@ recent_components:
         </div>
       </section>
       {% endif %}
+-->
 
       <section id="filter" class="ap-m-table-component-container">
         {% set categories = g.categories('/content/amp-dev/documentation/components/reference', locale=doc.locale) %}
@@ -194,6 +195,7 @@ recent_components:
         {% endfor %}
       </section>
     </section>
+<!-- close container -->
   </div>
 </main>
 {% with type = 'component' %}
