@@ -19,6 +19,14 @@
     @include ci-e-mails;
   }
 
+  &.--alpha {
+    @include ci-alpha;
+  }
+
+  &.--beta {
+    @include ci-beta;
+  }
+
   &.--general {
     color: color('white');
     background: color('blue-ribbon');

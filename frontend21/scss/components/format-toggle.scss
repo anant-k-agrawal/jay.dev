@@ -92,4 +92,17 @@
     }
   }
 
+  &-link:hover,
+  &-selected {
+    &.--alpha {
+      @include ci-alpha;
+    }
+  }
+
+  &-link:hover,
+  &-selected {
+    &.--beta {
+      @include ci-beta;
+    }
+  }
 }

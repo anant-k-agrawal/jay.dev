@@ -110,6 +110,14 @@ $gap: 10px;
         &.email {
           fill: url('#gradient-email') color('black');
         }
+
+        &.alpha {
+          fill: url('#gradient-alpha') color('black');
+        }
+
+        &.beta {
+          fill: url('#gradient-beta') color('black');
+        }
       }
 
       svg {
