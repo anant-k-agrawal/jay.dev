@@ -176,6 +176,7 @@ recent_examples:
 
       <h1>{{ _(doc.title) }}</h1>
 
+<!--
       {% do doc.styles.addCssFile('/css/components/organisms/card-grid.css') %}
       <section class="ap--card-grid">
         <h2 class="ap-o-card-grid-text">Featured examples</h2>
@@ -189,7 +190,7 @@ recent_examples:
           [% endif %]
         {% endfor %}
       </section>
-<!--
+
       {% do doc.styles.addCssFile('/css/components/molecules/teaser-info.css') %}
       <section class="ap-m-teaser-info">
         <div class="ap-m-teaser-info-text">
