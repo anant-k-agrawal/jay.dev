@@ -1,5 +1,5 @@
 const FORMAT_WEBSITES = 'websites';
-const SUPPORTED_FORMATS = [FORMAT_WEBSITES, 'stories', 'ads', 'email'];
+const SUPPORTED_FORMATS = [FORMAT_WEBSITES, 'stories', 'ads', 'email', 'food'];
 const DEFAULT_FORMAT = SUPPORTED_FORMATS[0];
 
 /**
