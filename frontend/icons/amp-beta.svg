@@ -1,0 +1,21 @@
+<symbol id="amp-afdsi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<defs>
+<linearGradient id="gradient-afdsi" x1="81.8129399%" x2="33.8766928%" y1="0%" y2="94.4849088%">
+  <stop offset="000%" stop-color="#917349"/>
+  <stop offset="100%" stop-color="#bb9155"/>
+</linearGradient>
+</defs>
+<g transform="matrix(.12666 0 0 .1162 3.19 .318)">
+<g transform="translate(12.24 -12.24)">
+<g fill="url(#gradient-afdsi)" transform="translate(60.343 -216.036)"><path d="M0 398.779h13.464v13.342H0z"/></g>
+<g fill="url(#gradient-afdsi)" transform="translate(101.102 -308.57)"><path d="M0 398.657h13.464v13.464H0z"/></g>
+<g fill="url(#gradient-afdsi)" transform="translate(116.525 -197.798)"><path d="m0 358.88 28.4 19.09v34.15L0 392.78Z"/></g>
+<g fill="url(#gradient-afdsi)" transform="translate(116.525 -142.106)"><path d="m0 356.8 28.4 19.46v35.86L0 392.78Z"/></g>
+<g fill="url(#gradient-afdsi)" transform="translate(146.268 -65.606)"><path d="M0 398.657h13.464v13.464H0z"/></g>
+<g fill="url(#gradient-afdsi)" transform="translate(161.078 -197.798)"><path d="m0 377.97 26.81-17.01v32.92L0 412.12Z"/></g>
+<g fill="url(#gradient-afdsi)" transform="translate(161.078 -141.617)"><path d="m0 375.77 26.81-18.36v37.33L0 412.12Z"/></g>
+<g fill="url(#gradient-afdsi)" transform="translate(232.315 -280.786)"><path d="M0 398.657h13.464v13.464H0z"/></g>
+<g fill="url(#gradient-afdsi)" ><path d="M289.72 24.48H16.28A16.402 16.402-180 0 0 0 40.88v218.24a153 153-180 1 0 306 0V40.88a16.402 16.402-180 0 0-16.28-16.4zm-27.78 123.13h-14.81v27.79l-42.97 29.38v57.16l-42.96 28.03v26.8h14.81v46.02h-46.02v-46.02h14.81v-26.93l-85.68-58.63v-18.85H44.06v-45.9h45.9v45.9H75.15v10.9l25.1 17.13V120.44H84.82V73.81h46.03v46.02h-14.57v21.66L153 165.97l51.04-32.8v51.65l26.68-18.23v-18.98h-14.68v-46.02h45.9z"/></g>
+</g>
+</g>
+</symbol>
