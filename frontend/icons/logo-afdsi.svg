@@ -1,4 +1,4 @@
-<symbol id="amp-beta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg id="amp-afdsi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 <defs>
 <linearGradient id="gradient-afdsi" x1="82%" x2="34%" y1="0%" y2="94%">
 <stop offset="000%" stop-color="#917349"/>
@@ -18,4 +18,4 @@
 <g fill="url(#gradient-afdsi)" ><path d="M289.72 24.48H16.28A16.402 16.402-180 0 0 0 40.88v218.24a153 153-180 1 0 306 0V40.88a16.402 16.402-180 0 0-16.28-16.4zm-27.78 123.13h-14.81v27.79l-42.97 29.38v57.16l-42.96 28.03v26.8h14.81v46.02h-46.02v-46.02h14.81v-26.93l-85.68-58.63v-18.85H44.06v-45.9h45.9v45.9H75.15v10.9l25.1 17.13V120.44H84.82V73.81h46.03v46.02h-14.57v21.66L153 165.97l51.04-32.8v51.65l26.68-18.23v-18.98h-14.68v-46.02h45.9z"/></g>
 </g>
 </g>
-</symbol>
+</svg>
