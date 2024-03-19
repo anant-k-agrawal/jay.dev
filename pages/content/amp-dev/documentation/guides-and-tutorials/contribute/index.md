@@ -13,7 +13,6 @@ formats:
   - stories
   - ads
   - email
-  - food
 ---
 
 The AMP Project would not be possible without help from all members of the community
