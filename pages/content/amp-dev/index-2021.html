@@ -136,12 +136,12 @@ success_stories:
         {% if format.cta %}
           <a href="documentation/index.html" class="ap-button --inverted cta">{{ _(format.cta) }}</a>
         {% endif %}
+-->
         {% with %}
           {% set href = format.url %}
           {% set text = _(format.link) %}
           {% include '/views/2021/partials/content/link.j2' %}
         {% endwith %}
--->
       </div>
     </div>
     {% endfor %}
