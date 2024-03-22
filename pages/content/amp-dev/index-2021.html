@@ -13,9 +13,9 @@ format_explainer:
     cta: "Get started"
     url: /about/websites.html
   - name: stories
-    headline: Web Stories
+    headline: Stories
     description: "Immerse readers in visual and tappable stories they can share anywhere on the open web."
-    link: "All about Web Stories"
+    link: "All about Stories"
     url: /about/stories.html
   - name: email
     headline: Emails
@@ -63,7 +63,7 @@ success_stories:
     </div>
 
     <div class="ap-home-stage-text">
-      <h1 class="ap-h1">{{ _('AMP is a web component framework to easily create user-first experiences for the web.') }}</h1>
+      <h1 class="ap-h1">{{ _('Knowledge graph applications for business and science.') }}</h1>
     </div>
   </section>
   <section class="ap-formats">
@@ -146,10 +146,10 @@ success_stories:
     </div>
     {% endfor %}
   </section>
-  
+<!--
   <section class="ap-intro ap-section --col-left">
     <h1>{{ _('The latest news') }}</h1>
-    <p>{{ _('Don\'t want to miss any of the great stuff that happens around AMP? Then always be first in line and subscribe to our newsletter!') }}</p>
+    <p>{{ _('Don\'t want to miss progress updates? Subscribe to our newsletter!') }}</p>
     {% with %}
       {% set square = true %}
       {% set class= "ap-newsletter-double" %}
@@ -166,7 +166,7 @@ success_stories:
       {% include '/views/2021/partials/content/link.j2' %}
     {% endwith %}
   </section>
-
+-->
 <!--
   <section class="ap-teaser-carousel --news">
     [% set posts = []|importBlog %]
@@ -245,8 +245,8 @@ success_stories:
 
   <section class="ap-intro ap-section --col-right">
     <div class="ap-text-block">
-      <h1>{{ _('Explore AMP success stories') }}</h1>
-      <p>{{ _('Don’t take our word for it - read case studies from industry success stories and see how AMP has produced positive results.') }}</p>
+      <h1>{{ _('Explore success stories') }}</h1>
+      <p>{{ _('Read case studies from industry success stories and learn about positive results.') }}</p>
       {% with %}
         {% set square = true %}
         {% set href = "runner/success-stories/index.html" %}
