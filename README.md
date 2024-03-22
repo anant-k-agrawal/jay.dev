@@ -131,6 +131,27 @@ You can contribute your changes back to the main repository by [creating a pull 
 
 ## Setup with Docker
 
+[NEW PROCESS]
+To build docker setup on local machine, follow the below steps:
+   1. Add your GitHub PAT in docker-compose.yml file.
+   2. If needed, clean-up all previous Docker containers, images, volumes & networks
+      ```sh
+      $ docker-compose down;
+      $ docker system prune -a; docker network prune; docker builder prune;
+      $ docker images -a; docker ps -a;
+      ```
+   3. To build your preferred NLs, edit .github/workflows and platform/lib/config.js files
+   4. Run the below command to build multiple languages parallelly and also start the container.
+      ```sh
+      $ COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose up -d --build
+      ```
+   5. To stop the running container, run below step(s):
+      ```sh
+      $ docker-compose down;
+      ```
+
+
+[OLD PROCESS]
 We provide a Dockerfile for development based on one of the official Python-images. When using this you can skip setting up Python and a local installation of Grow on your machine. Though make sure you completed all other installation steps, like cloning the repository, installing all Node.js dependencies and exporting a valid GitHub token as outlined in [Fork & clone the repository](#fork--clone-the-repository) and [Develop](#develop). When those steps are completed instead of running the project with `npm run develop` you can build a development Docker image with the followiung command, run from the project root directory:
 
 ```sh

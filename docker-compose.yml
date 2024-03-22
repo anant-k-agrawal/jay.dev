@@ -6,6 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-       AMP_DOC_TOKEN: "ADD YOUR GITHUB PAT HERE"
+        AMP_DOC_TOKEN: "ADD YOUR GITHUB PERSONAL ACCESS TOKEN HERE"
+        DOCKER_BUILDKIT: 1
     ports:
       - "8080:80"

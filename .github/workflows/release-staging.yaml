@@ -108,20 +108,20 @@ jobs:
         language:
           [
             'en',
-#            'de',
+            # 'de',
             'fr',
-#            'ar',
+            # 'ar',
             'es',
-#            'it',
-#            'id',
-#            'ja',
-#            'ko',
-            'pt_BR',
-#            'ru',
-#            'tr',
-#            'zh_CN',
-#            'pl',
-#            'vi',
+            # 'it',
+            # 'id',
+            # 'ja',
+            # 'ko',
+            # 'pt_BR',
+            # 'ru',
+            # 'tr',
+            # 'zh_CN',
+            # 'pl',
+            # 'vi',
           ]
     runs-on: ubuntu-latest
     steps:

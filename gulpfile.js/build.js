@@ -358,6 +358,7 @@ function buildPages(done) {
     buildFrontend,
     // eslint-disable-next-line prefer-arrow-callback
     async function buildGrow() {
+      console.log('ANANT: In buildPages()->buildGrow() 1')
       const options = {};
       if (config.isTestMode()) {
         options.include_paths = TEST_CONTENT_PATH_REGEX;
@@ -368,6 +369,7 @@ function buildPages(done) {
       }
       config.configureGrow(options);
 
+      console.log('ANANT: In buildPages()->buildGrow() 2')
       await grow('deploy --noconfirm --threaded');
     },
     minifyPages,
