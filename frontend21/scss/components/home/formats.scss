@@ -96,7 +96,8 @@ $gap: 10px;
         visibility: hidden;
 
         &.websites {
-          fill: url('#gradient-websites') color('black');
+          fill: url('#gradient-websites-1') color('black');
+          fill: url('#gradient-websites-2') color('black');
         }
 
         &.stories {
