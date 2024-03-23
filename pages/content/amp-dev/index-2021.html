@@ -35,6 +35,26 @@ format_explainer:
     description: "Developing data specifications for agriculture, food safety, science &#x26; labeling. Using research data repositories for comparing research investigations &#x26; discovering new solutions."
     link: "All about Food Data Institute"
 
+cards:
+  - icon: icon-flash
+    headline: Lightning Speed
+    text: AMP pages load near instantly – across all devices and platforms.
+  - icon: icon-build
+    headline: Easy Building
+    text: 'You can often convert your entire archive in days – especially when using common CMS like WordPress or Drupal.'
+  - icon: icon-flexible
+    headline: Maintain flexibility
+    text: 'You can use CSS to customize your styling and dynamic data to fetch the freshest data where needed.'
+  - icon: icon-performance
+    headline: Ensure performance
+    text: 'It takes a lot of time and effort to build a great website. AMP components are already optimized for the best performance.'
+  - icon: icon-touch-points
+    headline: Various web touch points
+    text: 'Used by global platforms like Google, Bing and Twitter, AMP allows users a native-feeling experience across all platforms by defaulting to AMP pages when available.'
+  - icon: icon-heart
+    headline: Open web
+    text: 'The AMP Project is an open source initiative to protect the future of the web by delivering a better, faster and more user-friendly experience.'
+
 success_stories:
   - !g.doc /content/amp-dev/runner/success-stories/washingtonpost.yaml
   - !g.doc /content/amp-dev/runner/success-stories/teads.yaml
@@ -142,6 +162,56 @@ success_stories:
       </div>
     </div>
     {% endfor %}
+  </section>
+
+  <section class="ap-cards">
+    <div class="ap-cards-grid" role="list">
+      {% for card in doc.cards %}
+      <div class="ap-cards-item" role="listitem">
+        <svg class="ap-cards-item-icon" width="30" height="30">
+          <use
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="/static/frontend/sprite.svg#{{ card.icon }}"
+          ></use>
+        </svg>
+
+        <h3>{{ card.headline }}</h3>
+        <p>{{ card.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <amp-base-carousel
+      id="cards-carousel"
+      class="ap-cards-carousel"
+      role="list"
+      layout="fixed-height"
+      height="350"
+      controls="never"
+      on="slideChange:cards-carousel-pagination.toggle(index=event.index, value=true)"
+    >
+      {% for card in doc.cards %}
+      <div class="ap-cards-item-wrapper">
+        <div class="ap-cards-item" role="listitem">
+          <svg class="ap-cards-item-icon" width="30" height="30">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/static/frontend/sprite.svg#{{ card.icon }}"
+            ></use>
+          </svg>
+
+          <h3>{{ card.headline }}</h3>
+          <p>{{ card.text }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </amp-base-carousel>
+    <amp-selector class="ap-cards-carousel-pagination" id="cards-carousel-pagination" layout="container" on="select: cards-carousel.goToSlide(index=event.targetOption)">
+      {% for card in doc.cards %}
+        <div class="ap-cards-carousel-pagination-item" option="{{ loop.index0 }}" {% if loop.index0==0 %}selected{% endif
+          %}></div>
+      {% endfor %}
+    </amp-selector>
   </section>
 
   <section class="ap-intro ap-section --col-right">
