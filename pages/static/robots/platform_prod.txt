@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /shared
 
-Sitemap: https://amp.dev/sitemap.xml
+Sitemap: https://ngfalls.netlify.app/sitemap.xml

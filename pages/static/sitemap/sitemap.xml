@@ -3,7 +3,4 @@
   <sitemap>
     <loc>https://ngfalls.netlify.app/sitemap_grow.xml</loc>
   </sitemap>
-  <sitemap>
-    <loc>https://ngfalls.netlify.app/sitemap_manual.xml</loc>
-  </sitemap>
 </sitemapindex>
