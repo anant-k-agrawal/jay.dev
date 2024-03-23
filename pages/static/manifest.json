@@ -1,6 +1,6 @@
 {
-  "name": "amp.dev",
-  "short_name": "amp.dev",
+  "name": "ngfalls.netlify.app",
+  "short_name": "ngfalls",
   "theme_color": "#005af0",
   "background_color": "#ffffff",
   "display": "standalone",
