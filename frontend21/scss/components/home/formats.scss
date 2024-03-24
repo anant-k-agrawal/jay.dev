@@ -156,14 +156,15 @@ $gap: 10px;
         }
       }
     }
-
+/*
     &.websites {
       .cta {
         display: none;
       }
     }
-
+*/
     &.websites,
+    &.beta,
     &.ads {
       color: color('white');
     }
@@ -208,12 +209,13 @@ $gap: 10px;
       &:nth-child(odd) {
         top: 24px;
       }
-
+/*
       &.websites {
         .cta {
           display: inline-block;
         }
       }
+*/
     }
 
     @include respond-to('large') {
@@ -231,6 +233,7 @@ $gap: 10px;
       display: initial;
 
       .websites &,
+      .beta &,
       .ads & {
         fill: color('white');
       }
