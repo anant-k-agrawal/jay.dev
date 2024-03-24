@@ -2,10 +2,8 @@
 <defs>
 <linearGradient id="gradient-websites-1">
   <stop offset="000%" stop-color="#0e1c2a"/>
-  <stop offset="100%" stop-color="#0e1c2a"/>
 </linearGradient>
 <linearGradient id="gradient-websites-2">
-  <stop offset="000%" stop-color="#005af0"/>
   <stop offset="100%" stop-color="#005af0"/>
 </linearGradient>
 </defs>
