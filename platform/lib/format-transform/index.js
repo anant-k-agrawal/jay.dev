@@ -19,7 +19,6 @@ const amphtmlValidator = require('amphtml-validator');
 const {htmlContent} = require('@lib/utils/cheerioHelper');
 const config = require('@lib/config.js');
 const formats = require('./formats');
-// const {cheerioOptions} = require('../common/cheerioOptions');
 
 const host = config.hosts.platform;
 const FORMATS_REGEXP = /@formats\(([^)]+)\)/;
@@ -117,14 +116,14 @@ class FormatTransform {
       return;
     }
 
-    comment.type = null;
-    comment.data = null;
+    comment.type = 'text';
+    comment.data = '';
 
     let next = comment.next;
     while (next) {
       const type = next.type;
-      next.type = null;
-      next.data = null;
+      next.type = 'text';
+      next.data = '';
 
       if (type !== 'text') {
         break;
