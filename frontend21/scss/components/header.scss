@@ -268,8 +268,7 @@
           }
 
           &.websites {
-            @include gradient-websites-1;
-            @include gradient-websites-2;
+            @include gradient-websites;
           }
 
           &.stories {
