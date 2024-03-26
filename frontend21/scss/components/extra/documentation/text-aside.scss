@@ -16,7 +16,7 @@
   @include respond-to('max') {
     grid-column: 2/24;
   }
-
+/*
   &:before {
     content: '';
     width: 2px;
@@ -28,7 +28,7 @@
       margin-left: 28px;
     }
   }
-
+*/
   &-item {
     position: relative;
     &.--start {
