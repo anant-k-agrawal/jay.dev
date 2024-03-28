@@ -49,7 +49,7 @@ stage:
       alt: Pronto
 
 kpis:
-  - value: "&#x1F4C8; value &#x2000;"
+  - value: "&#x1F4C8; value &#x2006;"
     text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon.
 
   - value: "&#x1F4C9; expense"
@@ -85,7 +85,7 @@ contents:
     alt: Pronto
     headline: Chemical Substance Data Kit
     text: "Chemical Substance Data Kit describes approximately 400 pesticides and metabolites organized by chemical group (e.g. organochlorine) and function group (e.g. fungicide). Single metabolites and degradants from multiple sources are properly documented."
-    direction: right-flat
+    direction: left-flat
 
   - layout: text
     headline: Food Substance
@@ -93,14 +93,14 @@ contents:
     direction: left-flat
 
   - layout: text-media
-    image_src: "/static/img/success-stories/pronto/21001100001000152161/vector-w140-h120.svg"
-    width: 140
-    height: 120
+    image_src: "/static/img/success-stories/pronto/21001100001000142161/image-333x334.webp"
+    width: 333
+    height: 334
     type: mobile
     alt: Pronto
     headline: Food Substance Data Kit
     text: "Food Substance Data Kit describes approximately 300 nutrients and additives organized by chemical group (e.g. lipids, proteins, phenols) and by function group (e.g. fortifiers, colors, preservatives)."
-    direction: left-flat
+    direction: right-flat
 
   - layout: text
     headline: Drug Substance
