@@ -65,7 +65,7 @@ contents:
 
   - layout: text
     headline: Contributing Solution
-    text: "<ul><li style="color:red;">Pronto is an acronym for practical ontologies for specifying electronic labels. Pronto has three components:</li><ul><li>Substance Data Kit</li><li>Product Data Kit</li><li>Linked Data Indexing</li></ul></ul>"
+    text: "<ul><li class="ap-h2">Pronto is an acronym for practical ontologies for specifying electronic labels. Pronto has three components:</li><ul><li>Substance Data Kit</li><li>Product Data Kit</li><li>Linked Data Indexing</li></ul></ul>"
 
   - layout: text
     headline: Substance Data Kit
