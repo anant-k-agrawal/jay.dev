@@ -49,7 +49,7 @@ stage:
       alt: Pronto
 
 kpis:
-  - value: "&#x1F4C8; value &#x2006;"
+  - value: "&#x1F4C8; value &nbsp;&nbsp;"
     text: Jelly jujubes marshmallow donut. Wafer cheesecake lollipop fruitcake danish powder. Pudding croissant biscuit icing. Gummi bears fruitcake cake wafer cake cookie caramels marshmallow bonbon.
 
   - value: "&#x1F4C9; expense"
@@ -90,7 +90,6 @@ contents:
   - layout: text
     headline: Food Substance
     text: "Food is any substance consumed to provide nutritional support for a body. It is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. The substance is ingested by an organism and assimilated by the organism's cells to provide energy, maintain life, or stimulate growth."
-    direction: left-flat
 
   - layout: text-media
     image_src: "/static/img/success-stories/pronto/21001100001000142161/image-333x334.webp"
@@ -105,7 +104,6 @@ contents:
   - layout: text
     headline: Drug Substance
     text: "A drug is any substance other than food, that when inhaled, injected, smoked, consumed, absorbed via a patch on the skin or dissolved under the tongue causes a physiological change in the body. In pharmacology, a pharmaceutical drug, also called a medication or medicine, is a chemical substance used to treat, cure, prevent, or diagnose a disease or to promote well-being. Traditionally drugs were obtained through extraction from medicinal plants, but more recently also by organic synthesis."
-    direction: left-flat
 
   - layout: text-media
     image_src: "/static/img/success-stories/pronto/21001100001000162161/vector-w140-h120.svg"
