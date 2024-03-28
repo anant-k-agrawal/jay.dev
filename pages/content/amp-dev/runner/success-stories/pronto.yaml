@@ -118,7 +118,6 @@ contents:
   - layout: text
     headline: Cosmetics Substance
     text: "Cosmetics are substances or products used to enhance the appearance or fragrance of the human body. Many cosmetics are designed for use of applying to the face and hair. They are generally mixtures of chemical compounds; some being derived from natural sources (such as coconut oil), and some being synthetics. Common cosmetics include lipstick, mascara, eye shadow, foundation, rouge, skin cleansers and skin lotions, shampoo, hairstyling products (gel, hair spray, etc.), perfume, and cologne."
-    direction: right-flat
 
   - layout: text-media
     image_src: "/static/img/success-stories/pronto/21001100001000192161/vector-w140-h120.svg"
@@ -133,7 +132,6 @@ contents:
   - layout: text
     headline: Textile Substance
     text: "A textile or cloth is a flexible material consisting of a network of natural or artificial fibers (yarn or thread). Yarn is produced by spinning raw fibers of wool, flax, cotton, or other material to produce long strands. Textiles are formed by weaving, knitting, crocheting, knotting, or felting. The words fabric and cloth are used in textile assembly trades (such as tailoring and dressmaking) as synonyms for textile. However, there are subtle differences in these terms in specialized usage. Textile refers to any material made of interlacing fibers. Fabric refers to any material made through weaving, knitting, spreading, crocheting, or bonding that may be used in production of further goods (garments, etc.). Cloth may be used synonymously with fabric but often refers to a finished piece of fabric used for a specific purpose (e.g., table cloth)."
-    direction: left-flat
 
   - layout: text-media
     image_src: "/static/img/success-stories/pronto/21001100001000222161/vector-w140-h120.svg"
@@ -148,12 +146,11 @@ contents:
   - layout: text
     headline: Product Data Kit
     text: "Ontomatica offers pre-defined product descriptions. Descriptions are organized into Kits. Each product (each item) is described using a specific Product Markup Language - Linked Data (PRML-LD) based on ISO 11238 structurally diverse substances standard for defining products. Each item is facet classified and accessible through a facet search interface."
-    direction: left-flat
 
   - layout: text
     headline: Chemical Product
     text: "Chemical products are the species formed from chemical reactions. During a chemical reaction, reactants are transformed into products after passing through a high energy transition state. This process results in the consumption of the reactants. It can be a spontaneous reaction or mediated by catalysts which lower the energy of the transition state, and by solvents which provide the chemical environment necessary for the reaction to take place."
-    direction: left-flat
+    direction: left-right
 
   - layout: text-media
     image_src: "/static/img/success-stories/pronto/21001100001000252161/vector-w140-h120.svg"
@@ -188,7 +185,6 @@ contents:
   - layout: text
     headline: Food Product
     text: "Food products are."
-    direction: right-flat
 
   - layout: text-media
     image_src: "/static/img/success-stories/pronto/21001100001000322161/vector-w140-h120.svg"
@@ -233,7 +229,6 @@ contents:
   - layout: text
     headline: Drug Product
     text: "Drug products are ..."
-    direction: left-flat
 
   - layout: text-media
     image_src: "/static/img/success-stories/pronto/21001100001000422161/vector-w140-h120.svg"
@@ -278,7 +273,6 @@ contents:
   - layout: text
     headline: Cosmetic Product
     text: "Cosmetic products are ..."
-    direction: right-flat
 
   - layout: text-media
     image_src: "/static/img/success-stories/pronto/21001100001000522161/vector-w140-h120.svg"
@@ -313,7 +307,6 @@ contents:
   - layout: text
     headline: Textile Product
     text: "Textile products are ..."
-    direction: left-flat
 
   - layout: text-media
     image_src: "/static/img/success-stories/pronto/21001100001000592161/vector-w140-h120.svg"
@@ -345,11 +338,9 @@ contents:
     text: "Advanced Textiles Data Kit describes approximately 1,400 items as identified in US Department of Commerce textiles and apparel datasets. Advanced Textiles Data Kit describes items using Textile Markup Language - Linked Data (TXML-LD) based on ISO 11238 structurally diverse substances standard for defining products."
     direction: left-flat
 
-
   - layout: text
     headline: Linked Data Indexing
     text: "Ontomatica offers a service to index chemicals, foods, drugs, cosmetics and textiles."
-    direction: right-flat
 
   - layout: text-media
     image_src: "/static/img/success-stories/pronto/21001100001000682161/vector-w140-h120.svg"
